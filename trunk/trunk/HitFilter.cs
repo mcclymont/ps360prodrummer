@@ -6,6 +6,12 @@ using System.Diagnostics;
 
 namespace _PS360Drum
 {
+    enum CymbalType
+    {
+        Yellow = 0,
+        Blue = 1 << 2,
+        Green = 1 << 3
+    }
     class HitFilter
     {
         Byte?[] m_HitVelocities = new Byte?[ProDrumController.NUM_PADS];
@@ -47,70 +53,58 @@ namespace _PS360Drum
             }
         }
 
-        public void TriggerNotes(byte color, byte type, byte[] velocities, int velocityArrayOffset)
+        public void TriggerNotes(byte color, byte type, byte flag, byte[] velocities, int velocityArrayOffset)
         {
             int isRed = color & ((byte)PadColor.Red);
             int isYellow = color & ((byte)PadColor.Yellow);
             int isBlue = color & ((byte)PadColor.Blue);
             int isGreen = color & ((byte)PadColor.Green);
-
-            bool OneColor = ((isRed != 0 ? 1 : 0) + (isYellow != 0 ? 1 : 0) + (isBlue != 0 ? 1 : 0) + (isGreen != 0 ? 1 : 0)) > 1;
-
+            
             int isTom = type & ((byte)PadType.Tom);
             int isCymbal = type & ((byte)PadType.Cymbal);
 
-            if (isRed != 0)
+            bool OneColor = ((isRed != 0 ? 1 : 0) + (isYellow != 0 ? 1 : 0) + (isBlue != 0 ? 1 : 0) + (isGreen != 0 ? 1 : 0)) == 1;
+
+            if (isCymbal != 0)
             {
-                TriggerNote(DrumPad.RedTom, velocities[velocityArrayOffset + 1]);
+                if (flag == 0)
+                {
+                    TriggerNote(DrumPad.YellowCymbal, velocities[velocityArrayOffset + (OneColor ? 0 : 1)]);
+                    if (OneColor == false)
+                        isYellow = 0;
+                }
+                if ((flag & (byte)CymbalType.Blue) != 0)
+                {
+                    TriggerNote(DrumPad.BlueCymbal, velocities[velocityArrayOffset + (OneColor ? 3 : 1)]);
+                    if (OneColor == false)
+                        isBlue = 0;
+                }
+                if ((flag & (byte)CymbalType.Green) != 0)
+                {
+                    TriggerNote(DrumPad.GreenCymbal, velocities[velocityArrayOffset + (OneColor ? 2 : 1)]);
+                    if (OneColor == false)
+                        isGreen = 0;
+                }
             }
-            if (isYellow != 0)
+            if (isTom != 0)
             {
-                if (isTom != 0 && isCymbal != 0 && OneColor)
+                if (isRed != 0)
+                {
+                    TriggerNote(DrumPad.RedTom, velocities[velocityArrayOffset + 1]);
+                }
+                if (isYellow != 0)
                 {
                     TriggerNote(DrumPad.YellowTom, velocities[velocityArrayOffset + 0]);
-                    TriggerNote(DrumPad.YellowCymbal, velocities[velocityArrayOffset + 1]);
                 }
-                else if (isTom != 0)
-                {
-                    TriggerNote(DrumPad.YellowTom, velocities[velocityArrayOffset + 0]);
-                }
-                else
-                {
-                    TriggerNote(DrumPad.YellowCymbal, velocities[velocityArrayOffset + 0]);
-                }
-            }
-            if (isBlue != 0)
-            {
-                if (isTom != 0 && isCymbal != 0 && OneColor)
-                {
-                    TriggerNote(DrumPad.BlueTom, velocities[velocityArrayOffset + 3]);
-                    TriggerNote(DrumPad.BlueCymbal, velocities[velocityArrayOffset + 1]);
-                }
-                else if (isTom != 0)
+                if (isBlue != 0)
                 {
                     TriggerNote(DrumPad.BlueTom, velocities[velocityArrayOffset + 3]);
                 }
-                else
-                {
-                    TriggerNote(DrumPad.BlueCymbal, velocities[velocityArrayOffset + 3]);
-                }
-            }
-            if (isGreen != 0)
-            {
-                if (isTom != 0 && isCymbal != 0 && OneColor)
-                {
-                    TriggerNote(DrumPad.GreenTom, velocities[velocityArrayOffset + 2]);
-                    TriggerNote(DrumPad.GreenCymbal, velocities[velocityArrayOffset + 1]);
-                }
-                else if (isTom != 0)
+                if (isGreen != 0)
                 {
                     TriggerNote(DrumPad.GreenTom, velocities[velocityArrayOffset + 2]);
                 }
-                else
-                {
-                    TriggerNote(DrumPad.GreenCymbal, velocities[velocityArrayOffset + 2]);
-                }
-            }
+            }         
         }
         private byte Boost(DrumPad pad, byte velocity)
         {

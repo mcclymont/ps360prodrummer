@@ -104,7 +104,7 @@ namespace _PS360Drum
 
                 if (args.data[1] > 0)
                 {
-                    m_HitFilter.TriggerNotes(args.data[1], args.data[2], args.data, 12);
+                    m_HitFilter.TriggerNotes(args.data[1], args.data[2], args.data[3], args.data, 12);
                 }
                 else
                 {
