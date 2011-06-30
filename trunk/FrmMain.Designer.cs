@@ -30,7 +30,6 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmMain));
-            this.checkForDrums = new System.Windows.Forms.Timer(this.components);
             this.lblMIDIChannel = new System.Windows.Forms.Label();
             this.lblMIDIDevice = new System.Windows.Forms.Label();
             this.nupMIDIChannel = new System.Windows.Forms.NumericUpDown();
@@ -93,10 +92,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.nupGreen)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nupRed)).BeginInit();
             this.SuspendLayout();
-            // 
-            // checkForDrums
-            // 
-            this.checkForDrums.Interval = 1000;
             // 
             // lblMIDIChannel
             // 
@@ -862,7 +857,6 @@
         private System.Windows.Forms.ComboBox ddlMIDIDevice;
 
         private System.Windows.Forms.Timer lowerValues;
-        private System.Windows.Forms.Timer checkForDrums;
         private System.Windows.Forms.SaveFileDialog saveFileDialog;
         private System.Windows.Forms.Button btnSave;
         private System.Windows.Forms.Button btnLoad;

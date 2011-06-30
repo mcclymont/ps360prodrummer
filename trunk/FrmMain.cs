@@ -127,7 +127,6 @@ namespace _PS360Drum
 
             // Sets high priority and enables search for drums
             Process.GetCurrentProcess().PriorityClass = ProcessPriorityClass.High;
-            checkForDrums.Enabled = true;
         }
 
         private void ButtonPress(object sender, EventArgs e)

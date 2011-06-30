@@ -5,6 +5,12 @@ using System.Diagnostics; // http://www.codeproject.com/KB/cs/USB_HID.aspx
 
 namespace _PS360Drum
 {
+    enum CymbalType : byte
+    {
+        Yellow = 0,
+        Blue = 1 << 2,
+        Green = 1 << 3
+    }
     public enum PadColor : byte
     {
         Blue = 1 << 0,
@@ -30,29 +36,28 @@ namespace _PS360Drum
         GreenCymbal = 6,
         Pedal = 7
     };
+    public enum DrumDPad : byte
+    {
+        Left = 6,
+        Up = 0,
+        Right = 2,
+        Down = 4
+    }
+    public enum DrumButton : byte
+    {
+        Select,
+        Start,
+        Triangle,
+        Rectangle,
+        Circle,
+        X
+    }
     public class ProDrumController
     {
         public const int NUM_PADS = 8;
 
-        public enum DPad : byte
-        {
-            Left = 6, 
-            Up = 0, 
-            Right = 2, 
-            Down = 4
-        }
-        public enum Button
-        {
-            Select, 
-            Start,
-            Triangle, 
-            Rectangle, 
-            Circle, 
-            X
-        }
-
         public delegate void NoteHitDelegate(DrumPad pad, byte velocity);
-        public delegate void ButtonDelegate(Button button);
+        public delegate void ButtonDelegate(DrumButton button);
 
         public event NoteHitDelegate NotHitEvent;
         public event ButtonDelegate ButtonPressedEvent;
