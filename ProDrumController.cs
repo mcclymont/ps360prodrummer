@@ -21,7 +21,6 @@ namespace _PS360Drum
     }
     public enum PadType : byte
     {
-        Button = 0,
         Tom = 1 << 2,
         Cymbal = 1 << 3
     }
@@ -38,15 +37,21 @@ namespace _PS360Drum
     };
     public enum DrumDPad : byte
     {
-        Left = 6,
         Up = 0,
+        RightUp = 1,
         Right = 2,
-        Down = 4
+        RightDown = 3,
+        Down = 4,
+        LeftDown = 5,
+        Left = 6,
+        LeftUp = 7,
+        None = 8
     }
     public enum DrumButton : byte
     {
         Select,
         Start,
+        BigButton,
         Triangle,
         Rectangle,
         Circle,
@@ -55,17 +60,20 @@ namespace _PS360Drum
     public class ProDrumController
     {
         public const int NUM_PADS = 8;
+        public const int NUM_BUTTON_STATES = 7;
 
         public delegate void NoteHitDelegate(DrumPad pad, byte velocity);
         public delegate void ButtonDelegate(DrumButton button);
+        public delegate void DPadDelegate(DrumDPad dpad);
 
-        public event NoteHitDelegate NotHitEvent;
         public event ButtonDelegate ButtonPressedEvent;
         public event ButtonDelegate ButtonReleasedEvent;
         public event ButtonDelegate ButtonDownEvent;
+        public event DPadDelegate DPadStateChanged;
 
-        private bool[] m_ButtonState;
-        private bool[] m_DPadState;
+        private bool[] m_ButtonState = new bool[NUM_BUTTON_STATES];
+        private DrumDPad m_DPadState = DrumDPad.None;
+
 
         private HitFilter m_HitFilter;
 
@@ -106,22 +114,88 @@ namespace _PS360Drum
             if (args.data.GetLength(0) == 28)
             {
                 //byte[] test = new byte[28] { 0, 0, 0, 8, 127, 127, 127, 127, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 0, 2, 0, 2, 0, 2, 0 };
-
+                HandleDPad(args.data);
+                HandleButtons(args.data);
                 if (args.data[1] > 0)
                 {
-                    m_HitFilter.TriggerNotes(args.data[1], args.data[2], args.data[3], args.data, 12);
-                }
-                else
-                {
-                    if (args.data[3] != 8)
-                    {
-
-                    }
+                    if (args.data[2] != 0 || args.data[1] == (byte)PadColor.Pedal)
+                        m_HitFilter.TriggerNotes(args.data[1], args.data[2], args.data[3], args.data, 12);
                 }
             }
             else
             {
                 Debug.Assert(false, "Length detected != 28");
+            }
+        }
+        private bool IsCymbal(byte[] data)
+        {
+            return ((data[2] & (byte)PadType.Cymbal) != 0);
+        }
+        private DrumDPad TranslateDPad(byte raw)
+        {
+            return (DrumDPad)raw;
+        }
+        private void HandleDPad(byte[] data)
+        {
+            if (IsCymbal(data) == false) //can't check dpad if cymbal is hit
+            {
+                DrumDPad dpad = TranslateDPad(data[3]);
+                if (m_DPadState != dpad)
+                {
+                    if (DPadStateChanged != null)
+                        DPadStateChanged(dpad);
+                    m_DPadState = dpad;
+                }
+            }
+        }
+        private void HandleButtons(byte[] data)
+        {
+            bool[] newState = new bool[NUM_BUTTON_STATES];
+            if (data[2] == 0) //O, X, Rect, Triangle
+            {
+                if ((data[1] & 1) != 0)
+                    newState[(byte)DrumButton.Rectangle] = true;
+                if ((data[1] & 2) != 0)
+                    newState[(byte)DrumButton.X] = true;
+                if ((data[1] & 4) != 0)
+                    newState[(byte)DrumButton.Circle] = true;
+                if ((data[1] & 8) != 0)
+                    newState[(byte)DrumButton.Triangle] = true;
+            }
+            else
+            {
+                if ((data[2] & 1) != 0) //select
+                {
+                    newState[(byte)DrumButton.Select] = true;
+                }
+                if ((data[2] & 2) != 0) //start
+                {
+                    newState[(byte)DrumButton.Start] = true;
+                }
+                if ((data[2] & 16) != 0) //big button
+                {
+                    newState[(byte)DrumButton.BigButton] = true;
+                }
+            }
+            for (int i = 0; i < NUM_BUTTON_STATES; ++i)
+            {
+                if (newState[i])
+                    if (ButtonDownEvent != null)
+                        ButtonDownEvent((DrumButton)i);
+                if (m_ButtonState[i] != newState[i])
+                {
+                    if (newState[i] == false)
+                    {
+                        if (ButtonReleasedEvent != null)
+                            ButtonReleasedEvent((DrumButton)i);
+                    }
+                    else
+                    {
+                        if (ButtonPressedEvent != null)
+                            ButtonPressedEvent((DrumButton)i);
+                    }
+                    m_ButtonState[i] = newState[i];
+                }
             }
         }
         private void UsbOnSpecifiedDeviceArrived(object sender, EventArgs e)

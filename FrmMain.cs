@@ -15,11 +15,13 @@ namespace _PS360Drum
     {
         Object[] allowedBoostValues = new Object[6] { 10, 20, 30, 40, 50, 60 };
 
-        NumericUpDown[] referenceMidiNotes = new NumericUpDown[ProDrumController.NUM_PADS];
+        NumericUpDown[] referenceMidiNotes = new NumericUpDown[ProDrumController.NUM_PADS + ProDrumController.NUM_BUTTON_STATES + 4];
         Button[] referenceButtons = new Button[ProDrumController.NUM_PADS];
         ProgressBar[] referenceVelocity = new ProgressBar[ProDrumController.NUM_PADS];
-        CheckBox[] referenceBoost = new CheckBox[ProDrumController.NUM_PADS];
+        CheckBox[] referenceCheckBox = new CheckBox[ProDrumController.NUM_PADS + ProDrumController.NUM_BUTTON_STATES + 4];
         ComboBox[] referenceBoostValues = new ComboBox[ProDrumController.NUM_PADS];
+        const int BUTTON_OFFSET = ProDrumController.NUM_PADS;
+        const int DPAD_OFFSET = BUTTON_OFFSET + ProDrumController.NUM_BUTTON_STATES;
 
         Int32 _lowerValues;
         String defaultFilePath = Path.Combine(Path.GetDirectoryName(Application.ExecutablePath), "PS360Drum.p3s");
@@ -33,12 +35,18 @@ namespace _PS360Drum
         private delegate byte Byte_DrumPadDelegate(DrumPad pad);
         private delegate void Void_DrumPadByteDelegate(DrumPad pad, byte velocity);
 
+        private DrumDPad m_PrevDPadState = DrumDPad.None;
+
         public FrmMain()
         {    
             InitializeComponent();
 
             m_Serializer = new Serializer(this);
             m_DrumController = new ProDrumController(this);
+            m_DrumController.ButtonPressedEvent += DrumButtonPressed;
+            m_DrumController.ButtonReleasedEvent += DrumButtonReleased;
+            m_DrumController.DPadStateChanged += DrumDPadStateChanged;
+
             MidiSender = new MidiSender(this);
 
             // Lists MIDI devices
@@ -63,6 +71,18 @@ namespace _PS360Drum
             referenceMidiNotes[(int)DrumPad.BlueCymbal] = nupCymBlue;
             referenceMidiNotes[(int)DrumPad.GreenCymbal] = nupCymGreen;
             referenceMidiNotes[(int)DrumPad.Pedal] = nupPedal;
+            referenceMidiNotes[BUTTON_OFFSET + (int)DrumButton.BigButton] = nupBigButton;
+            referenceMidiNotes[BUTTON_OFFSET + (int)DrumButton.Circle] = nupCircle;
+            referenceMidiNotes[BUTTON_OFFSET + (int)DrumButton.Rectangle] = nupRectangle;
+            referenceMidiNotes[BUTTON_OFFSET + (int)DrumButton.Select] = nupSelect;
+            referenceMidiNotes[BUTTON_OFFSET + (int)DrumButton.Start] = nupStart;
+            referenceMidiNotes[BUTTON_OFFSET + (int)DrumButton.Triangle] = nupTriangle;
+            referenceMidiNotes[BUTTON_OFFSET + (int)DrumButton.X] = nupX;
+            referenceMidiNotes[DPAD_OFFSET + (int)DrumDPad.Left/2] = nupDPadLeft;
+            referenceMidiNotes[DPAD_OFFSET + (int)DrumDPad.Right/2] = nupDPadRight;
+            referenceMidiNotes[DPAD_OFFSET + (int)DrumDPad.Up/2] = nupDPadUp;
+            referenceMidiNotes[DPAD_OFFSET + (int)DrumDPad.Down/2] = nupDPadDown;
+
 
             referenceButtons[(int)DrumPad.RedTom] = btnRed;
             btnRed.Tag = DrumPad.RedTom;
@@ -90,14 +110,25 @@ namespace _PS360Drum
             referenceVelocity[(int)DrumPad.GreenCymbal] = pbCymGreen;
             referenceVelocity[(int)DrumPad.Pedal] = pbPedal;
 
-            referenceBoost[(int)DrumPad.RedTom] = chkRed;
-            referenceBoost[(int)DrumPad.YellowTom] = chkYellow;
-            referenceBoost[(int)DrumPad.BlueTom] = chkBlue;
-            referenceBoost[(int)DrumPad.GreenTom] = chkGreen;
-            referenceBoost[(int)DrumPad.YellowCymbal] = chkCymYellow;
-            referenceBoost[(int)DrumPad.BlueCymbal] = chkCymBlue;
-            referenceBoost[(int)DrumPad.GreenCymbal] = chkCymGreen;
-            referenceBoost[(int)DrumPad.Pedal] = chkPedal;
+            referenceCheckBox[(int)DrumPad.RedTom] = chkRed;
+            referenceCheckBox[(int)DrumPad.YellowTom] = chkYellow;
+            referenceCheckBox[(int)DrumPad.BlueTom] = chkBlue;
+            referenceCheckBox[(int)DrumPad.GreenTom] = chkGreen;
+            referenceCheckBox[(int)DrumPad.YellowCymbal] = chkCymYellow;
+            referenceCheckBox[(int)DrumPad.BlueCymbal] = chkCymBlue;
+            referenceCheckBox[(int)DrumPad.GreenCymbal] = chkCymGreen;
+            referenceCheckBox[(int)DrumPad.Pedal] = chkPedal;
+            referenceCheckBox[BUTTON_OFFSET + (int)DrumButton.BigButton] = chkBigButton;
+            referenceCheckBox[BUTTON_OFFSET + (int)DrumButton.Circle] = chkCircle;
+            referenceCheckBox[BUTTON_OFFSET + (int)DrumButton.Rectangle] = chkRectangle;
+            referenceCheckBox[BUTTON_OFFSET + (int)DrumButton.Select] = chkSelect;
+            referenceCheckBox[BUTTON_OFFSET + (int)DrumButton.Start] = chkStart;
+            referenceCheckBox[BUTTON_OFFSET + (int)DrumButton.Triangle] = chkTriangle;
+            referenceCheckBox[BUTTON_OFFSET + (int)DrumButton.X] = chkX;
+            referenceCheckBox[DPAD_OFFSET + (int)DrumDPad.Left/2] = chkDPadLeft;
+            referenceCheckBox[DPAD_OFFSET + (int)DrumDPad.Right/2] = chkDPadRight;
+            referenceCheckBox[DPAD_OFFSET + (int)DrumDPad.Up/2] = chkDPadUp;
+            referenceCheckBox[DPAD_OFFSET + (int)DrumDPad.Down/2] = chkDPadDown;
 
             referenceBoostValues[(int)DrumPad.RedTom] = ddlRed;
             referenceBoostValues[(int)DrumPad.YellowTom] = ddlYellow;
@@ -135,6 +166,116 @@ namespace _PS360Drum
             byte vel = (byte)m_Random.Next(0, 255);
             MidiSender.TriggerNote((DrumPad)b.Tag, vel);
         }
+        private void DrumButtonPressed(DrumButton b)
+        {
+            if (InvokeRequired)
+            {
+                Invoke(new ProDrumController.ButtonDelegate(DrumButtonPressed), new object[] { b });
+            }
+            else
+            {
+                referenceCheckBox[BUTTON_OFFSET + (int)b].Checked = true;
+                MidiSender.SendNoteOn((byte)referenceMidiNotes[BUTTON_OFFSET + (int)b].Value, 127);
+            }
+        }
+        private void DrumButtonReleased(DrumButton b)
+        {
+            if (InvokeRequired)
+            {
+                Invoke(new ProDrumController.ButtonDelegate(DrumButtonReleased), new object[] { b });
+            }
+            else
+            {
+                referenceCheckBox[BUTTON_OFFSET + (int)b].Checked = false;
+                MidiSender.SendNoteOff((byte)referenceMidiNotes[BUTTON_OFFSET + (int)b].Value);
+            }
+        }
+        private void DPadOn(DrumDPad dp)
+        {
+            Debug.Assert((byte)dp % 2 == 0, "only left, up, right, down is allowed here");
+
+            if (referenceCheckBox[DPAD_OFFSET + (int)dp / 2].Checked == false)
+            {
+                referenceCheckBox[DPAD_OFFSET + (int)dp / 2].Checked = true;
+                MidiSender.SendNoteOff((byte)referenceMidiNotes[DPAD_OFFSET + (int)dp / 2].Value);
+            }
+        }
+        private void DPadOn(DrumDPad dp, DrumDPad dp2)
+        {
+            Debug.Assert((byte)dp % 2 == 0, "only left, up, right, down is allowed here");
+            Debug.Assert((byte)dp2 % 2 == 0, "only left, up, right, down is allowed here");
+
+            if (referenceCheckBox[DPAD_OFFSET + (int)dp / 2].Checked == false)
+            {
+                referenceCheckBox[DPAD_OFFSET + (int)dp / 2].Checked = true;
+                MidiSender.SendNoteOn((byte)referenceMidiNotes[DPAD_OFFSET + (int)dp / 2].Value, 127);
+            }
+            if (referenceCheckBox[DPAD_OFFSET + (int)dp2 / 2].Checked == false)
+            {
+                referenceCheckBox[DPAD_OFFSET + (int)dp2 / 2].Checked = true;
+                MidiSender.SendNoteOn((byte)referenceMidiNotes[DPAD_OFFSET + (int)dp / 2].Value, 127);
+            }
+        }
+        private void DPadOff(DrumDPad dp)
+        {
+            Debug.Assert((byte)dp % 2 == 0, "only left, up, right, down is allowed here");
+            Debug.Assert((byte)dp % 2 == 0, "only left, up, right, down is allowed here");
+
+            if (referenceCheckBox[DPAD_OFFSET + (int)dp / 2].Checked == true)
+            {
+                referenceCheckBox[DPAD_OFFSET + (int)dp / 2].Checked = false;
+                MidiSender.SendNoteOff((byte)referenceMidiNotes[DPAD_OFFSET + (int)dp / 2].Value);
+            }
+        }
+        private void DrumDPadStateChanged(DrumDPad dp)
+        {
+            if (m_PrevDPadState == dp)
+                return;
+            if (InvokeRequired)
+            {
+                Invoke(new ProDrumController.DPadDelegate(DrumDPadStateChanged), new object[] { dp });
+            }
+            else
+            {
+                int new1, new2;
+                if ((byte)dp % 2 == 0)
+                {
+                    new1 = (byte)dp;
+                    new2 = (byte)dp;
+                }
+                else
+                {
+                    new1 = (byte)dp - 1;
+                    new2 = (byte)dp + 1;
+                    if (new2 == 8) new2 = 0;
+                }
+
+                if (dp != DrumDPad.None)
+                {
+                    DPadOn((DrumDPad)new1, (DrumDPad)new2);
+                }
+                if (m_PrevDPadState != DrumDPad.None)
+                {
+                    if ((byte)m_PrevDPadState % 2 == 0)
+                    {
+                        if ((byte)m_PrevDPadState != new1 && (byte)m_PrevDPadState != new2)
+                            DPadOff(m_PrevDPadState);
+                    }
+                    else
+                    {
+                        int prev1 = (byte)m_PrevDPadState - 1;
+                        int prev2 = (byte)m_PrevDPadState + 1;
+                        if (prev2 == 8) prev2 = 0;
+
+                        if (prev1 != new1 && prev1 != new2)
+                            DPadOff((DrumDPad)prev1);
+                        if (prev2 != new1 && prev2 != new2)
+                            DPadOff((DrumDPad)prev2);
+                    }
+                }                
+                m_PrevDPadState = dp;
+            }
+        }
         private void UpdateMidi(object sender, EventArgs e)
         {
             MidiSender.UpdateMidiSettings();
@@ -158,7 +299,7 @@ namespace _PS360Drum
         }
         public bool GetBoostEnabled(DrumPad pad)
         {
-            return referenceBoost[(int)pad].Checked;
+            return referenceCheckBox[(int)pad].Checked;
         }
         public string GetMidiOutDeviceName()
         {
@@ -175,7 +316,7 @@ namespace _PS360Drum
         }
         public void SetBoost(DrumPad pad, bool enabled, byte value)
         {
-            referenceBoost[(int)pad].Checked = enabled;
+            referenceCheckBox[(int)pad].Checked = enabled;
             SetSelectIndex(ref referenceBoostValues[(int)pad], value);
         }
         private void SetSelectIndex(ref ComboBox currentCombobox, Object value)
@@ -278,3 +419,4 @@ namespace _PS360Drum
         #endregion
     }
 }
+

@@ -23,8 +23,9 @@ namespace _PS360Drum
             // Maximum value is 127
             hitVelocity = (byte)(hitVelocity / 2);
 
-            SendNote(m_Main.GetMidiNote(pad), hitVelocity);
+            SendNoteOn(m_Main.GetMidiNote(pad), hitVelocity);
             m_Main.UpdateVelocityPb(pad, hitVelocity);
+            SendNoteOff(m_Main.GetMidiNote(pad));
         }
         public void UpdateMidiSettings()
         {
@@ -39,11 +40,16 @@ namespace _PS360Drum
             if (!m_DrumsHandler.Engaged)
                 m_DrumsHandler.Open();
         }
-        private void SendNote(byte midiNote, byte midiVelocity)
+        public void SendNoteOn(byte midiNote, byte midiVelocity)
         {
+            System.Diagnostics.Debug.Assert(midiVelocity < 128, "midiVelocity should be < 128");
             m_DrumsHandler.Send(m_Main.GetMidiChannel(),
                 (byte)CarlsMidiTools.MIDIStatusMessages.NoteOn,
                 midiNote, midiVelocity, (byte)0);
+            Console.WriteLine("Sending note: " + midiNote + " - velocity: " + midiVelocity);
+        }
+        public void SendNoteOff(byte midiNote)
+        {
             m_DrumsHandler.Send(m_Main.GetMidiChannel(),
                 (byte)CarlsMidiTools.MIDIStatusMessages.NoteOff,
                 midiNote, (byte)0, (byte)0);
