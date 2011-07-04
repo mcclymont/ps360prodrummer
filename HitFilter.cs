@@ -10,11 +10,8 @@ namespace _PS360Drum
     {
         Byte?[] m_HitVelocities = new Byte?[ProDrumController.NUM_PADS];
         Timer[] m_Timers = new Timer[ProDrumController.NUM_PADS];
-        Timer m_KickTimeout;
 
         FrmMain m_Main;
-
-        bool m_CanKick = true;
 
         const int MAX_HIT_PER_SECOND = 30; //33.3333ms delay
         private byte m_MinVelocitySensitivity = 42;
@@ -22,8 +19,6 @@ namespace _PS360Drum
         public HitFilter(FrmMain main)
         {
             m_Main = main;
-            m_KickTimeout = new Timer(1.0f / MAX_HIT_PER_SECOND * 1000);
-            m_KickTimeout.Elapsed += KickTimeout_Elapsed;
             for (int i = 0; i < ProDrumController.NUM_PADS; ++i)
             {
                 m_HitVelocities[i] = null;
@@ -50,11 +45,6 @@ namespace _PS360Drum
                 }
             }
         }
-        void KickTimeout_Elapsed(object sender, ElapsedEventArgs e)
-        {
-            m_KickTimeout.Stop();
-            m_CanKick = true;
-        }
 
         public void TriggerNotes(byte color, byte type, byte flag, byte[] velocities, int velocityArrayOffset)
         {
@@ -62,7 +52,6 @@ namespace _PS360Drum
             int isYellow = color & ((byte)PadColor.Yellow);
             int isBlue = color & ((byte)PadColor.Blue);
             int isGreen = color & ((byte)PadColor.Green);
-            int isPedal = color & ((byte)PadColor.Pedal);
             
             int isTom = type & ((byte)PadType.Tom);
             int isCymbal = type & ((byte)PadType.Cymbal);
@@ -109,16 +98,12 @@ namespace _PS360Drum
                     TriggerNote(DrumPad.GreenTom, velocities[velocityArrayOffset + 2]);
                 }
             }
-            if (isPedal != 0)
-            {
-                TriggerKick();
-            }
         }
         private byte Boost(DrumPad pad, byte velocity)
         {
-            if (m_Main.GetBoostEnabled(pad))
+            if (m_Main.GuiLinker.GetBoostEnabled(pad))
             {
-                velocity = (byte)Math.Min((byte)255, velocity + m_Main.GetBoost(pad));
+                velocity = (byte)Math.Min((byte)255, velocity + m_Main.GuiLinker.GetBoost(pad));
             }
             return velocity;
         }
@@ -136,23 +121,5 @@ namespace _PS360Drum
                 m_HitVelocities[(int)pad] = velocity;
             }
         }
-        private void TriggerKick()
-        {
-            byte velocity = (byte)(60 + m_MinVelocitySensitivity);
-            velocity = Boost(DrumPad.Pedal, velocity);
-            if (m_CanKick)
-            {
-                m_Timers[(int)DrumPad.Pedal].Start();
-                m_HitVelocities[(int)DrumPad.Pedal] = velocity;
-                m_CanKick = false;
-                m_KickTimeout.Start();
-            }
-            else
-            {
-                m_KickTimeout.Stop();
-                m_KickTimeout.Start();
-            }
-        }
-
     }
 }

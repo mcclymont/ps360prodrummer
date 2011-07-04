@@ -29,12 +29,124 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.Label lblMIDIChannel;
+            System.Windows.Forms.Label lblMIDIDevice;
+            System.Windows.Forms.Label label1;
+            System.Windows.Forms.Label label2;
+            System.Windows.Forms.Label label3;
+            System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
+            System.Windows.Forms.Label label5;
+            System.Windows.Forms.Label label6;
+            System.Windows.Forms.Label label7;
+            System.Windows.Forms.Label label8;
+            System.Windows.Forms.Label label9;
+            System.Windows.Forms.Label label10;
+            System.Windows.Forms.Label label11;
+            System.Windows.Forms.Label label12;
+            System.Windows.Forms.Label label13;
+            System.Windows.Forms.Label label14;
+            System.Windows.Forms.Label label15;
+            System.Windows.Forms.Label label16;
+            System.Windows.Forms.Label label17;
+            System.Windows.Forms.Label label18;
+            System.Windows.Forms.Label label4;
+            System.Windows.Forms.Label label19;
+            System.Windows.Forms.Label label20;
+            System.Windows.Forms.Label label21;
+            System.Windows.Forms.Label label22;
+            System.Windows.Forms.Label label23;
+            System.Windows.Forms.Label label24;
+            System.Windows.Forms.Label label25;
+            System.Windows.Forms.Label label26;
+            System.Windows.Forms.Label label27;
+            System.Windows.Forms.Label label28;
+            System.Windows.Forms.Label label29;
+            System.Windows.Forms.Label label30;
+            System.Windows.Forms.Label label31;
+            System.Windows.Forms.Label label32;
+            System.Windows.Forms.Label label33;
+            System.Windows.Forms.Label label34;
+            System.Windows.Forms.Label label35;
+            System.Windows.Forms.Label label36;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmMain));
-            this.lblMIDIChannel = new System.Windows.Forms.Label();
-            this.lblMIDIDevice = new System.Windows.Forms.Label();
+            this.ddlAdvSwitchDPadUp = new System.Windows.Forms.ComboBox();
+            this.nupAdvVelDPadUp = new System.Windows.Forms.NumericUpDown();
+            this.ddlAdvSwitchDPadRight = new System.Windows.Forms.ComboBox();
+            this.ddlAdvSwitchDPadDown = new System.Windows.Forms.ComboBox();
+            this.ddlAdvSwitchDPadLeft = new System.Windows.Forms.ComboBox();
+            this.ddlAdvSwitchTriangle = new System.Windows.Forms.ComboBox();
+            this.ddlAdvSwitchCircle = new System.Windows.Forms.ComboBox();
+            this.ddlAdvSwitchX = new System.Windows.Forms.ComboBox();
+            this.ddlAdvSwitchRectangle = new System.Windows.Forms.ComboBox();
+            this.ddlAdvSwitchSelect = new System.Windows.Forms.ComboBox();
+            this.ddlAdvSwitchStart = new System.Windows.Forms.ComboBox();
+            this.ddlAdvSwitchBigButton = new System.Windows.Forms.ComboBox();
+            this.nupAdvVelDPadRight = new System.Windows.Forms.NumericUpDown();
+            this.nupAdvVelDPadDown = new System.Windows.Forms.NumericUpDown();
+            this.nupAdvVelDPadLeft = new System.Windows.Forms.NumericUpDown();
+            this.nupAdvVelTriangle = new System.Windows.Forms.NumericUpDown();
+            this.nupAdvVelCircle = new System.Windows.Forms.NumericUpDown();
+            this.nupAdvVelX = new System.Windows.Forms.NumericUpDown();
+            this.nupAdvVelRectangle = new System.Windows.Forms.NumericUpDown();
+            this.nupAdvVelSelect = new System.Windows.Forms.NumericUpDown();
+            this.nupAdvVelBigButton = new System.Windows.Forms.NumericUpDown();
+            this.nupAdvNoteStart = new System.Windows.Forms.NumericUpDown();
+            this.nupAdvVelStart = new System.Windows.Forms.NumericUpDown();
+            this.nupAdvNoteBigButton = new System.Windows.Forms.NumericUpDown();
+            this.nupAdvNoteSelect = new System.Windows.Forms.NumericUpDown();
+            this.nupAdvNoteRectangle = new System.Windows.Forms.NumericUpDown();
+            this.nupAdvNoteX = new System.Windows.Forms.NumericUpDown();
+            this.nupAdvNoteCircle = new System.Windows.Forms.NumericUpDown();
+            this.nupAdvNoteTriangle = new System.Windows.Forms.NumericUpDown();
+            this.nupAdvNoteDPadLeft = new System.Windows.Forms.NumericUpDown();
+            this.nupAdvNoteDPadDown = new System.Windows.Forms.NumericUpDown();
+            this.nupAdvNoteDPadRight = new System.Windows.Forms.NumericUpDown();
+            this.nupAdvNoteDPadUp = new System.Windows.Forms.NumericUpDown();
             this.nupMIDIChannel = new System.Windows.Forms.NumericUpDown();
             this.ddlMIDIDevice = new System.Windows.Forms.ComboBox();
             this.pnlHolder = new System.Windows.Forms.Panel();
+            this.groupBox7 = new System.Windows.Forms.GroupBox();
+            this.ddlRedTom = new System.Windows.Forms.ComboBox();
+            this.nupRedTom = new System.Windows.Forms.NumericUpDown();
+            this.btnRedTom = new System.Windows.Forms.Button();
+            this.pbRedTom = new System.Windows.Forms.ProgressBar();
+            this.chkBoostRedTom = new System.Windows.Forms.CheckBox();
+            this.groupBox6 = new System.Windows.Forms.GroupBox();
+            this.ddlYellowTom = new System.Windows.Forms.ComboBox();
+            this.nupYellowTom = new System.Windows.Forms.NumericUpDown();
+            this.btnYellowTom = new System.Windows.Forms.Button();
+            this.pbYellowTom = new System.Windows.Forms.ProgressBar();
+            this.chkBoostYellowTom = new System.Windows.Forms.CheckBox();
+            this.groupBox5 = new System.Windows.Forms.GroupBox();
+            this.nupBlueTom = new System.Windows.Forms.NumericUpDown();
+            this.btnBlueTom = new System.Windows.Forms.Button();
+            this.pbBlueTom = new System.Windows.Forms.ProgressBar();
+            this.chkBoostBlueTom = new System.Windows.Forms.CheckBox();
+            this.ddlBlueTom = new System.Windows.Forms.ComboBox();
+            this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.nupGreenTom = new System.Windows.Forms.NumericUpDown();
+            this.btnGreenTom = new System.Windows.Forms.Button();
+            this.pbGreenTom = new System.Windows.Forms.ProgressBar();
+            this.chkBoostGreenTom = new System.Windows.Forms.CheckBox();
+            this.ddlGreenTom = new System.Windows.Forms.ComboBox();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.nupGreenCymbal = new System.Windows.Forms.NumericUpDown();
+            this.btnGreenCymbal = new System.Windows.Forms.Button();
+            this.pbGreenCymbal = new System.Windows.Forms.ProgressBar();
+            this.chkBoostGreenCymbal = new System.Windows.Forms.CheckBox();
+            this.ddlGreenCymbal = new System.Windows.Forms.ComboBox();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.nupBlueCymbal = new System.Windows.Forms.NumericUpDown();
+            this.btnBlueCymbal = new System.Windows.Forms.Button();
+            this.pbBlueCymbal = new System.Windows.Forms.ProgressBar();
+            this.chkBoostBlueCymbal = new System.Windows.Forms.CheckBox();
+            this.ddlBlueCymbal = new System.Windows.Forms.ComboBox();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.ddlYellowCymbal = new System.Windows.Forms.ComboBox();
+            this.nupYellowCymbal = new System.Windows.Forms.NumericUpDown();
+            this.btnYellowCymbal = new System.Windows.Forms.Button();
+            this.pbYellowCymbal = new System.Windows.Forms.ProgressBar();
+            this.chkBoostYellowCymbal = new System.Windows.Forms.CheckBox();
             this.chkDPadLeft = new System.Windows.Forms.CheckBox();
             this.chkDPadDown = new System.Windows.Forms.CheckBox();
             this.chkDPadUp = new System.Windows.Forms.CheckBox();
@@ -46,32 +158,8 @@
             this.chkX = new System.Windows.Forms.CheckBox();
             this.chkCircle = new System.Windows.Forms.CheckBox();
             this.chkTriangle = new System.Windows.Forms.CheckBox();
-            this.ddlPedal = new System.Windows.Forms.ComboBox();
-            this.ddlCymBlue = new System.Windows.Forms.ComboBox();
-            this.ddlGreen = new System.Windows.Forms.ComboBox();
-            this.ddlCymGreen = new System.Windows.Forms.ComboBox();
-            this.ddlCymYellow = new System.Windows.Forms.ComboBox();
-            this.ddlBlue = new System.Windows.Forms.ComboBox();
-            this.ddlRed = new System.Windows.Forms.ComboBox();
-            this.ddlYellow = new System.Windows.Forms.ComboBox();
-            this.chkPedal = new System.Windows.Forms.CheckBox();
-            this.chkGreen = new System.Windows.Forms.CheckBox();
-            this.chkCymBlue = new System.Windows.Forms.CheckBox();
-            this.chkCymGreen = new System.Windows.Forms.CheckBox();
-            this.chkCymYellow = new System.Windows.Forms.CheckBox();
-            this.chkBlue = new System.Windows.Forms.CheckBox();
-            this.chkRed = new System.Windows.Forms.CheckBox();
-            this.chkYellow = new System.Windows.Forms.CheckBox();
-            this.pbCymGreen = new System.Windows.Forms.ProgressBar();
-            this.pbPedal = new System.Windows.Forms.ProgressBar();
-            this.pbCymYellow = new System.Windows.Forms.ProgressBar();
-            this.pbGreen = new System.Windows.Forms.ProgressBar();
-            this.pbBlue = new System.Windows.Forms.ProgressBar();
-            this.pbRed = new System.Windows.Forms.ProgressBar();
-            this.pbCymBlue = new System.Windows.Forms.ProgressBar();
-            this.pbYellow = new System.Windows.Forms.ProgressBar();
-            this.btnPedal = new System.Windows.Forms.Button();
-            this.btnCymBlue = new System.Windows.Forms.Button();
+            this.chkPedalLeft = new System.Windows.Forms.CheckBox();
+            this.chkPedalRight = new System.Windows.Forms.CheckBox();
             this.nupDPadDown = new System.Windows.Forms.NumericUpDown();
             this.nupDPadLeft = new System.Windows.Forms.NumericUpDown();
             this.nupDPadUp = new System.Windows.Forms.NumericUpDown();
@@ -83,28 +171,138 @@
             this.nupX = new System.Windows.Forms.NumericUpDown();
             this.nupTriangle = new System.Windows.Forms.NumericUpDown();
             this.nupCircle = new System.Windows.Forms.NumericUpDown();
-            this.nupPedal = new System.Windows.Forms.NumericUpDown();
-            this.btnCymGreen = new System.Windows.Forms.Button();
-            this.btnYellow = new System.Windows.Forms.Button();
-            this.btnCymYellow = new System.Windows.Forms.Button();
-            this.nupCymBlue = new System.Windows.Forms.NumericUpDown();
-            this.btnBlue = new System.Windows.Forms.Button();
-            this.nupCymGreen = new System.Windows.Forms.NumericUpDown();
-            this.nupYellow = new System.Windows.Forms.NumericUpDown();
-            this.nupCymYellow = new System.Windows.Forms.NumericUpDown();
-            this.btnGreen = new System.Windows.Forms.Button();
-            this.nupBlue = new System.Windows.Forms.NumericUpDown();
-            this.btnRed = new System.Windows.Forms.Button();
-            this.nupGreen = new System.Windows.Forms.NumericUpDown();
-            this.nupRed = new System.Windows.Forms.NumericUpDown();
+            this.nupPedalLeft = new System.Windows.Forms.NumericUpDown();
+            this.nupPedalRight = new System.Windows.Forms.NumericUpDown();
             this.lowerValues = new System.Windows.Forms.Timer(this.components);
             this.saveFileDialog = new System.Windows.Forms.SaveFileDialog();
             this.btnSave = new System.Windows.Forms.Button();
             this.btnLoad = new System.Windows.Forms.Button();
             this.openFileDialog = new System.Windows.Forms.OpenFileDialog();
             this.btnReset = new System.Windows.Forms.Button();
+            this.tabControl1 = new System.Windows.Forms.TabControl();
+            this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.groupBox11 = new System.Windows.Forms.GroupBox();
+            this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
+            this.ddlAdvSwitchPedalLeft = new System.Windows.Forms.ComboBox();
+            this.nupAdvVelPedalLeft = new System.Windows.Forms.NumericUpDown();
+            this.ddlAdvSwitchPedalRight = new System.Windows.Forms.ComboBox();
+            this.nupAdvVelPedalRight = new System.Windows.Forms.NumericUpDown();
+            this.nupAdvNotePedalRight = new System.Windows.Forms.NumericUpDown();
+            this.nupAdvNotePedalLeft = new System.Windows.Forms.NumericUpDown();
+            this.groupBox10 = new System.Windows.Forms.GroupBox();
+            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
+            this.ddlAdvBoostRedTom = new System.Windows.Forms.ComboBox();
+            this.nupAdvNoteGreenCymbal = new System.Windows.Forms.NumericUpDown();
+            this.nupAdvNoteGreenTom = new System.Windows.Forms.NumericUpDown();
+            this.nupAdvNoteBlueCymbal = new System.Windows.Forms.NumericUpDown();
+            this.nupAdvNoteBlueTom = new System.Windows.Forms.NumericUpDown();
+            this.nupAdvNoteYellowCymbal = new System.Windows.Forms.NumericUpDown();
+            this.nupAdvNoteYellowTom = new System.Windows.Forms.NumericUpDown();
+            this.nupAdvNoteRedTom = new System.Windows.Forms.NumericUpDown();
+            this.chkAdvBoostRedTom = new System.Windows.Forms.CheckBox();
+            this.chkAdvBoostYellowTom = new System.Windows.Forms.CheckBox();
+            this.chkAdvBoostYellowCymbal = new System.Windows.Forms.CheckBox();
+            this.chkAdvBoostBlueTom = new System.Windows.Forms.CheckBox();
+            this.chkAdvBoostBlueCymbal = new System.Windows.Forms.CheckBox();
+            this.chkAdvBoostGreenTom = new System.Windows.Forms.CheckBox();
+            this.chkAdvBoostGreenCymbal = new System.Windows.Forms.CheckBox();
+            this.ddlAdvBoostYellowTom = new System.Windows.Forms.ComboBox();
+            this.ddlAdvBoostYellowCymbal = new System.Windows.Forms.ComboBox();
+            this.ddlAdvBoostBlueTom = new System.Windows.Forms.ComboBox();
+            this.ddlAdvBoostBlueCymbal = new System.Windows.Forms.ComboBox();
+            this.ddlAdvBoostGreenTom = new System.Windows.Forms.ComboBox();
+            this.ddlAdvBoostGreenCymbal = new System.Windows.Forms.ComboBox();
+            this.groupBox9 = new System.Windows.Forms.GroupBox();
+            this.groupBox8 = new System.Windows.Forms.GroupBox();
+            this.listBox1 = new System.Windows.Forms.ListBox();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.numericUpDown35 = new System.Windows.Forms.NumericUpDown();
+            this.numericUpDown34 = new System.Windows.Forms.NumericUpDown();
+            this.numericUpDown2 = new System.Windows.Forms.NumericUpDown();
+            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.panel1 = new System.Windows.Forms.Panel();
+            lblMIDIChannel = new System.Windows.Forms.Label();
+            lblMIDIDevice = new System.Windows.Forms.Label();
+            label1 = new System.Windows.Forms.Label();
+            label2 = new System.Windows.Forms.Label();
+            label3 = new System.Windows.Forms.Label();
+            tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            label5 = new System.Windows.Forms.Label();
+            label6 = new System.Windows.Forms.Label();
+            label7 = new System.Windows.Forms.Label();
+            label8 = new System.Windows.Forms.Label();
+            label9 = new System.Windows.Forms.Label();
+            label10 = new System.Windows.Forms.Label();
+            label11 = new System.Windows.Forms.Label();
+            label12 = new System.Windows.Forms.Label();
+            label13 = new System.Windows.Forms.Label();
+            label14 = new System.Windows.Forms.Label();
+            label15 = new System.Windows.Forms.Label();
+            label16 = new System.Windows.Forms.Label();
+            label17 = new System.Windows.Forms.Label();
+            label18 = new System.Windows.Forms.Label();
+            label4 = new System.Windows.Forms.Label();
+            label19 = new System.Windows.Forms.Label();
+            label20 = new System.Windows.Forms.Label();
+            label21 = new System.Windows.Forms.Label();
+            label22 = new System.Windows.Forms.Label();
+            label23 = new System.Windows.Forms.Label();
+            label24 = new System.Windows.Forms.Label();
+            label25 = new System.Windows.Forms.Label();
+            label26 = new System.Windows.Forms.Label();
+            label27 = new System.Windows.Forms.Label();
+            label28 = new System.Windows.Forms.Label();
+            label29 = new System.Windows.Forms.Label();
+            label30 = new System.Windows.Forms.Label();
+            label31 = new System.Windows.Forms.Label();
+            label32 = new System.Windows.Forms.Label();
+            label33 = new System.Windows.Forms.Label();
+            label34 = new System.Windows.Forms.Label();
+            label35 = new System.Windows.Forms.Label();
+            label36 = new System.Windows.Forms.Label();
+            tableLayoutPanel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nupAdvVelDPadUp)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nupAdvVelDPadRight)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nupAdvVelDPadDown)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nupAdvVelDPadLeft)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nupAdvVelTriangle)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nupAdvVelCircle)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nupAdvVelX)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nupAdvVelRectangle)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nupAdvVelSelect)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nupAdvVelBigButton)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nupAdvNoteStart)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nupAdvVelStart)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nupAdvNoteBigButton)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nupAdvNoteSelect)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nupAdvNoteRectangle)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nupAdvNoteX)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nupAdvNoteCircle)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nupAdvNoteTriangle)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nupAdvNoteDPadLeft)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nupAdvNoteDPadDown)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nupAdvNoteDPadRight)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nupAdvNoteDPadUp)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nupMIDIChannel)).BeginInit();
             this.pnlHolder.SuspendLayout();
+            this.groupBox7.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nupRedTom)).BeginInit();
+            this.groupBox6.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nupYellowTom)).BeginInit();
+            this.groupBox5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nupBlueTom)).BeginInit();
+            this.groupBox4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nupGreenTom)).BeginInit();
+            this.groupBox3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nupGreenCymbal)).BeginInit();
+            this.groupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nupBlueCymbal)).BeginInit();
+            this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nupYellowCymbal)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nupDPadDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nupDPadLeft)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nupDPadUp)).BeginInit();
@@ -116,39 +314,964 @@
             ((System.ComponentModel.ISupportInitialize)(this.nupX)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nupTriangle)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nupCircle)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nupPedal)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nupCymBlue)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nupCymGreen)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nupYellow)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nupCymYellow)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nupBlue)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nupGreen)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nupRed)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nupPedalLeft)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nupPedalRight)).BeginInit();
+            this.tabControl1.SuspendLayout();
+            this.tabPage1.SuspendLayout();
+            this.tabPage2.SuspendLayout();
+            this.groupBox11.SuspendLayout();
+            this.tableLayoutPanel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nupAdvVelPedalLeft)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nupAdvVelPedalRight)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nupAdvNotePedalRight)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nupAdvNotePedalLeft)).BeginInit();
+            this.groupBox10.SuspendLayout();
+            this.tableLayoutPanel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nupAdvNoteGreenCymbal)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nupAdvNoteGreenTom)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nupAdvNoteBlueCymbal)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nupAdvNoteBlueTom)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nupAdvNoteYellowCymbal)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nupAdvNoteYellowTom)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nupAdvNoteRedTom)).BeginInit();
+            this.groupBox9.SuspendLayout();
+            this.groupBox8.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown35)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown34)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // lblMIDIChannel
             // 
-            this.lblMIDIChannel.Location = new System.Drawing.Point(192, 582);
-            this.lblMIDIChannel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblMIDIChannel.Name = "lblMIDIChannel";
-            this.lblMIDIChannel.Size = new System.Drawing.Size(107, 30);
-            this.lblMIDIChannel.TabIndex = 21;
-            this.lblMIDIChannel.Text = "MIDI Channel";
-            this.lblMIDIChannel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            lblMIDIChannel.Location = new System.Drawing.Point(185, 0);
+            lblMIDIChannel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            lblMIDIChannel.Name = "lblMIDIChannel";
+            lblMIDIChannel.Size = new System.Drawing.Size(107, 30);
+            lblMIDIChannel.TabIndex = 21;
+            lblMIDIChannel.Text = "MIDI Channel";
+            lblMIDIChannel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // lblMIDIDevice
             // 
-            this.lblMIDIDevice.Location = new System.Drawing.Point(11, 582);
-            this.lblMIDIDevice.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblMIDIDevice.Name = "lblMIDIDevice";
-            this.lblMIDIDevice.Size = new System.Drawing.Size(96, 30);
-            this.lblMIDIDevice.TabIndex = 20;
-            this.lblMIDIDevice.Text = "MIDI Device";
-            this.lblMIDIDevice.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            lblMIDIDevice.Location = new System.Drawing.Point(4, 0);
+            lblMIDIDevice.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            lblMIDIDevice.Name = "lblMIDIDevice";
+            lblMIDIDevice.Size = new System.Drawing.Size(96, 30);
+            lblMIDIDevice.TabIndex = 20;
+            lblMIDIDevice.Text = "MIDI Device";
+            lblMIDIDevice.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Location = new System.Drawing.Point(6, 22);
+            label1.Name = "label1";
+            label1.Size = new System.Drawing.Size(66, 17);
+            label1.TabIndex = 8;
+            label1.Text = "If velocity";
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Location = new System.Drawing.Point(150, 51);
+            label2.Name = "label2";
+            label2.Size = new System.Drawing.Size(103, 17);
+            label2.TabIndex = 10;
+            label2.Text = "change note to";
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Location = new System.Drawing.Point(4, 32);
+            label3.Name = "label3";
+            label3.Size = new System.Drawing.Size(65, 17);
+            label3.TabIndex = 0;
+            label3.Text = "DPad Up";
+            // 
+            // tableLayoutPanel1
+            // 
+            tableLayoutPanel1.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Single;
+            tableLayoutPanel1.ColumnCount = 4;
+            tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            tableLayoutPanel1.Controls.Add(label3, 0, 1);
+            tableLayoutPanel1.Controls.Add(this.ddlAdvSwitchDPadUp, 3, 1);
+            tableLayoutPanel1.Controls.Add(label5, 0, 0);
+            tableLayoutPanel1.Controls.Add(label6, 1, 0);
+            tableLayoutPanel1.Controls.Add(label7, 2, 0);
+            tableLayoutPanel1.Controls.Add(label8, 3, 0);
+            tableLayoutPanel1.Controls.Add(this.nupAdvVelDPadUp, 2, 1);
+            tableLayoutPanel1.Controls.Add(label9, 0, 2);
+            tableLayoutPanel1.Controls.Add(label10, 0, 3);
+            tableLayoutPanel1.Controls.Add(label11, 0, 4);
+            tableLayoutPanel1.Controls.Add(label12, 0, 5);
+            tableLayoutPanel1.Controls.Add(label13, 0, 6);
+            tableLayoutPanel1.Controls.Add(label14, 0, 7);
+            tableLayoutPanel1.Controls.Add(label15, 0, 8);
+            tableLayoutPanel1.Controls.Add(label16, 0, 9);
+            tableLayoutPanel1.Controls.Add(label17, 0, 10);
+            tableLayoutPanel1.Controls.Add(label18, 0, 11);
+            tableLayoutPanel1.Controls.Add(this.ddlAdvSwitchDPadRight, 3, 2);
+            tableLayoutPanel1.Controls.Add(this.ddlAdvSwitchDPadDown, 3, 3);
+            tableLayoutPanel1.Controls.Add(this.ddlAdvSwitchDPadLeft, 3, 4);
+            tableLayoutPanel1.Controls.Add(this.ddlAdvSwitchTriangle, 3, 5);
+            tableLayoutPanel1.Controls.Add(this.ddlAdvSwitchCircle, 3, 6);
+            tableLayoutPanel1.Controls.Add(this.ddlAdvSwitchX, 3, 7);
+            tableLayoutPanel1.Controls.Add(this.ddlAdvSwitchRectangle, 3, 8);
+            tableLayoutPanel1.Controls.Add(this.ddlAdvSwitchSelect, 3, 9);
+            tableLayoutPanel1.Controls.Add(this.ddlAdvSwitchStart, 3, 10);
+            tableLayoutPanel1.Controls.Add(this.ddlAdvSwitchBigButton, 3, 11);
+            tableLayoutPanel1.Controls.Add(this.nupAdvVelDPadRight, 2, 2);
+            tableLayoutPanel1.Controls.Add(this.nupAdvVelDPadDown, 2, 3);
+            tableLayoutPanel1.Controls.Add(this.nupAdvVelDPadLeft, 2, 4);
+            tableLayoutPanel1.Controls.Add(this.nupAdvVelTriangle, 2, 5);
+            tableLayoutPanel1.Controls.Add(this.nupAdvVelCircle, 2, 6);
+            tableLayoutPanel1.Controls.Add(this.nupAdvVelX, 2, 7);
+            tableLayoutPanel1.Controls.Add(this.nupAdvVelRectangle, 2, 8);
+            tableLayoutPanel1.Controls.Add(this.nupAdvVelSelect, 2, 9);
+            tableLayoutPanel1.Controls.Add(this.nupAdvVelBigButton, 2, 11);
+            tableLayoutPanel1.Controls.Add(this.nupAdvNoteStart, 1, 10);
+            tableLayoutPanel1.Controls.Add(this.nupAdvVelStart, 2, 10);
+            tableLayoutPanel1.Controls.Add(this.nupAdvNoteBigButton, 1, 11);
+            tableLayoutPanel1.Controls.Add(this.nupAdvNoteSelect, 1, 9);
+            tableLayoutPanel1.Controls.Add(this.nupAdvNoteRectangle, 1, 8);
+            tableLayoutPanel1.Controls.Add(this.nupAdvNoteX, 1, 7);
+            tableLayoutPanel1.Controls.Add(this.nupAdvNoteCircle, 1, 6);
+            tableLayoutPanel1.Controls.Add(this.nupAdvNoteTriangle, 1, 5);
+            tableLayoutPanel1.Controls.Add(this.nupAdvNoteDPadLeft, 1, 4);
+            tableLayoutPanel1.Controls.Add(this.nupAdvNoteDPadDown, 1, 3);
+            tableLayoutPanel1.Controls.Add(this.nupAdvNoteDPadRight, 1, 2);
+            tableLayoutPanel1.Controls.Add(this.nupAdvNoteDPadUp, 1, 1);
+            tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            tableLayoutPanel1.Location = new System.Drawing.Point(3, 18);
+            tableLayoutPanel1.Name = "tableLayoutPanel1";
+            tableLayoutPanel1.RowCount = 12;
+            tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
+            tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
+            tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
+            tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
+            tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
+            tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
+            tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
+            tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
+            tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
+            tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
+            tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
+            tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
+            tableLayoutPanel1.Size = new System.Drawing.Size(427, 377);
+            tableLayoutPanel1.TabIndex = 2;
+            // 
+            // ddlAdvSwitchDPadUp
+            // 
+            this.ddlAdvSwitchDPadUp.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.ddlAdvSwitchDPadUp.FormattingEnabled = true;
+            this.ddlAdvSwitchDPadUp.Location = new System.Drawing.Point(322, 35);
+            this.ddlAdvSwitchDPadUp.Name = "ddlAdvSwitchDPadUp";
+            this.ddlAdvSwitchDPadUp.Size = new System.Drawing.Size(101, 24);
+            this.ddlAdvSwitchDPadUp.TabIndex = 1;
+            // 
+            // label5
+            // 
+            label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            label5.Location = new System.Drawing.Point(4, 1);
+            label5.Name = "label5";
+            label5.Size = new System.Drawing.Size(99, 27);
+            label5.TabIndex = 0;
+            label5.Text = "Button";
+            label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label6
+            // 
+            label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            label6.Location = new System.Drawing.Point(110, 1);
+            label6.Name = "label6";
+            label6.Size = new System.Drawing.Size(99, 27);
+            label6.TabIndex = 0;
+            label6.Text = "Note";
+            label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label7
+            // 
+            label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            label7.Location = new System.Drawing.Point(216, 1);
+            label7.Name = "label7";
+            label7.Size = new System.Drawing.Size(99, 27);
+            label7.TabIndex = 0;
+            label7.Text = "Velocity";
+            label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label8
+            // 
+            label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            label8.Location = new System.Drawing.Point(322, 1);
+            label8.Name = "label8";
+            label8.Size = new System.Drawing.Size(101, 27);
+            label8.TabIndex = 0;
+            label8.Text = "Switch mode";
+            label8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // nupAdvVelDPadUp
+            // 
+            this.nupAdvVelDPadUp.Location = new System.Drawing.Point(217, 36);
+            this.nupAdvVelDPadUp.Margin = new System.Windows.Forms.Padding(4);
+            this.nupAdvVelDPadUp.Maximum = new decimal(new int[] {
+            127,
+            0,
+            0,
+            0});
+            this.nupAdvVelDPadUp.Name = "nupAdvVelDPadUp";
+            this.nupAdvVelDPadUp.Size = new System.Drawing.Size(97, 22);
+            this.nupAdvVelDPadUp.TabIndex = 6;
+            this.nupAdvVelDPadUp.Value = new decimal(new int[] {
+            64,
+            0,
+            0,
+            0});
+            // 
+            // label9
+            // 
+            label9.AutoSize = true;
+            label9.Location = new System.Drawing.Point(4, 63);
+            label9.Name = "label9";
+            label9.Size = new System.Drawing.Size(80, 17);
+            label9.TabIndex = 0;
+            label9.Text = "DPad Right";
+            // 
+            // label10
+            // 
+            label10.AutoSize = true;
+            label10.Location = new System.Drawing.Point(4, 94);
+            label10.Name = "label10";
+            label10.Size = new System.Drawing.Size(82, 17);
+            label10.TabIndex = 0;
+            label10.Text = "DPad Down";
+            // 
+            // label11
+            // 
+            label11.AutoSize = true;
+            label11.Location = new System.Drawing.Point(4, 125);
+            label11.Name = "label11";
+            label11.Size = new System.Drawing.Size(71, 17);
+            label11.TabIndex = 0;
+            label11.Text = "DPad Left";
+            // 
+            // label12
+            // 
+            label12.AutoSize = true;
+            label12.Location = new System.Drawing.Point(4, 156);
+            label12.Name = "label12";
+            label12.Size = new System.Drawing.Size(60, 17);
+            label12.TabIndex = 0;
+            label12.Text = "Triangle";
+            // 
+            // label13
+            // 
+            label13.AutoSize = true;
+            label13.Location = new System.Drawing.Point(4, 187);
+            label13.Name = "label13";
+            label13.Size = new System.Drawing.Size(43, 17);
+            label13.TabIndex = 0;
+            label13.Text = "Circle";
+            // 
+            // label14
+            // 
+            label14.AutoSize = true;
+            label14.Location = new System.Drawing.Point(4, 218);
+            label14.Name = "label14";
+            label14.Size = new System.Drawing.Size(17, 17);
+            label14.TabIndex = 0;
+            label14.Text = "X";
+            // 
+            // label15
+            // 
+            label15.AutoSize = true;
+            label15.Location = new System.Drawing.Point(4, 249);
+            label15.Name = "label15";
+            label15.Size = new System.Drawing.Size(72, 17);
+            label15.TabIndex = 0;
+            label15.Text = "Rectangle";
+            // 
+            // label16
+            // 
+            label16.AutoSize = true;
+            label16.Location = new System.Drawing.Point(4, 280);
+            label16.Name = "label16";
+            label16.Size = new System.Drawing.Size(47, 17);
+            label16.TabIndex = 0;
+            label16.Text = "Select";
+            // 
+            // label17
+            // 
+            label17.AutoSize = true;
+            label17.Location = new System.Drawing.Point(4, 311);
+            label17.Name = "label17";
+            label17.Size = new System.Drawing.Size(38, 17);
+            label17.TabIndex = 0;
+            label17.Text = "Start";
+            // 
+            // label18
+            // 
+            label18.AutoSize = true;
+            label18.Location = new System.Drawing.Point(4, 342);
+            label18.Name = "label18";
+            label18.Size = new System.Drawing.Size(72, 17);
+            label18.TabIndex = 0;
+            label18.Text = "Big button";
+            // 
+            // ddlAdvSwitchDPadRight
+            // 
+            this.ddlAdvSwitchDPadRight.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.ddlAdvSwitchDPadRight.FormattingEnabled = true;
+            this.ddlAdvSwitchDPadRight.Location = new System.Drawing.Point(322, 66);
+            this.ddlAdvSwitchDPadRight.Name = "ddlAdvSwitchDPadRight";
+            this.ddlAdvSwitchDPadRight.Size = new System.Drawing.Size(101, 24);
+            this.ddlAdvSwitchDPadRight.TabIndex = 1;
+            // 
+            // ddlAdvSwitchDPadDown
+            // 
+            this.ddlAdvSwitchDPadDown.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.ddlAdvSwitchDPadDown.FormattingEnabled = true;
+            this.ddlAdvSwitchDPadDown.Location = new System.Drawing.Point(322, 97);
+            this.ddlAdvSwitchDPadDown.Name = "ddlAdvSwitchDPadDown";
+            this.ddlAdvSwitchDPadDown.Size = new System.Drawing.Size(101, 24);
+            this.ddlAdvSwitchDPadDown.TabIndex = 1;
+            // 
+            // ddlAdvSwitchDPadLeft
+            // 
+            this.ddlAdvSwitchDPadLeft.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.ddlAdvSwitchDPadLeft.FormattingEnabled = true;
+            this.ddlAdvSwitchDPadLeft.Location = new System.Drawing.Point(322, 128);
+            this.ddlAdvSwitchDPadLeft.Name = "ddlAdvSwitchDPadLeft";
+            this.ddlAdvSwitchDPadLeft.Size = new System.Drawing.Size(101, 24);
+            this.ddlAdvSwitchDPadLeft.TabIndex = 1;
+            // 
+            // ddlAdvSwitchTriangle
+            // 
+            this.ddlAdvSwitchTriangle.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.ddlAdvSwitchTriangle.FormattingEnabled = true;
+            this.ddlAdvSwitchTriangle.Location = new System.Drawing.Point(322, 159);
+            this.ddlAdvSwitchTriangle.Name = "ddlAdvSwitchTriangle";
+            this.ddlAdvSwitchTriangle.Size = new System.Drawing.Size(101, 24);
+            this.ddlAdvSwitchTriangle.TabIndex = 1;
+            // 
+            // ddlAdvSwitchCircle
+            // 
+            this.ddlAdvSwitchCircle.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.ddlAdvSwitchCircle.FormattingEnabled = true;
+            this.ddlAdvSwitchCircle.Location = new System.Drawing.Point(322, 190);
+            this.ddlAdvSwitchCircle.Name = "ddlAdvSwitchCircle";
+            this.ddlAdvSwitchCircle.Size = new System.Drawing.Size(101, 24);
+            this.ddlAdvSwitchCircle.TabIndex = 1;
+            // 
+            // ddlAdvSwitchX
+            // 
+            this.ddlAdvSwitchX.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.ddlAdvSwitchX.FormattingEnabled = true;
+            this.ddlAdvSwitchX.Location = new System.Drawing.Point(322, 221);
+            this.ddlAdvSwitchX.Name = "ddlAdvSwitchX";
+            this.ddlAdvSwitchX.Size = new System.Drawing.Size(101, 24);
+            this.ddlAdvSwitchX.TabIndex = 1;
+            // 
+            // ddlAdvSwitchRectangle
+            // 
+            this.ddlAdvSwitchRectangle.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.ddlAdvSwitchRectangle.FormattingEnabled = true;
+            this.ddlAdvSwitchRectangle.Location = new System.Drawing.Point(322, 252);
+            this.ddlAdvSwitchRectangle.Name = "ddlAdvSwitchRectangle";
+            this.ddlAdvSwitchRectangle.Size = new System.Drawing.Size(101, 24);
+            this.ddlAdvSwitchRectangle.TabIndex = 1;
+            // 
+            // ddlAdvSwitchSelect
+            // 
+            this.ddlAdvSwitchSelect.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.ddlAdvSwitchSelect.FormattingEnabled = true;
+            this.ddlAdvSwitchSelect.Location = new System.Drawing.Point(322, 283);
+            this.ddlAdvSwitchSelect.Name = "ddlAdvSwitchSelect";
+            this.ddlAdvSwitchSelect.Size = new System.Drawing.Size(101, 24);
+            this.ddlAdvSwitchSelect.TabIndex = 1;
+            // 
+            // ddlAdvSwitchStart
+            // 
+            this.ddlAdvSwitchStart.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.ddlAdvSwitchStart.FormattingEnabled = true;
+            this.ddlAdvSwitchStart.Location = new System.Drawing.Point(322, 314);
+            this.ddlAdvSwitchStart.Name = "ddlAdvSwitchStart";
+            this.ddlAdvSwitchStart.Size = new System.Drawing.Size(101, 24);
+            this.ddlAdvSwitchStart.TabIndex = 1;
+            // 
+            // ddlAdvSwitchBigButton
+            // 
+            this.ddlAdvSwitchBigButton.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.ddlAdvSwitchBigButton.FormattingEnabled = true;
+            this.ddlAdvSwitchBigButton.Location = new System.Drawing.Point(322, 345);
+            this.ddlAdvSwitchBigButton.Name = "ddlAdvSwitchBigButton";
+            this.ddlAdvSwitchBigButton.Size = new System.Drawing.Size(101, 24);
+            this.ddlAdvSwitchBigButton.TabIndex = 1;
+            // 
+            // nupAdvVelDPadRight
+            // 
+            this.nupAdvVelDPadRight.Location = new System.Drawing.Point(217, 67);
+            this.nupAdvVelDPadRight.Margin = new System.Windows.Forms.Padding(4);
+            this.nupAdvVelDPadRight.Maximum = new decimal(new int[] {
+            127,
+            0,
+            0,
+            0});
+            this.nupAdvVelDPadRight.Name = "nupAdvVelDPadRight";
+            this.nupAdvVelDPadRight.Size = new System.Drawing.Size(97, 22);
+            this.nupAdvVelDPadRight.TabIndex = 6;
+            this.nupAdvVelDPadRight.Value = new decimal(new int[] {
+            64,
+            0,
+            0,
+            0});
+            // 
+            // nupAdvVelDPadDown
+            // 
+            this.nupAdvVelDPadDown.Location = new System.Drawing.Point(217, 98);
+            this.nupAdvVelDPadDown.Margin = new System.Windows.Forms.Padding(4);
+            this.nupAdvVelDPadDown.Maximum = new decimal(new int[] {
+            127,
+            0,
+            0,
+            0});
+            this.nupAdvVelDPadDown.Name = "nupAdvVelDPadDown";
+            this.nupAdvVelDPadDown.Size = new System.Drawing.Size(97, 22);
+            this.nupAdvVelDPadDown.TabIndex = 6;
+            this.nupAdvVelDPadDown.Value = new decimal(new int[] {
+            64,
+            0,
+            0,
+            0});
+            // 
+            // nupAdvVelDPadLeft
+            // 
+            this.nupAdvVelDPadLeft.Location = new System.Drawing.Point(217, 129);
+            this.nupAdvVelDPadLeft.Margin = new System.Windows.Forms.Padding(4);
+            this.nupAdvVelDPadLeft.Maximum = new decimal(new int[] {
+            127,
+            0,
+            0,
+            0});
+            this.nupAdvVelDPadLeft.Name = "nupAdvVelDPadLeft";
+            this.nupAdvVelDPadLeft.Size = new System.Drawing.Size(97, 22);
+            this.nupAdvVelDPadLeft.TabIndex = 6;
+            this.nupAdvVelDPadLeft.Value = new decimal(new int[] {
+            64,
+            0,
+            0,
+            0});
+            // 
+            // nupAdvVelTriangle
+            // 
+            this.nupAdvVelTriangle.Location = new System.Drawing.Point(217, 160);
+            this.nupAdvVelTriangle.Margin = new System.Windows.Forms.Padding(4);
+            this.nupAdvVelTriangle.Maximum = new decimal(new int[] {
+            127,
+            0,
+            0,
+            0});
+            this.nupAdvVelTriangle.Name = "nupAdvVelTriangle";
+            this.nupAdvVelTriangle.Size = new System.Drawing.Size(97, 22);
+            this.nupAdvVelTriangle.TabIndex = 6;
+            this.nupAdvVelTriangle.Value = new decimal(new int[] {
+            64,
+            0,
+            0,
+            0});
+            // 
+            // nupAdvVelCircle
+            // 
+            this.nupAdvVelCircle.Location = new System.Drawing.Point(217, 191);
+            this.nupAdvVelCircle.Margin = new System.Windows.Forms.Padding(4);
+            this.nupAdvVelCircle.Maximum = new decimal(new int[] {
+            127,
+            0,
+            0,
+            0});
+            this.nupAdvVelCircle.Name = "nupAdvVelCircle";
+            this.nupAdvVelCircle.Size = new System.Drawing.Size(97, 22);
+            this.nupAdvVelCircle.TabIndex = 6;
+            this.nupAdvVelCircle.Value = new decimal(new int[] {
+            64,
+            0,
+            0,
+            0});
+            // 
+            // nupAdvVelX
+            // 
+            this.nupAdvVelX.Location = new System.Drawing.Point(217, 222);
+            this.nupAdvVelX.Margin = new System.Windows.Forms.Padding(4);
+            this.nupAdvVelX.Maximum = new decimal(new int[] {
+            127,
+            0,
+            0,
+            0});
+            this.nupAdvVelX.Name = "nupAdvVelX";
+            this.nupAdvVelX.Size = new System.Drawing.Size(97, 22);
+            this.nupAdvVelX.TabIndex = 6;
+            this.nupAdvVelX.Value = new decimal(new int[] {
+            64,
+            0,
+            0,
+            0});
+            // 
+            // nupAdvVelRectangle
+            // 
+            this.nupAdvVelRectangle.Location = new System.Drawing.Point(217, 253);
+            this.nupAdvVelRectangle.Margin = new System.Windows.Forms.Padding(4);
+            this.nupAdvVelRectangle.Maximum = new decimal(new int[] {
+            127,
+            0,
+            0,
+            0});
+            this.nupAdvVelRectangle.Name = "nupAdvVelRectangle";
+            this.nupAdvVelRectangle.Size = new System.Drawing.Size(97, 22);
+            this.nupAdvVelRectangle.TabIndex = 6;
+            this.nupAdvVelRectangle.Value = new decimal(new int[] {
+            64,
+            0,
+            0,
+            0});
+            // 
+            // nupAdvVelSelect
+            // 
+            this.nupAdvVelSelect.Location = new System.Drawing.Point(217, 284);
+            this.nupAdvVelSelect.Margin = new System.Windows.Forms.Padding(4);
+            this.nupAdvVelSelect.Maximum = new decimal(new int[] {
+            127,
+            0,
+            0,
+            0});
+            this.nupAdvVelSelect.Name = "nupAdvVelSelect";
+            this.nupAdvVelSelect.Size = new System.Drawing.Size(97, 22);
+            this.nupAdvVelSelect.TabIndex = 6;
+            this.nupAdvVelSelect.Value = new decimal(new int[] {
+            64,
+            0,
+            0,
+            0});
+            // 
+            // nupAdvVelBigButton
+            // 
+            this.nupAdvVelBigButton.Location = new System.Drawing.Point(217, 346);
+            this.nupAdvVelBigButton.Margin = new System.Windows.Forms.Padding(4);
+            this.nupAdvVelBigButton.Maximum = new decimal(new int[] {
+            127,
+            0,
+            0,
+            0});
+            this.nupAdvVelBigButton.Name = "nupAdvVelBigButton";
+            this.nupAdvVelBigButton.Size = new System.Drawing.Size(97, 22);
+            this.nupAdvVelBigButton.TabIndex = 6;
+            this.nupAdvVelBigButton.Value = new decimal(new int[] {
+            64,
+            0,
+            0,
+            0});
+            // 
+            // nupAdvNoteStart
+            // 
+            this.nupAdvNoteStart.Location = new System.Drawing.Point(111, 315);
+            this.nupAdvNoteStart.Margin = new System.Windows.Forms.Padding(4);
+            this.nupAdvNoteStart.Maximum = new decimal(new int[] {
+            127,
+            0,
+            0,
+            0});
+            this.nupAdvNoteStart.Name = "nupAdvNoteStart";
+            this.nupAdvNoteStart.Size = new System.Drawing.Size(97, 22);
+            this.nupAdvNoteStart.TabIndex = 6;
+            this.nupAdvNoteStart.Value = new decimal(new int[] {
+            64,
+            0,
+            0,
+            0});
+            // 
+            // nupAdvVelStart
+            // 
+            this.nupAdvVelStart.Location = new System.Drawing.Point(217, 315);
+            this.nupAdvVelStart.Margin = new System.Windows.Forms.Padding(4);
+            this.nupAdvVelStart.Maximum = new decimal(new int[] {
+            127,
+            0,
+            0,
+            0});
+            this.nupAdvVelStart.Name = "nupAdvVelStart";
+            this.nupAdvVelStart.Size = new System.Drawing.Size(97, 22);
+            this.nupAdvVelStart.TabIndex = 6;
+            this.nupAdvVelStart.Value = new decimal(new int[] {
+            64,
+            0,
+            0,
+            0});
+            // 
+            // nupAdvNoteBigButton
+            // 
+            this.nupAdvNoteBigButton.Location = new System.Drawing.Point(111, 346);
+            this.nupAdvNoteBigButton.Margin = new System.Windows.Forms.Padding(4);
+            this.nupAdvNoteBigButton.Maximum = new decimal(new int[] {
+            127,
+            0,
+            0,
+            0});
+            this.nupAdvNoteBigButton.Name = "nupAdvNoteBigButton";
+            this.nupAdvNoteBigButton.Size = new System.Drawing.Size(97, 22);
+            this.nupAdvNoteBigButton.TabIndex = 6;
+            this.nupAdvNoteBigButton.Value = new decimal(new int[] {
+            64,
+            0,
+            0,
+            0});
+            // 
+            // nupAdvNoteSelect
+            // 
+            this.nupAdvNoteSelect.Location = new System.Drawing.Point(111, 284);
+            this.nupAdvNoteSelect.Margin = new System.Windows.Forms.Padding(4);
+            this.nupAdvNoteSelect.Maximum = new decimal(new int[] {
+            127,
+            0,
+            0,
+            0});
+            this.nupAdvNoteSelect.Name = "nupAdvNoteSelect";
+            this.nupAdvNoteSelect.Size = new System.Drawing.Size(97, 22);
+            this.nupAdvNoteSelect.TabIndex = 6;
+            this.nupAdvNoteSelect.Value = new decimal(new int[] {
+            64,
+            0,
+            0,
+            0});
+            // 
+            // nupAdvNoteRectangle
+            // 
+            this.nupAdvNoteRectangle.Location = new System.Drawing.Point(111, 253);
+            this.nupAdvNoteRectangle.Margin = new System.Windows.Forms.Padding(4);
+            this.nupAdvNoteRectangle.Maximum = new decimal(new int[] {
+            127,
+            0,
+            0,
+            0});
+            this.nupAdvNoteRectangle.Name = "nupAdvNoteRectangle";
+            this.nupAdvNoteRectangle.Size = new System.Drawing.Size(97, 22);
+            this.nupAdvNoteRectangle.TabIndex = 6;
+            this.nupAdvNoteRectangle.Value = new decimal(new int[] {
+            64,
+            0,
+            0,
+            0});
+            // 
+            // nupAdvNoteX
+            // 
+            this.nupAdvNoteX.Location = new System.Drawing.Point(111, 222);
+            this.nupAdvNoteX.Margin = new System.Windows.Forms.Padding(4);
+            this.nupAdvNoteX.Maximum = new decimal(new int[] {
+            127,
+            0,
+            0,
+            0});
+            this.nupAdvNoteX.Name = "nupAdvNoteX";
+            this.nupAdvNoteX.Size = new System.Drawing.Size(97, 22);
+            this.nupAdvNoteX.TabIndex = 6;
+            this.nupAdvNoteX.Value = new decimal(new int[] {
+            64,
+            0,
+            0,
+            0});
+            // 
+            // nupAdvNoteCircle
+            // 
+            this.nupAdvNoteCircle.Location = new System.Drawing.Point(111, 191);
+            this.nupAdvNoteCircle.Margin = new System.Windows.Forms.Padding(4);
+            this.nupAdvNoteCircle.Maximum = new decimal(new int[] {
+            127,
+            0,
+            0,
+            0});
+            this.nupAdvNoteCircle.Name = "nupAdvNoteCircle";
+            this.nupAdvNoteCircle.Size = new System.Drawing.Size(97, 22);
+            this.nupAdvNoteCircle.TabIndex = 6;
+            this.nupAdvNoteCircle.Value = new decimal(new int[] {
+            64,
+            0,
+            0,
+            0});
+            // 
+            // nupAdvNoteTriangle
+            // 
+            this.nupAdvNoteTriangle.Location = new System.Drawing.Point(111, 160);
+            this.nupAdvNoteTriangle.Margin = new System.Windows.Forms.Padding(4);
+            this.nupAdvNoteTriangle.Maximum = new decimal(new int[] {
+            127,
+            0,
+            0,
+            0});
+            this.nupAdvNoteTriangle.Name = "nupAdvNoteTriangle";
+            this.nupAdvNoteTriangle.Size = new System.Drawing.Size(97, 22);
+            this.nupAdvNoteTriangle.TabIndex = 6;
+            this.nupAdvNoteTriangle.Value = new decimal(new int[] {
+            64,
+            0,
+            0,
+            0});
+            // 
+            // nupAdvNoteDPadLeft
+            // 
+            this.nupAdvNoteDPadLeft.Location = new System.Drawing.Point(111, 129);
+            this.nupAdvNoteDPadLeft.Margin = new System.Windows.Forms.Padding(4);
+            this.nupAdvNoteDPadLeft.Maximum = new decimal(new int[] {
+            127,
+            0,
+            0,
+            0});
+            this.nupAdvNoteDPadLeft.Name = "nupAdvNoteDPadLeft";
+            this.nupAdvNoteDPadLeft.Size = new System.Drawing.Size(97, 22);
+            this.nupAdvNoteDPadLeft.TabIndex = 6;
+            this.nupAdvNoteDPadLeft.Value = new decimal(new int[] {
+            64,
+            0,
+            0,
+            0});
+            // 
+            // nupAdvNoteDPadDown
+            // 
+            this.nupAdvNoteDPadDown.Location = new System.Drawing.Point(111, 98);
+            this.nupAdvNoteDPadDown.Margin = new System.Windows.Forms.Padding(4);
+            this.nupAdvNoteDPadDown.Maximum = new decimal(new int[] {
+            127,
+            0,
+            0,
+            0});
+            this.nupAdvNoteDPadDown.Name = "nupAdvNoteDPadDown";
+            this.nupAdvNoteDPadDown.Size = new System.Drawing.Size(97, 22);
+            this.nupAdvNoteDPadDown.TabIndex = 6;
+            this.nupAdvNoteDPadDown.Value = new decimal(new int[] {
+            64,
+            0,
+            0,
+            0});
+            // 
+            // nupAdvNoteDPadRight
+            // 
+            this.nupAdvNoteDPadRight.Location = new System.Drawing.Point(111, 67);
+            this.nupAdvNoteDPadRight.Margin = new System.Windows.Forms.Padding(4);
+            this.nupAdvNoteDPadRight.Maximum = new decimal(new int[] {
+            127,
+            0,
+            0,
+            0});
+            this.nupAdvNoteDPadRight.Name = "nupAdvNoteDPadRight";
+            this.nupAdvNoteDPadRight.Size = new System.Drawing.Size(97, 22);
+            this.nupAdvNoteDPadRight.TabIndex = 6;
+            this.nupAdvNoteDPadRight.Value = new decimal(new int[] {
+            64,
+            0,
+            0,
+            0});
+            // 
+            // nupAdvNoteDPadUp
+            // 
+            this.nupAdvNoteDPadUp.Location = new System.Drawing.Point(111, 36);
+            this.nupAdvNoteDPadUp.Margin = new System.Windows.Forms.Padding(4);
+            this.nupAdvNoteDPadUp.Maximum = new decimal(new int[] {
+            127,
+            0,
+            0,
+            0});
+            this.nupAdvNoteDPadUp.Name = "nupAdvNoteDPadUp";
+            this.nupAdvNoteDPadUp.Size = new System.Drawing.Size(97, 22);
+            this.nupAdvNoteDPadUp.TabIndex = 6;
+            this.nupAdvNoteDPadUp.Value = new decimal(new int[] {
+            64,
+            0,
+            0,
+            0});
+            // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.Location = new System.Drawing.Point(4, 32);
+            label4.Name = "label4";
+            label4.Size = new System.Drawing.Size(66, 17);
+            label4.TabIndex = 0;
+            label4.Text = "Red Tom";
+            // 
+            // label19
+            // 
+            label19.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            label19.Location = new System.Drawing.Point(4, 1);
+            label19.Name = "label19";
+            label19.Size = new System.Drawing.Size(99, 27);
+            label19.TabIndex = 0;
+            label19.Text = "Drum";
+            label19.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label20
+            // 
+            label20.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            label20.Location = new System.Drawing.Point(113, 1);
+            label20.Name = "label20";
+            label20.Size = new System.Drawing.Size(99, 27);
+            label20.TabIndex = 0;
+            label20.Text = "Note";
+            label20.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label21
+            // 
+            label21.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            label21.Location = new System.Drawing.Point(221, 1);
+            label21.Name = "label21";
+            label21.Size = new System.Drawing.Size(65, 27);
+            label21.TabIndex = 0;
+            label21.Text = "Boost";
+            label21.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label22
+            // 
+            label22.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            label22.Location = new System.Drawing.Point(293, 1);
+            label22.Name = "label22";
+            label22.Size = new System.Drawing.Size(101, 27);
+            label22.TabIndex = 0;
+            label22.Text = "Boost";
+            label22.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label23
+            // 
+            label23.AutoSize = true;
+            label23.Location = new System.Drawing.Point(4, 63);
+            label23.Name = "label23";
+            label23.Size = new System.Drawing.Size(80, 17);
+            label23.TabIndex = 0;
+            label23.Text = "Yellow Tom";
+            // 
+            // label24
+            // 
+            label24.AutoSize = true;
+            label24.Location = new System.Drawing.Point(4, 94);
+            label24.Name = "label24";
+            label24.Size = new System.Drawing.Size(98, 17);
+            label24.TabIndex = 0;
+            label24.Text = "Yellow Cymbal";
+            // 
+            // label25
+            // 
+            label25.AutoSize = true;
+            label25.Location = new System.Drawing.Point(4, 125);
+            label25.Name = "label25";
+            label25.Size = new System.Drawing.Size(68, 17);
+            label25.TabIndex = 0;
+            label25.Text = "Blue Tom";
+            // 
+            // label26
+            // 
+            label26.AutoSize = true;
+            label26.Location = new System.Drawing.Point(4, 156);
+            label26.Name = "label26";
+            label26.Size = new System.Drawing.Size(86, 17);
+            label26.TabIndex = 0;
+            label26.Text = "Blue Cymbal";
+            // 
+            // label27
+            // 
+            label27.AutoSize = true;
+            label27.Location = new System.Drawing.Point(4, 187);
+            label27.Name = "label27";
+            label27.Size = new System.Drawing.Size(80, 17);
+            label27.TabIndex = 0;
+            label27.Text = "Green Tom";
+            // 
+            // label28
+            // 
+            label28.AutoSize = true;
+            label28.Location = new System.Drawing.Point(4, 218);
+            label28.Name = "label28";
+            label28.Size = new System.Drawing.Size(98, 17);
+            label28.TabIndex = 0;
+            label28.Text = "Green Cymbal";
+            // 
+            // label29
+            // 
+            label29.AutoSize = true;
+            label29.Location = new System.Drawing.Point(4, 32);
+            label29.Name = "label29";
+            label29.Size = new System.Drawing.Size(72, 17);
+            label29.TabIndex = 0;
+            label29.Text = "Pedal Left";
+            // 
+            // label30
+            // 
+            label30.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            label30.Location = new System.Drawing.Point(4, 1);
+            label30.Name = "label30";
+            label30.Size = new System.Drawing.Size(93, 27);
+            label30.TabIndex = 0;
+            label30.Text = "Pedal";
+            label30.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label31
+            // 
+            label31.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            label31.Location = new System.Drawing.Point(104, 1);
+            label31.Name = "label31";
+            label31.Size = new System.Drawing.Size(93, 27);
+            label31.TabIndex = 0;
+            label31.Text = "Note";
+            label31.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label32
+            // 
+            label32.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            label32.Location = new System.Drawing.Point(204, 1);
+            label32.Name = "label32";
+            label32.Size = new System.Drawing.Size(93, 27);
+            label32.TabIndex = 0;
+            label32.Text = "Velocity";
+            label32.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label33
+            // 
+            label33.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            label33.Location = new System.Drawing.Point(304, 1);
+            label33.Name = "label33";
+            label33.Size = new System.Drawing.Size(96, 27);
+            label33.TabIndex = 0;
+            label33.Text = "Switch mode";
+            label33.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label34
+            // 
+            label34.AutoSize = true;
+            label34.Location = new System.Drawing.Point(4, 63);
+            label34.Name = "label34";
+            label34.Size = new System.Drawing.Size(81, 17);
+            label34.TabIndex = 0;
+            label34.Text = "Pedal Right";
+            // 
+            // label35
+            // 
+            label35.AutoSize = true;
+            label35.Location = new System.Drawing.Point(6, 77);
+            label35.Name = "label35";
+            label35.Size = new System.Drawing.Size(158, 17);
+            label35.TabIndex = 8;
+            label35.Text = "New velocity = velocity *";
+            // 
+            // label36
+            // 
+            label36.AutoSize = true;
+            label36.Location = new System.Drawing.Point(238, 79);
+            label36.Name = "label36";
+            label36.Size = new System.Drawing.Size(16, 17);
+            label36.TabIndex = 12;
+            label36.Text = "+";
             // 
             // nupMIDIChannel
             // 
-            this.nupMIDIChannel.Location = new System.Drawing.Point(192, 612);
+            this.nupMIDIChannel.Location = new System.Drawing.Point(185, 30);
             this.nupMIDIChannel.Margin = new System.Windows.Forms.Padding(4);
             this.nupMIDIChannel.Maximum = new decimal(new int[] {
             15,
@@ -164,7 +1287,7 @@
             // 
             this.ddlMIDIDevice.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.ddlMIDIDevice.FormattingEnabled = true;
-            this.ddlMIDIDevice.Location = new System.Drawing.Point(11, 612);
+            this.ddlMIDIDevice.Location = new System.Drawing.Point(4, 30);
             this.ddlMIDIDevice.Margin = new System.Windows.Forms.Padding(4);
             this.ddlMIDIDevice.Name = "ddlMIDIDevice";
             this.ddlMIDIDevice.Size = new System.Drawing.Size(160, 24);
@@ -176,6 +1299,13 @@
             this.pnlHolder.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pnlHolder.BackgroundImage")));
             this.pnlHolder.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pnlHolder.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.pnlHolder.Controls.Add(this.groupBox7);
+            this.pnlHolder.Controls.Add(this.groupBox6);
+            this.pnlHolder.Controls.Add(this.groupBox5);
+            this.pnlHolder.Controls.Add(this.groupBox4);
+            this.pnlHolder.Controls.Add(this.groupBox3);
+            this.pnlHolder.Controls.Add(this.groupBox2);
+            this.pnlHolder.Controls.Add(this.groupBox1);
             this.pnlHolder.Controls.Add(this.chkDPadLeft);
             this.pnlHolder.Controls.Add(this.chkDPadDown);
             this.pnlHolder.Controls.Add(this.chkDPadUp);
@@ -187,32 +1317,8 @@
             this.pnlHolder.Controls.Add(this.chkX);
             this.pnlHolder.Controls.Add(this.chkCircle);
             this.pnlHolder.Controls.Add(this.chkTriangle);
-            this.pnlHolder.Controls.Add(this.ddlPedal);
-            this.pnlHolder.Controls.Add(this.ddlCymBlue);
-            this.pnlHolder.Controls.Add(this.ddlGreen);
-            this.pnlHolder.Controls.Add(this.ddlCymGreen);
-            this.pnlHolder.Controls.Add(this.ddlCymYellow);
-            this.pnlHolder.Controls.Add(this.ddlBlue);
-            this.pnlHolder.Controls.Add(this.ddlRed);
-            this.pnlHolder.Controls.Add(this.ddlYellow);
-            this.pnlHolder.Controls.Add(this.chkPedal);
-            this.pnlHolder.Controls.Add(this.chkGreen);
-            this.pnlHolder.Controls.Add(this.chkCymBlue);
-            this.pnlHolder.Controls.Add(this.chkCymGreen);
-            this.pnlHolder.Controls.Add(this.chkCymYellow);
-            this.pnlHolder.Controls.Add(this.chkBlue);
-            this.pnlHolder.Controls.Add(this.chkRed);
-            this.pnlHolder.Controls.Add(this.chkYellow);
-            this.pnlHolder.Controls.Add(this.pbCymGreen);
-            this.pnlHolder.Controls.Add(this.pbPedal);
-            this.pnlHolder.Controls.Add(this.pbCymYellow);
-            this.pnlHolder.Controls.Add(this.pbGreen);
-            this.pnlHolder.Controls.Add(this.pbBlue);
-            this.pnlHolder.Controls.Add(this.pbRed);
-            this.pnlHolder.Controls.Add(this.pbCymBlue);
-            this.pnlHolder.Controls.Add(this.pbYellow);
-            this.pnlHolder.Controls.Add(this.btnPedal);
-            this.pnlHolder.Controls.Add(this.btnCymBlue);
+            this.pnlHolder.Controls.Add(this.chkPedalLeft);
+            this.pnlHolder.Controls.Add(this.chkPedalRight);
             this.pnlHolder.Controls.Add(this.nupDPadDown);
             this.pnlHolder.Controls.Add(this.nupDPadLeft);
             this.pnlHolder.Controls.Add(this.nupDPadUp);
@@ -224,25 +1330,605 @@
             this.pnlHolder.Controls.Add(this.nupX);
             this.pnlHolder.Controls.Add(this.nupTriangle);
             this.pnlHolder.Controls.Add(this.nupCircle);
-            this.pnlHolder.Controls.Add(this.nupPedal);
-            this.pnlHolder.Controls.Add(this.btnCymGreen);
-            this.pnlHolder.Controls.Add(this.btnYellow);
-            this.pnlHolder.Controls.Add(this.btnCymYellow);
-            this.pnlHolder.Controls.Add(this.nupCymBlue);
-            this.pnlHolder.Controls.Add(this.btnBlue);
-            this.pnlHolder.Controls.Add(this.nupCymGreen);
-            this.pnlHolder.Controls.Add(this.nupYellow);
-            this.pnlHolder.Controls.Add(this.nupCymYellow);
-            this.pnlHolder.Controls.Add(this.btnGreen);
-            this.pnlHolder.Controls.Add(this.nupBlue);
-            this.pnlHolder.Controls.Add(this.btnRed);
-            this.pnlHolder.Controls.Add(this.nupGreen);
-            this.pnlHolder.Controls.Add(this.nupRed);
-            this.pnlHolder.Location = new System.Drawing.Point(11, 10);
+            this.pnlHolder.Controls.Add(this.nupPedalLeft);
+            this.pnlHolder.Controls.Add(this.nupPedalRight);
+            this.pnlHolder.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlHolder.Location = new System.Drawing.Point(3, 3);
             this.pnlHolder.Margin = new System.Windows.Forms.Padding(4);
             this.pnlHolder.Name = "pnlHolder";
-            this.pnlHolder.Size = new System.Drawing.Size(853, 573);
+            this.pnlHolder.Size = new System.Drawing.Size(859, 608);
             this.pnlHolder.TabIndex = 15;
+            // 
+            // groupBox7
+            // 
+            this.groupBox7.Controls.Add(this.ddlRedTom);
+            this.groupBox7.Controls.Add(this.nupRedTom);
+            this.groupBox7.Controls.Add(this.btnRedTom);
+            this.groupBox7.Controls.Add(this.pbRedTom);
+            this.groupBox7.Controls.Add(this.chkBoostRedTom);
+            this.groupBox7.ForeColor = System.Drawing.Color.White;
+            this.groupBox7.Location = new System.Drawing.Point(54, 342);
+            this.groupBox7.Name = "groupBox7";
+            this.groupBox7.Size = new System.Drawing.Size(138, 100);
+            this.groupBox7.TabIndex = 41;
+            this.groupBox7.TabStop = false;
+            this.groupBox7.Text = "Red Tom";
+            // 
+            // ddlRedTom
+            // 
+            this.ddlRedTom.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.ddlRedTom.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ddlRedTom.FormattingEnabled = true;
+            this.ddlRedTom.Location = new System.Drawing.Point(79, 72);
+            this.ddlRedTom.Margin = new System.Windows.Forms.Padding(4);
+            this.ddlRedTom.Name = "ddlRedTom";
+            this.ddlRedTom.Size = new System.Drawing.Size(52, 21);
+            this.ddlRedTom.TabIndex = 34;
+            // 
+            // nupRedTom
+            // 
+            this.nupRedTom.Location = new System.Drawing.Point(5, 23);
+            this.nupRedTom.Margin = new System.Windows.Forms.Padding(4);
+            this.nupRedTom.Maximum = new decimal(new int[] {
+            127,
+            0,
+            0,
+            0});
+            this.nupRedTom.Name = "nupRedTom";
+            this.nupRedTom.Size = new System.Drawing.Size(64, 22);
+            this.nupRedTom.TabIndex = 4;
+            this.nupRedTom.Value = new decimal(new int[] {
+            64,
+            0,
+            0,
+            0});
+            // 
+            // btnRedTom
+            // 
+            this.btnRedTom.ForeColor = System.Drawing.Color.Black;
+            this.btnRedTom.Location = new System.Drawing.Point(79, 23);
+            this.btnRedTom.Margin = new System.Windows.Forms.Padding(4);
+            this.btnRedTom.Name = "btnRedTom";
+            this.btnRedTom.Size = new System.Drawing.Size(53, 25);
+            this.btnRedTom.TabIndex = 9;
+            this.btnRedTom.Text = "Hit";
+            this.btnRedTom.UseVisualStyleBackColor = true;
+            this.btnRedTom.Click += new System.EventHandler(this.ButtonPress);
+            // 
+            // pbRedTom
+            // 
+            this.pbRedTom.BackColor = System.Drawing.Color.Black;
+            this.pbRedTom.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(175)))), ((int)(((byte)(230)))));
+            this.pbRedTom.Location = new System.Drawing.Point(5, 52);
+            this.pbRedTom.Margin = new System.Windows.Forms.Padding(4);
+            this.pbRedTom.MarqueeAnimationSpeed = 0;
+            this.pbRedTom.Maximum = 127;
+            this.pbRedTom.Name = "pbRedTom";
+            this.pbRedTom.Size = new System.Drawing.Size(128, 15);
+            this.pbRedTom.Style = System.Windows.Forms.ProgressBarStyle.Continuous;
+            this.pbRedTom.TabIndex = 23;
+            // 
+            // chkBoostRedTom
+            // 
+            this.chkBoostRedTom.AutoSize = true;
+            this.chkBoostRedTom.BackColor = System.Drawing.Color.Transparent;
+            this.chkBoostRedTom.Checked = true;
+            this.chkBoostRedTom.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.chkBoostRedTom.ForeColor = System.Drawing.Color.White;
+            this.chkBoostRedTom.Location = new System.Drawing.Point(5, 72);
+            this.chkBoostRedTom.Margin = new System.Windows.Forms.Padding(4);
+            this.chkBoostRedTom.Name = "chkBoostRedTom";
+            this.chkBoostRedTom.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.chkBoostRedTom.Size = new System.Drawing.Size(66, 21);
+            this.chkBoostRedTom.TabIndex = 28;
+            this.chkBoostRedTom.Text = "Boost";
+            this.chkBoostRedTom.UseVisualStyleBackColor = false;
+            // 
+            // groupBox6
+            // 
+            this.groupBox6.Controls.Add(this.ddlYellowTom);
+            this.groupBox6.Controls.Add(this.nupYellowTom);
+            this.groupBox6.Controls.Add(this.btnYellowTom);
+            this.groupBox6.Controls.Add(this.pbYellowTom);
+            this.groupBox6.Controls.Add(this.chkBoostYellowTom);
+            this.groupBox6.ForeColor = System.Drawing.Color.White;
+            this.groupBox6.Location = new System.Drawing.Point(222, 251);
+            this.groupBox6.Name = "groupBox6";
+            this.groupBox6.Size = new System.Drawing.Size(138, 100);
+            this.groupBox6.TabIndex = 41;
+            this.groupBox6.TabStop = false;
+            this.groupBox6.Text = "Yellow Tom";
+            // 
+            // ddlYellowTom
+            // 
+            this.ddlYellowTom.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.ddlYellowTom.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ddlYellowTom.FormattingEnabled = true;
+            this.ddlYellowTom.Location = new System.Drawing.Point(80, 71);
+            this.ddlYellowTom.Margin = new System.Windows.Forms.Padding(4);
+            this.ddlYellowTom.Name = "ddlYellowTom";
+            this.ddlYellowTom.Size = new System.Drawing.Size(52, 21);
+            this.ddlYellowTom.TabIndex = 33;
+            // 
+            // nupYellowTom
+            // 
+            this.nupYellowTom.Location = new System.Drawing.Point(5, 22);
+            this.nupYellowTom.Margin = new System.Windows.Forms.Padding(4);
+            this.nupYellowTom.Maximum = new decimal(new int[] {
+            127,
+            0,
+            0,
+            0});
+            this.nupYellowTom.Name = "nupYellowTom";
+            this.nupYellowTom.Size = new System.Drawing.Size(64, 22);
+            this.nupYellowTom.TabIndex = 7;
+            this.nupYellowTom.Value = new decimal(new int[] {
+            64,
+            0,
+            0,
+            0});
+            // 
+            // btnYellowTom
+            // 
+            this.btnYellowTom.ForeColor = System.Drawing.Color.Black;
+            this.btnYellowTom.Location = new System.Drawing.Point(80, 22);
+            this.btnYellowTom.Margin = new System.Windows.Forms.Padding(4);
+            this.btnYellowTom.Name = "btnYellowTom";
+            this.btnYellowTom.Size = new System.Drawing.Size(53, 25);
+            this.btnYellowTom.TabIndex = 12;
+            this.btnYellowTom.Text = "Hit";
+            this.btnYellowTom.UseVisualStyleBackColor = true;
+            this.btnYellowTom.Click += new System.EventHandler(this.ButtonPress);
+            // 
+            // pbYellowTom
+            // 
+            this.pbYellowTom.BackColor = System.Drawing.Color.Black;
+            this.pbYellowTom.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(175)))), ((int)(((byte)(230)))));
+            this.pbYellowTom.Location = new System.Drawing.Point(5, 51);
+            this.pbYellowTom.Margin = new System.Windows.Forms.Padding(4);
+            this.pbYellowTom.MarqueeAnimationSpeed = 0;
+            this.pbYellowTom.Maximum = 127;
+            this.pbYellowTom.Name = "pbYellowTom";
+            this.pbYellowTom.Size = new System.Drawing.Size(128, 15);
+            this.pbYellowTom.Style = System.Windows.Forms.ProgressBarStyle.Continuous;
+            this.pbYellowTom.TabIndex = 21;
+            // 
+            // chkBoostYellowTom
+            // 
+            this.chkBoostYellowTom.AutoSize = true;
+            this.chkBoostYellowTom.BackColor = System.Drawing.Color.Transparent;
+            this.chkBoostYellowTom.CheckAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.chkBoostYellowTom.Checked = true;
+            this.chkBoostYellowTom.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.chkBoostYellowTom.ForeColor = System.Drawing.Color.White;
+            this.chkBoostYellowTom.Location = new System.Drawing.Point(5, 71);
+            this.chkBoostYellowTom.Margin = new System.Windows.Forms.Padding(4);
+            this.chkBoostYellowTom.Name = "chkBoostYellowTom";
+            this.chkBoostYellowTom.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.chkBoostYellowTom.Size = new System.Drawing.Size(66, 21);
+            this.chkBoostYellowTom.TabIndex = 27;
+            this.chkBoostYellowTom.Text = "Boost";
+            this.chkBoostYellowTom.UseVisualStyleBackColor = false;
+            // 
+            // groupBox5
+            // 
+            this.groupBox5.Controls.Add(this.nupBlueTom);
+            this.groupBox5.Controls.Add(this.btnBlueTom);
+            this.groupBox5.Controls.Add(this.pbBlueTom);
+            this.groupBox5.Controls.Add(this.chkBoostBlueTom);
+            this.groupBox5.Controls.Add(this.ddlBlueTom);
+            this.groupBox5.ForeColor = System.Drawing.Color.White;
+            this.groupBox5.Location = new System.Drawing.Point(450, 248);
+            this.groupBox5.Name = "groupBox5";
+            this.groupBox5.Size = new System.Drawing.Size(138, 100);
+            this.groupBox5.TabIndex = 41;
+            this.groupBox5.TabStop = false;
+            this.groupBox5.Text = "Blue Tom";
+            // 
+            // nupBlueTom
+            // 
+            this.nupBlueTom.Location = new System.Drawing.Point(6, 22);
+            this.nupBlueTom.Margin = new System.Windows.Forms.Padding(4);
+            this.nupBlueTom.Maximum = new decimal(new int[] {
+            127,
+            0,
+            0,
+            0});
+            this.nupBlueTom.Name = "nupBlueTom";
+            this.nupBlueTom.Size = new System.Drawing.Size(64, 22);
+            this.nupBlueTom.TabIndex = 5;
+            this.nupBlueTom.Value = new decimal(new int[] {
+            64,
+            0,
+            0,
+            0});
+            // 
+            // btnBlueTom
+            // 
+            this.btnBlueTom.ForeColor = System.Drawing.Color.Black;
+            this.btnBlueTom.Location = new System.Drawing.Point(80, 22);
+            this.btnBlueTom.Margin = new System.Windows.Forms.Padding(4);
+            this.btnBlueTom.Name = "btnBlueTom";
+            this.btnBlueTom.Size = new System.Drawing.Size(53, 25);
+            this.btnBlueTom.TabIndex = 10;
+            this.btnBlueTom.Text = "Hit";
+            this.btnBlueTom.UseVisualStyleBackColor = true;
+            this.btnBlueTom.Click += new System.EventHandler(this.ButtonPress);
+            // 
+            // pbBlueTom
+            // 
+            this.pbBlueTom.BackColor = System.Drawing.Color.Black;
+            this.pbBlueTom.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(175)))), ((int)(((byte)(230)))));
+            this.pbBlueTom.Location = new System.Drawing.Point(6, 51);
+            this.pbBlueTom.Margin = new System.Windows.Forms.Padding(4);
+            this.pbBlueTom.Maximum = 127;
+            this.pbBlueTom.Name = "pbBlueTom";
+            this.pbBlueTom.Size = new System.Drawing.Size(128, 15);
+            this.pbBlueTom.Style = System.Windows.Forms.ProgressBarStyle.Continuous;
+            this.pbBlueTom.TabIndex = 24;
+            // 
+            // chkBoostBlueTom
+            // 
+            this.chkBoostBlueTom.AutoSize = true;
+            this.chkBoostBlueTom.BackColor = System.Drawing.Color.Transparent;
+            this.chkBoostBlueTom.Checked = true;
+            this.chkBoostBlueTom.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.chkBoostBlueTom.ForeColor = System.Drawing.Color.White;
+            this.chkBoostBlueTom.Location = new System.Drawing.Point(6, 71);
+            this.chkBoostBlueTom.Margin = new System.Windows.Forms.Padding(4);
+            this.chkBoostBlueTom.Name = "chkBoostBlueTom";
+            this.chkBoostBlueTom.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.chkBoostBlueTom.Size = new System.Drawing.Size(66, 21);
+            this.chkBoostBlueTom.TabIndex = 29;
+            this.chkBoostBlueTom.Text = "Boost";
+            this.chkBoostBlueTom.UseVisualStyleBackColor = false;
+            // 
+            // ddlBlueTom
+            // 
+            this.ddlBlueTom.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.ddlBlueTom.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ddlBlueTom.FormattingEnabled = true;
+            this.ddlBlueTom.Location = new System.Drawing.Point(80, 71);
+            this.ddlBlueTom.Margin = new System.Windows.Forms.Padding(4);
+            this.ddlBlueTom.Name = "ddlBlueTom";
+            this.ddlBlueTom.Size = new System.Drawing.Size(52, 21);
+            this.ddlBlueTom.TabIndex = 35;
+            // 
+            // groupBox4
+            // 
+            this.groupBox4.Controls.Add(this.nupGreenTom);
+            this.groupBox4.Controls.Add(this.btnGreenTom);
+            this.groupBox4.Controls.Add(this.pbGreenTom);
+            this.groupBox4.Controls.Add(this.chkBoostGreenTom);
+            this.groupBox4.Controls.Add(this.ddlGreenTom);
+            this.groupBox4.ForeColor = System.Drawing.Color.White;
+            this.groupBox4.Location = new System.Drawing.Point(662, 307);
+            this.groupBox4.Name = "groupBox4";
+            this.groupBox4.Size = new System.Drawing.Size(138, 100);
+            this.groupBox4.TabIndex = 41;
+            this.groupBox4.TabStop = false;
+            this.groupBox4.Text = "Green Tom";
+            // 
+            // nupGreenTom
+            // 
+            this.nupGreenTom.Location = new System.Drawing.Point(6, 22);
+            this.nupGreenTom.Margin = new System.Windows.Forms.Padding(4);
+            this.nupGreenTom.Maximum = new decimal(new int[] {
+            127,
+            0,
+            0,
+            0});
+            this.nupGreenTom.Name = "nupGreenTom";
+            this.nupGreenTom.Size = new System.Drawing.Size(64, 22);
+            this.nupGreenTom.TabIndex = 6;
+            this.nupGreenTom.Value = new decimal(new int[] {
+            64,
+            0,
+            0,
+            0});
+            // 
+            // btnGreenTom
+            // 
+            this.btnGreenTom.ForeColor = System.Drawing.Color.Black;
+            this.btnGreenTom.Location = new System.Drawing.Point(80, 22);
+            this.btnGreenTom.Margin = new System.Windows.Forms.Padding(4);
+            this.btnGreenTom.Name = "btnGreenTom";
+            this.btnGreenTom.Size = new System.Drawing.Size(53, 25);
+            this.btnGreenTom.TabIndex = 11;
+            this.btnGreenTom.Text = "Hit";
+            this.btnGreenTom.UseVisualStyleBackColor = true;
+            this.btnGreenTom.Click += new System.EventHandler(this.ButtonPress);
+            // 
+            // pbGreenTom
+            // 
+            this.pbGreenTom.BackColor = System.Drawing.Color.Black;
+            this.pbGreenTom.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(175)))), ((int)(((byte)(230)))));
+            this.pbGreenTom.Location = new System.Drawing.Point(6, 51);
+            this.pbGreenTom.Margin = new System.Windows.Forms.Padding(4);
+            this.pbGreenTom.Maximum = 127;
+            this.pbGreenTom.Name = "pbGreenTom";
+            this.pbGreenTom.Size = new System.Drawing.Size(128, 15);
+            this.pbGreenTom.Style = System.Windows.Forms.ProgressBarStyle.Continuous;
+            this.pbGreenTom.TabIndex = 25;
+            // 
+            // chkBoostGreenTom
+            // 
+            this.chkBoostGreenTom.AutoSize = true;
+            this.chkBoostGreenTom.BackColor = System.Drawing.Color.Transparent;
+            this.chkBoostGreenTom.Checked = true;
+            this.chkBoostGreenTom.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.chkBoostGreenTom.ForeColor = System.Drawing.Color.White;
+            this.chkBoostGreenTom.Location = new System.Drawing.Point(6, 71);
+            this.chkBoostGreenTom.Margin = new System.Windows.Forms.Padding(4);
+            this.chkBoostGreenTom.Name = "chkBoostGreenTom";
+            this.chkBoostGreenTom.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.chkBoostGreenTom.Size = new System.Drawing.Size(66, 21);
+            this.chkBoostGreenTom.TabIndex = 31;
+            this.chkBoostGreenTom.Text = "Boost";
+            this.chkBoostGreenTom.UseVisualStyleBackColor = false;
+            // 
+            // ddlGreenTom
+            // 
+            this.ddlGreenTom.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.ddlGreenTom.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ddlGreenTom.FormattingEnabled = true;
+            this.ddlGreenTom.Location = new System.Drawing.Point(80, 71);
+            this.ddlGreenTom.Margin = new System.Windows.Forms.Padding(4);
+            this.ddlGreenTom.Name = "ddlGreenTom";
+            this.ddlGreenTom.Size = new System.Drawing.Size(52, 21);
+            this.ddlGreenTom.TabIndex = 36;
+            // 
+            // groupBox3
+            // 
+            this.groupBox3.Controls.Add(this.nupGreenCymbal);
+            this.groupBox3.Controls.Add(this.btnGreenCymbal);
+            this.groupBox3.Controls.Add(this.pbGreenCymbal);
+            this.groupBox3.Controls.Add(this.chkBoostGreenCymbal);
+            this.groupBox3.Controls.Add(this.ddlGreenCymbal);
+            this.groupBox3.ForeColor = System.Drawing.Color.White;
+            this.groupBox3.Location = new System.Drawing.Point(666, 122);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(138, 100);
+            this.groupBox3.TabIndex = 41;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "Green Cymbal";
+            // 
+            // nupGreenCymbal
+            // 
+            this.nupGreenCymbal.Location = new System.Drawing.Point(6, 22);
+            this.nupGreenCymbal.Margin = new System.Windows.Forms.Padding(4);
+            this.nupGreenCymbal.Maximum = new decimal(new int[] {
+            127,
+            0,
+            0,
+            0});
+            this.nupGreenCymbal.Name = "nupGreenCymbal";
+            this.nupGreenCymbal.Size = new System.Drawing.Size(64, 22);
+            this.nupGreenCymbal.TabIndex = 5;
+            this.nupGreenCymbal.Value = new decimal(new int[] {
+            64,
+            0,
+            0,
+            0});
+            // 
+            // btnGreenCymbal
+            // 
+            this.btnGreenCymbal.ForeColor = System.Drawing.Color.Black;
+            this.btnGreenCymbal.Location = new System.Drawing.Point(80, 22);
+            this.btnGreenCymbal.Margin = new System.Windows.Forms.Padding(4);
+            this.btnGreenCymbal.Name = "btnGreenCymbal";
+            this.btnGreenCymbal.Size = new System.Drawing.Size(53, 25);
+            this.btnGreenCymbal.TabIndex = 10;
+            this.btnGreenCymbal.Text = "Hit";
+            this.btnGreenCymbal.UseVisualStyleBackColor = true;
+            this.btnGreenCymbal.Click += new System.EventHandler(this.ButtonPress);
+            // 
+            // pbGreenCymbal
+            // 
+            this.pbGreenCymbal.BackColor = System.Drawing.Color.Black;
+            this.pbGreenCymbal.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(175)))), ((int)(((byte)(230)))));
+            this.pbGreenCymbal.Location = new System.Drawing.Point(6, 51);
+            this.pbGreenCymbal.Margin = new System.Windows.Forms.Padding(4);
+            this.pbGreenCymbal.Maximum = 127;
+            this.pbGreenCymbal.Name = "pbGreenCymbal";
+            this.pbGreenCymbal.Size = new System.Drawing.Size(128, 15);
+            this.pbGreenCymbal.Style = System.Windows.Forms.ProgressBarStyle.Continuous;
+            this.pbGreenCymbal.TabIndex = 24;
+            // 
+            // chkBoostGreenCymbal
+            // 
+            this.chkBoostGreenCymbal.AutoSize = true;
+            this.chkBoostGreenCymbal.BackColor = System.Drawing.Color.Transparent;
+            this.chkBoostGreenCymbal.Checked = true;
+            this.chkBoostGreenCymbal.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.chkBoostGreenCymbal.ForeColor = System.Drawing.Color.White;
+            this.chkBoostGreenCymbal.Location = new System.Drawing.Point(6, 71);
+            this.chkBoostGreenCymbal.Margin = new System.Windows.Forms.Padding(4);
+            this.chkBoostGreenCymbal.Name = "chkBoostGreenCymbal";
+            this.chkBoostGreenCymbal.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.chkBoostGreenCymbal.Size = new System.Drawing.Size(66, 21);
+            this.chkBoostGreenCymbal.TabIndex = 29;
+            this.chkBoostGreenCymbal.Text = "Boost";
+            this.chkBoostGreenCymbal.UseVisualStyleBackColor = false;
+            // 
+            // ddlGreenCymbal
+            // 
+            this.ddlGreenCymbal.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.ddlGreenCymbal.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ddlGreenCymbal.FormattingEnabled = true;
+            this.ddlGreenCymbal.Location = new System.Drawing.Point(80, 71);
+            this.ddlGreenCymbal.Margin = new System.Windows.Forms.Padding(4);
+            this.ddlGreenCymbal.Name = "ddlGreenCymbal";
+            this.ddlGreenCymbal.Size = new System.Drawing.Size(52, 21);
+            this.ddlGreenCymbal.TabIndex = 35;
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.nupBlueCymbal);
+            this.groupBox2.Controls.Add(this.btnBlueCymbal);
+            this.groupBox2.Controls.Add(this.pbBlueCymbal);
+            this.groupBox2.Controls.Add(this.chkBoostBlueCymbal);
+            this.groupBox2.Controls.Add(this.ddlBlueCymbal);
+            this.groupBox2.ForeColor = System.Drawing.Color.White;
+            this.groupBox2.Location = new System.Drawing.Point(450, 28);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(138, 100);
+            this.groupBox2.TabIndex = 41;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Blue Cymbal";
+            // 
+            // nupBlueCymbal
+            // 
+            this.nupBlueCymbal.Location = new System.Drawing.Point(5, 22);
+            this.nupBlueCymbal.Margin = new System.Windows.Forms.Padding(4);
+            this.nupBlueCymbal.Maximum = new decimal(new int[] {
+            127,
+            0,
+            0,
+            0});
+            this.nupBlueCymbal.Name = "nupBlueCymbal";
+            this.nupBlueCymbal.Size = new System.Drawing.Size(64, 22);
+            this.nupBlueCymbal.TabIndex = 8;
+            this.nupBlueCymbal.Value = new decimal(new int[] {
+            64,
+            0,
+            0,
+            0});
+            // 
+            // btnBlueCymbal
+            // 
+            this.btnBlueCymbal.ForeColor = System.Drawing.Color.Black;
+            this.btnBlueCymbal.Location = new System.Drawing.Point(80, 22);
+            this.btnBlueCymbal.Margin = new System.Windows.Forms.Padding(4);
+            this.btnBlueCymbal.Name = "btnBlueCymbal";
+            this.btnBlueCymbal.Size = new System.Drawing.Size(53, 25);
+            this.btnBlueCymbal.TabIndex = 13;
+            this.btnBlueCymbal.Text = "Hit";
+            this.btnBlueCymbal.UseVisualStyleBackColor = true;
+            this.btnBlueCymbal.Click += new System.EventHandler(this.ButtonPress);
+            // 
+            // pbBlueCymbal
+            // 
+            this.pbBlueCymbal.BackColor = System.Drawing.Color.Black;
+            this.pbBlueCymbal.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(175)))), ((int)(((byte)(230)))));
+            this.pbBlueCymbal.Location = new System.Drawing.Point(5, 51);
+            this.pbBlueCymbal.Margin = new System.Windows.Forms.Padding(4);
+            this.pbBlueCymbal.Maximum = 127;
+            this.pbBlueCymbal.Name = "pbBlueCymbal";
+            this.pbBlueCymbal.Size = new System.Drawing.Size(128, 15);
+            this.pbBlueCymbal.Style = System.Windows.Forms.ProgressBarStyle.Continuous;
+            this.pbBlueCymbal.TabIndex = 22;
+            // 
+            // chkBoostBlueCymbal
+            // 
+            this.chkBoostBlueCymbal.AutoSize = true;
+            this.chkBoostBlueCymbal.BackColor = System.Drawing.Color.Transparent;
+            this.chkBoostBlueCymbal.Checked = true;
+            this.chkBoostBlueCymbal.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.chkBoostBlueCymbal.ForeColor = System.Drawing.Color.White;
+            this.chkBoostBlueCymbal.Location = new System.Drawing.Point(5, 71);
+            this.chkBoostBlueCymbal.Margin = new System.Windows.Forms.Padding(4);
+            this.chkBoostBlueCymbal.Name = "chkBoostBlueCymbal";
+            this.chkBoostBlueCymbal.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.chkBoostBlueCymbal.Size = new System.Drawing.Size(66, 21);
+            this.chkBoostBlueCymbal.TabIndex = 30;
+            this.chkBoostBlueCymbal.Text = "Boost";
+            this.chkBoostBlueCymbal.UseVisualStyleBackColor = false;
+            // 
+            // ddlBlueCymbal
+            // 
+            this.ddlBlueCymbal.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.ddlBlueCymbal.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ddlBlueCymbal.FormattingEnabled = true;
+            this.ddlBlueCymbal.Location = new System.Drawing.Point(80, 71);
+            this.ddlBlueCymbal.Margin = new System.Windows.Forms.Padding(4);
+            this.ddlBlueCymbal.Name = "ddlBlueCymbal";
+            this.ddlBlueCymbal.Size = new System.Drawing.Size(52, 21);
+            this.ddlBlueCymbal.TabIndex = 37;
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.ddlYellowCymbal);
+            this.groupBox1.Controls.Add(this.nupYellowCymbal);
+            this.groupBox1.Controls.Add(this.btnYellowCymbal);
+            this.groupBox1.Controls.Add(this.pbYellowCymbal);
+            this.groupBox1.Controls.Add(this.chkBoostYellowCymbal);
+            this.groupBox1.ForeColor = System.Drawing.Color.White;
+            this.groupBox1.Location = new System.Drawing.Point(60, 122);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(138, 100);
+            this.groupBox1.TabIndex = 40;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Yellow Cymbal";
+            // 
+            // ddlYellowCymbal
+            // 
+            this.ddlYellowCymbal.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.ddlYellowCymbal.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ddlYellowCymbal.FormattingEnabled = true;
+            this.ddlYellowCymbal.Location = new System.Drawing.Point(78, 72);
+            this.ddlYellowCymbal.Margin = new System.Windows.Forms.Padding(4);
+            this.ddlYellowCymbal.Name = "ddlYellowCymbal";
+            this.ddlYellowCymbal.Size = new System.Drawing.Size(52, 21);
+            this.ddlYellowCymbal.TabIndex = 35;
+            // 
+            // nupYellowCymbal
+            // 
+            this.nupYellowCymbal.Location = new System.Drawing.Point(4, 23);
+            this.nupYellowCymbal.Margin = new System.Windows.Forms.Padding(4);
+            this.nupYellowCymbal.Maximum = new decimal(new int[] {
+            127,
+            0,
+            0,
+            0});
+            this.nupYellowCymbal.Name = "nupYellowCymbal";
+            this.nupYellowCymbal.Size = new System.Drawing.Size(64, 22);
+            this.nupYellowCymbal.TabIndex = 5;
+            this.nupYellowCymbal.Value = new decimal(new int[] {
+            64,
+            0,
+            0,
+            0});
+            // 
+            // btnYellowCymbal
+            // 
+            this.btnYellowCymbal.ForeColor = System.Drawing.Color.Black;
+            this.btnYellowCymbal.Location = new System.Drawing.Point(78, 23);
+            this.btnYellowCymbal.Margin = new System.Windows.Forms.Padding(4);
+            this.btnYellowCymbal.Name = "btnYellowCymbal";
+            this.btnYellowCymbal.Size = new System.Drawing.Size(53, 25);
+            this.btnYellowCymbal.TabIndex = 10;
+            this.btnYellowCymbal.Text = "Hit";
+            this.btnYellowCymbal.UseVisualStyleBackColor = true;
+            this.btnYellowCymbal.Click += new System.EventHandler(this.ButtonPress);
+            // 
+            // pbYellowCymbal
+            // 
+            this.pbYellowCymbal.BackColor = System.Drawing.Color.Black;
+            this.pbYellowCymbal.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(175)))), ((int)(((byte)(230)))));
+            this.pbYellowCymbal.Location = new System.Drawing.Point(4, 52);
+            this.pbYellowCymbal.Margin = new System.Windows.Forms.Padding(4);
+            this.pbYellowCymbal.Maximum = 127;
+            this.pbYellowCymbal.Name = "pbYellowCymbal";
+            this.pbYellowCymbal.Size = new System.Drawing.Size(128, 15);
+            this.pbYellowCymbal.Style = System.Windows.Forms.ProgressBarStyle.Continuous;
+            this.pbYellowCymbal.TabIndex = 24;
+            // 
+            // chkBoostYellowCymbal
+            // 
+            this.chkBoostYellowCymbal.AutoSize = true;
+            this.chkBoostYellowCymbal.BackColor = System.Drawing.Color.Transparent;
+            this.chkBoostYellowCymbal.Checked = true;
+            this.chkBoostYellowCymbal.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.chkBoostYellowCymbal.ForeColor = System.Drawing.Color.White;
+            this.chkBoostYellowCymbal.Location = new System.Drawing.Point(4, 72);
+            this.chkBoostYellowCymbal.Margin = new System.Windows.Forms.Padding(4);
+            this.chkBoostYellowCymbal.Name = "chkBoostYellowCymbal";
+            this.chkBoostYellowCymbal.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.chkBoostYellowCymbal.Size = new System.Drawing.Size(66, 21);
+            this.chkBoostYellowCymbal.TabIndex = 29;
+            this.chkBoostYellowCymbal.Text = "Boost";
+            this.chkBoostYellowCymbal.UseVisualStyleBackColor = false;
             // 
             // chkDPadLeft
             // 
@@ -253,7 +1939,7 @@
             this.chkDPadLeft.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent;
             this.chkDPadLeft.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.chkDPadLeft.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.chkDPadLeft.Location = new System.Drawing.Point(261, 390);
+            this.chkDPadLeft.Location = new System.Drawing.Point(259, 418);
             this.chkDPadLeft.Name = "chkDPadLeft";
             this.chkDPadLeft.Size = new System.Drawing.Size(18, 17);
             this.chkDPadLeft.TabIndex = 39;
@@ -268,7 +1954,7 @@
             this.chkDPadDown.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent;
             this.chkDPadDown.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.chkDPadDown.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.chkDPadDown.Location = new System.Drawing.Point(299, 443);
+            this.chkDPadDown.Location = new System.Drawing.Point(297, 471);
             this.chkDPadDown.Name = "chkDPadDown";
             this.chkDPadDown.Size = new System.Drawing.Size(18, 17);
             this.chkDPadDown.TabIndex = 39;
@@ -283,7 +1969,7 @@
             this.chkDPadUp.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent;
             this.chkDPadUp.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.chkDPadUp.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.chkDPadUp.Location = new System.Drawing.Point(318, 342);
+            this.chkDPadUp.Location = new System.Drawing.Point(316, 370);
             this.chkDPadUp.Name = "chkDPadUp";
             this.chkDPadUp.Size = new System.Drawing.Size(18, 17);
             this.chkDPadUp.TabIndex = 39;
@@ -298,7 +1984,7 @@
             this.chkDPadRight.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent;
             this.chkDPadRight.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.chkDPadRight.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.chkDPadRight.Location = new System.Drawing.Point(367, 389);
+            this.chkDPadRight.Location = new System.Drawing.Point(365, 417);
             this.chkDPadRight.Name = "chkDPadRight";
             this.chkDPadRight.Size = new System.Drawing.Size(18, 17);
             this.chkDPadRight.TabIndex = 39;
@@ -409,346 +2095,35 @@
             this.chkTriangle.TabIndex = 39;
             this.chkTriangle.UseVisualStyleBackColor = true;
             // 
-            // ddlPedal
+            // chkPedalLeft
             // 
-            this.ddlPedal.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.ddlPedal.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ddlPedal.FormattingEnabled = true;
-            this.ddlPedal.Location = new System.Drawing.Point(769, 487);
-            this.ddlPedal.Margin = new System.Windows.Forms.Padding(4);
-            this.ddlPedal.Name = "ddlPedal";
-            this.ddlPedal.Size = new System.Drawing.Size(52, 21);
-            this.ddlPedal.TabIndex = 38;
+            this.chkPedalLeft.AutoSize = true;
+            this.chkPedalLeft.BackColor = System.Drawing.Color.Transparent;
+            this.chkPedalLeft.ForeColor = System.Drawing.Color.White;
+            this.chkPedalLeft.Location = new System.Drawing.Point(138, 472);
+            this.chkPedalLeft.Margin = new System.Windows.Forms.Padding(4);
+            this.chkPedalLeft.Name = "chkPedalLeft";
+            this.chkPedalLeft.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.chkPedalLeft.Size = new System.Drawing.Size(18, 17);
+            this.chkPedalLeft.TabIndex = 32;
+            this.chkPedalLeft.UseVisualStyleBackColor = false;
             // 
-            // ddlCymBlue
+            // chkPedalRight
             // 
-            this.ddlCymBlue.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.ddlCymBlue.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ddlCymBlue.FormattingEnabled = true;
-            this.ddlCymBlue.Location = new System.Drawing.Point(523, 93);
-            this.ddlCymBlue.Margin = new System.Windows.Forms.Padding(4);
-            this.ddlCymBlue.Name = "ddlCymBlue";
-            this.ddlCymBlue.Size = new System.Drawing.Size(52, 21);
-            this.ddlCymBlue.TabIndex = 37;
-            // 
-            // ddlGreen
-            // 
-            this.ddlGreen.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.ddlGreen.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ddlGreen.FormattingEnabled = true;
-            this.ddlGreen.Location = new System.Drawing.Point(740, 358);
-            this.ddlGreen.Margin = new System.Windows.Forms.Padding(4);
-            this.ddlGreen.Name = "ddlGreen";
-            this.ddlGreen.Size = new System.Drawing.Size(52, 21);
-            this.ddlGreen.TabIndex = 36;
-            // 
-            // ddlCymGreen
-            // 
-            this.ddlCymGreen.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.ddlCymGreen.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ddlCymGreen.FormattingEnabled = true;
-            this.ddlCymGreen.Location = new System.Drawing.Point(740, 171);
-            this.ddlCymGreen.Margin = new System.Windows.Forms.Padding(4);
-            this.ddlCymGreen.Name = "ddlCymGreen";
-            this.ddlCymGreen.Size = new System.Drawing.Size(52, 21);
-            this.ddlCymGreen.TabIndex = 35;
-            // 
-            // ddlCymYellow
-            // 
-            this.ddlCymYellow.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.ddlCymYellow.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ddlCymYellow.FormattingEnabled = true;
-            this.ddlCymYellow.Location = new System.Drawing.Point(136, 171);
-            this.ddlCymYellow.Margin = new System.Windows.Forms.Padding(4);
-            this.ddlCymYellow.Name = "ddlCymYellow";
-            this.ddlCymYellow.Size = new System.Drawing.Size(52, 21);
-            this.ddlCymYellow.TabIndex = 35;
-            // 
-            // ddlBlue
-            // 
-            this.ddlBlue.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.ddlBlue.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ddlBlue.FormattingEnabled = true;
-            this.ddlBlue.Location = new System.Drawing.Point(524, 297);
-            this.ddlBlue.Margin = new System.Windows.Forms.Padding(4);
-            this.ddlBlue.Name = "ddlBlue";
-            this.ddlBlue.Size = new System.Drawing.Size(52, 21);
-            this.ddlBlue.TabIndex = 35;
-            // 
-            // ddlRed
-            // 
-            this.ddlRed.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.ddlRed.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ddlRed.FormattingEnabled = true;
-            this.ddlRed.Location = new System.Drawing.Point(134, 394);
-            this.ddlRed.Margin = new System.Windows.Forms.Padding(4);
-            this.ddlRed.Name = "ddlRed";
-            this.ddlRed.Size = new System.Drawing.Size(52, 21);
-            this.ddlRed.TabIndex = 34;
-            // 
-            // ddlYellow
-            // 
-            this.ddlYellow.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.ddlYellow.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ddlYellow.FormattingEnabled = true;
-            this.ddlYellow.Location = new System.Drawing.Point(300, 300);
-            this.ddlYellow.Margin = new System.Windows.Forms.Padding(4);
-            this.ddlYellow.Name = "ddlYellow";
-            this.ddlYellow.Size = new System.Drawing.Size(52, 21);
-            this.ddlYellow.TabIndex = 33;
-            // 
-            // chkPedal
-            // 
-            this.chkPedal.AutoSize = true;
-            this.chkPedal.BackColor = System.Drawing.Color.Transparent;
-            this.chkPedal.Checked = true;
-            this.chkPedal.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.chkPedal.ForeColor = System.Drawing.Color.White;
-            this.chkPedal.Location = new System.Drawing.Point(695, 490);
-            this.chkPedal.Margin = new System.Windows.Forms.Padding(4);
-            this.chkPedal.Name = "chkPedal";
-            this.chkPedal.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.chkPedal.Size = new System.Drawing.Size(66, 21);
-            this.chkPedal.TabIndex = 32;
-            this.chkPedal.Text = "Boost";
-            this.chkPedal.UseVisualStyleBackColor = false;
-            // 
-            // chkGreen
-            // 
-            this.chkGreen.AutoSize = true;
-            this.chkGreen.BackColor = System.Drawing.Color.Transparent;
-            this.chkGreen.Checked = true;
-            this.chkGreen.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.chkGreen.ForeColor = System.Drawing.Color.White;
-            this.chkGreen.Location = new System.Drawing.Point(666, 358);
-            this.chkGreen.Margin = new System.Windows.Forms.Padding(4);
-            this.chkGreen.Name = "chkGreen";
-            this.chkGreen.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.chkGreen.Size = new System.Drawing.Size(66, 21);
-            this.chkGreen.TabIndex = 31;
-            this.chkGreen.Text = "Boost";
-            this.chkGreen.UseVisualStyleBackColor = false;
-            // 
-            // chkCymBlue
-            // 
-            this.chkCymBlue.AutoSize = true;
-            this.chkCymBlue.BackColor = System.Drawing.Color.Transparent;
-            this.chkCymBlue.Checked = true;
-            this.chkCymBlue.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.chkCymBlue.ForeColor = System.Drawing.Color.White;
-            this.chkCymBlue.Location = new System.Drawing.Point(448, 93);
-            this.chkCymBlue.Margin = new System.Windows.Forms.Padding(4);
-            this.chkCymBlue.Name = "chkCymBlue";
-            this.chkCymBlue.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.chkCymBlue.Size = new System.Drawing.Size(66, 21);
-            this.chkCymBlue.TabIndex = 30;
-            this.chkCymBlue.Text = "Boost";
-            this.chkCymBlue.UseVisualStyleBackColor = false;
-            // 
-            // chkCymGreen
-            // 
-            this.chkCymGreen.AutoSize = true;
-            this.chkCymGreen.BackColor = System.Drawing.Color.Transparent;
-            this.chkCymGreen.Checked = true;
-            this.chkCymGreen.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.chkCymGreen.ForeColor = System.Drawing.Color.White;
-            this.chkCymGreen.Location = new System.Drawing.Point(666, 171);
-            this.chkCymGreen.Margin = new System.Windows.Forms.Padding(4);
-            this.chkCymGreen.Name = "chkCymGreen";
-            this.chkCymGreen.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.chkCymGreen.Size = new System.Drawing.Size(66, 21);
-            this.chkCymGreen.TabIndex = 29;
-            this.chkCymGreen.Text = "Boost";
-            this.chkCymGreen.UseVisualStyleBackColor = false;
-            // 
-            // chkCymYellow
-            // 
-            this.chkCymYellow.AutoSize = true;
-            this.chkCymYellow.BackColor = System.Drawing.Color.Transparent;
-            this.chkCymYellow.Checked = true;
-            this.chkCymYellow.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.chkCymYellow.ForeColor = System.Drawing.Color.White;
-            this.chkCymYellow.Location = new System.Drawing.Point(62, 171);
-            this.chkCymYellow.Margin = new System.Windows.Forms.Padding(4);
-            this.chkCymYellow.Name = "chkCymYellow";
-            this.chkCymYellow.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.chkCymYellow.Size = new System.Drawing.Size(66, 21);
-            this.chkCymYellow.TabIndex = 29;
-            this.chkCymYellow.Text = "Boost";
-            this.chkCymYellow.UseVisualStyleBackColor = false;
-            // 
-            // chkBlue
-            // 
-            this.chkBlue.AutoSize = true;
-            this.chkBlue.BackColor = System.Drawing.Color.Transparent;
-            this.chkBlue.Checked = true;
-            this.chkBlue.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.chkBlue.ForeColor = System.Drawing.Color.White;
-            this.chkBlue.Location = new System.Drawing.Point(450, 297);
-            this.chkBlue.Margin = new System.Windows.Forms.Padding(4);
-            this.chkBlue.Name = "chkBlue";
-            this.chkBlue.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.chkBlue.Size = new System.Drawing.Size(66, 21);
-            this.chkBlue.TabIndex = 29;
-            this.chkBlue.Text = "Boost";
-            this.chkBlue.UseVisualStyleBackColor = false;
-            // 
-            // chkRed
-            // 
-            this.chkRed.AutoSize = true;
-            this.chkRed.BackColor = System.Drawing.Color.Transparent;
-            this.chkRed.Checked = true;
-            this.chkRed.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.chkRed.ForeColor = System.Drawing.Color.White;
-            this.chkRed.Location = new System.Drawing.Point(60, 394);
-            this.chkRed.Margin = new System.Windows.Forms.Padding(4);
-            this.chkRed.Name = "chkRed";
-            this.chkRed.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.chkRed.Size = new System.Drawing.Size(66, 21);
-            this.chkRed.TabIndex = 28;
-            this.chkRed.Text = "Boost";
-            this.chkRed.UseVisualStyleBackColor = false;
-            // 
-            // chkYellow
-            // 
-            this.chkYellow.AutoSize = true;
-            this.chkYellow.BackColor = System.Drawing.Color.Transparent;
-            this.chkYellow.CheckAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.chkYellow.Checked = true;
-            this.chkYellow.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.chkYellow.ForeColor = System.Drawing.Color.White;
-            this.chkYellow.Location = new System.Drawing.Point(225, 300);
-            this.chkYellow.Margin = new System.Windows.Forms.Padding(4);
-            this.chkYellow.Name = "chkYellow";
-            this.chkYellow.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.chkYellow.Size = new System.Drawing.Size(66, 21);
-            this.chkYellow.TabIndex = 27;
-            this.chkYellow.Text = "Boost";
-            this.chkYellow.UseVisualStyleBackColor = false;
-            // 
-            // pbCymGreen
-            // 
-            this.pbCymGreen.BackColor = System.Drawing.Color.Black;
-            this.pbCymGreen.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(175)))), ((int)(((byte)(230)))));
-            this.pbCymGreen.Location = new System.Drawing.Point(666, 151);
-            this.pbCymGreen.Margin = new System.Windows.Forms.Padding(4);
-            this.pbCymGreen.Maximum = 127;
-            this.pbCymGreen.Name = "pbCymGreen";
-            this.pbCymGreen.Size = new System.Drawing.Size(128, 15);
-            this.pbCymGreen.Style = System.Windows.Forms.ProgressBarStyle.Continuous;
-            this.pbCymGreen.TabIndex = 24;
-            // 
-            // pbPedal
-            // 
-            this.pbPedal.Location = new System.Drawing.Point(695, 467);
-            this.pbPedal.Margin = new System.Windows.Forms.Padding(4);
-            this.pbPedal.Maximum = 127;
-            this.pbPedal.Name = "pbPedal";
-            this.pbPedal.Size = new System.Drawing.Size(128, 15);
-            this.pbPedal.Style = System.Windows.Forms.ProgressBarStyle.Continuous;
-            this.pbPedal.TabIndex = 26;
-            // 
-            // pbCymYellow
-            // 
-            this.pbCymYellow.BackColor = System.Drawing.Color.Black;
-            this.pbCymYellow.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(175)))), ((int)(((byte)(230)))));
-            this.pbCymYellow.Location = new System.Drawing.Point(62, 151);
-            this.pbCymYellow.Margin = new System.Windows.Forms.Padding(4);
-            this.pbCymYellow.Maximum = 127;
-            this.pbCymYellow.Name = "pbCymYellow";
-            this.pbCymYellow.Size = new System.Drawing.Size(128, 15);
-            this.pbCymYellow.Style = System.Windows.Forms.ProgressBarStyle.Continuous;
-            this.pbCymYellow.TabIndex = 24;
-            // 
-            // pbGreen
-            // 
-            this.pbGreen.BackColor = System.Drawing.Color.Black;
-            this.pbGreen.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(175)))), ((int)(((byte)(230)))));
-            this.pbGreen.Location = new System.Drawing.Point(666, 338);
-            this.pbGreen.Margin = new System.Windows.Forms.Padding(4);
-            this.pbGreen.Maximum = 127;
-            this.pbGreen.Name = "pbGreen";
-            this.pbGreen.Size = new System.Drawing.Size(128, 15);
-            this.pbGreen.Style = System.Windows.Forms.ProgressBarStyle.Continuous;
-            this.pbGreen.TabIndex = 25;
-            // 
-            // pbBlue
-            // 
-            this.pbBlue.BackColor = System.Drawing.Color.Black;
-            this.pbBlue.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(175)))), ((int)(((byte)(230)))));
-            this.pbBlue.Location = new System.Drawing.Point(450, 277);
-            this.pbBlue.Margin = new System.Windows.Forms.Padding(4);
-            this.pbBlue.Maximum = 127;
-            this.pbBlue.Name = "pbBlue";
-            this.pbBlue.Size = new System.Drawing.Size(128, 15);
-            this.pbBlue.Style = System.Windows.Forms.ProgressBarStyle.Continuous;
-            this.pbBlue.TabIndex = 24;
-            // 
-            // pbRed
-            // 
-            this.pbRed.BackColor = System.Drawing.Color.Black;
-            this.pbRed.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(175)))), ((int)(((byte)(230)))));
-            this.pbRed.Location = new System.Drawing.Point(60, 374);
-            this.pbRed.Margin = new System.Windows.Forms.Padding(4);
-            this.pbRed.MarqueeAnimationSpeed = 0;
-            this.pbRed.Maximum = 127;
-            this.pbRed.Name = "pbRed";
-            this.pbRed.Size = new System.Drawing.Size(128, 15);
-            this.pbRed.Style = System.Windows.Forms.ProgressBarStyle.Continuous;
-            this.pbRed.TabIndex = 23;
-            // 
-            // pbCymBlue
-            // 
-            this.pbCymBlue.BackColor = System.Drawing.Color.Black;
-            this.pbCymBlue.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(175)))), ((int)(((byte)(230)))));
-            this.pbCymBlue.Location = new System.Drawing.Point(448, 73);
-            this.pbCymBlue.Margin = new System.Windows.Forms.Padding(4);
-            this.pbCymBlue.Maximum = 127;
-            this.pbCymBlue.Name = "pbCymBlue";
-            this.pbCymBlue.Size = new System.Drawing.Size(128, 15);
-            this.pbCymBlue.Style = System.Windows.Forms.ProgressBarStyle.Continuous;
-            this.pbCymBlue.TabIndex = 22;
-            // 
-            // pbYellow
-            // 
-            this.pbYellow.BackColor = System.Drawing.Color.Black;
-            this.pbYellow.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(175)))), ((int)(((byte)(230)))));
-            this.pbYellow.Location = new System.Drawing.Point(225, 280);
-            this.pbYellow.Margin = new System.Windows.Forms.Padding(4);
-            this.pbYellow.MarqueeAnimationSpeed = 0;
-            this.pbYellow.Maximum = 127;
-            this.pbYellow.Name = "pbYellow";
-            this.pbYellow.Size = new System.Drawing.Size(128, 15);
-            this.pbYellow.Style = System.Windows.Forms.ProgressBarStyle.Continuous;
-            this.pbYellow.TabIndex = 21;
-            // 
-            // btnPedal
-            // 
-            this.btnPedal.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnPedal.Location = new System.Drawing.Point(769, 438);
-            this.btnPedal.Margin = new System.Windows.Forms.Padding(4);
-            this.btnPedal.Name = "btnPedal";
-            this.btnPedal.Size = new System.Drawing.Size(53, 25);
-            this.btnPedal.TabIndex = 14;
-            this.btnPedal.Text = "Hit";
-            this.btnPedal.UseVisualStyleBackColor = true;
-            this.btnPedal.Click += new System.EventHandler(this.ButtonPress);
-            // 
-            // btnCymBlue
-            // 
-            this.btnCymBlue.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnCymBlue.Location = new System.Drawing.Point(523, 44);
-            this.btnCymBlue.Margin = new System.Windows.Forms.Padding(4);
-            this.btnCymBlue.Name = "btnCymBlue";
-            this.btnCymBlue.Size = new System.Drawing.Size(53, 25);
-            this.btnCymBlue.TabIndex = 13;
-            this.btnCymBlue.Text = "Hit";
-            this.btnCymBlue.UseVisualStyleBackColor = true;
-            this.btnCymBlue.Click += new System.EventHandler(this.ButtonPress);
+            this.chkPedalRight.AutoSize = true;
+            this.chkPedalRight.BackColor = System.Drawing.Color.Transparent;
+            this.chkPedalRight.ForeColor = System.Drawing.Color.White;
+            this.chkPedalRight.Location = new System.Drawing.Point(750, 464);
+            this.chkPedalRight.Margin = new System.Windows.Forms.Padding(4);
+            this.chkPedalRight.Name = "chkPedalRight";
+            this.chkPedalRight.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.chkPedalRight.Size = new System.Drawing.Size(18, 17);
+            this.chkPedalRight.TabIndex = 32;
+            this.chkPedalRight.UseVisualStyleBackColor = false;
             // 
             // nupDPadDown
             // 
-            this.nupDPadDown.Location = new System.Drawing.Point(272, 459);
+            this.nupDPadDown.Location = new System.Drawing.Point(270, 487);
             this.nupDPadDown.Margin = new System.Windows.Forms.Padding(4);
             this.nupDPadDown.Maximum = new decimal(new int[] {
             127,
@@ -766,7 +2141,7 @@
             // 
             // nupDPadLeft
             // 
-            this.nupDPadLeft.Location = new System.Drawing.Point(233, 405);
+            this.nupDPadLeft.Location = new System.Drawing.Point(231, 433);
             this.nupDPadLeft.Margin = new System.Windows.Forms.Padding(4);
             this.nupDPadLeft.Maximum = new decimal(new int[] {
             127,
@@ -784,7 +2159,7 @@
             // 
             // nupDPadUp
             // 
-            this.nupDPadUp.Location = new System.Drawing.Point(289, 358);
+            this.nupDPadUp.Location = new System.Drawing.Point(287, 386);
             this.nupDPadUp.Margin = new System.Windows.Forms.Padding(4);
             this.nupDPadUp.Maximum = new decimal(new int[] {
             127,
@@ -802,7 +2177,7 @@
             // 
             // nupDPadRight
             // 
-            this.nupDPadRight.Location = new System.Drawing.Point(339, 404);
+            this.nupDPadRight.Location = new System.Drawing.Point(337, 432);
             this.nupDPadRight.Margin = new System.Windows.Forms.Padding(4);
             this.nupDPadRight.Maximum = new decimal(new int[] {
             127,
@@ -944,218 +2319,38 @@
             0,
             0});
             // 
-            // nupPedal
+            // nupPedalLeft
             // 
-            this.nupPedal.Location = new System.Drawing.Point(695, 438);
-            this.nupPedal.Margin = new System.Windows.Forms.Padding(4);
-            this.nupPedal.Maximum = new decimal(new int[] {
+            this.nupPedalLeft.Location = new System.Drawing.Point(91, 487);
+            this.nupPedalLeft.Margin = new System.Windows.Forms.Padding(4);
+            this.nupPedalLeft.Maximum = new decimal(new int[] {
             127,
             0,
             0,
             0});
-            this.nupPedal.Name = "nupPedal";
-            this.nupPedal.Size = new System.Drawing.Size(64, 22);
-            this.nupPedal.TabIndex = 3;
-            this.nupPedal.Value = new decimal(new int[] {
+            this.nupPedalLeft.Name = "nupPedalLeft";
+            this.nupPedalLeft.Size = new System.Drawing.Size(64, 22);
+            this.nupPedalLeft.TabIndex = 3;
+            this.nupPedalLeft.Value = new decimal(new int[] {
             36,
             0,
             0,
             0});
             // 
-            // btnCymGreen
+            // nupPedalRight
             // 
-            this.btnCymGreen.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnCymGreen.Location = new System.Drawing.Point(740, 122);
-            this.btnCymGreen.Margin = new System.Windows.Forms.Padding(4);
-            this.btnCymGreen.Name = "btnCymGreen";
-            this.btnCymGreen.Size = new System.Drawing.Size(53, 25);
-            this.btnCymGreen.TabIndex = 10;
-            this.btnCymGreen.Text = "Hit";
-            this.btnCymGreen.UseVisualStyleBackColor = true;
-            this.btnCymGreen.Click += new System.EventHandler(this.ButtonPress);
-            // 
-            // btnYellow
-            // 
-            this.btnYellow.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnYellow.Location = new System.Drawing.Point(300, 251);
-            this.btnYellow.Margin = new System.Windows.Forms.Padding(4);
-            this.btnYellow.Name = "btnYellow";
-            this.btnYellow.Size = new System.Drawing.Size(53, 25);
-            this.btnYellow.TabIndex = 12;
-            this.btnYellow.Text = "Hit";
-            this.btnYellow.UseVisualStyleBackColor = true;
-            this.btnYellow.Click += new System.EventHandler(this.ButtonPress);
-            // 
-            // btnCymYellow
-            // 
-            this.btnCymYellow.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnCymYellow.Location = new System.Drawing.Point(136, 122);
-            this.btnCymYellow.Margin = new System.Windows.Forms.Padding(4);
-            this.btnCymYellow.Name = "btnCymYellow";
-            this.btnCymYellow.Size = new System.Drawing.Size(53, 25);
-            this.btnCymYellow.TabIndex = 10;
-            this.btnCymYellow.Text = "Hit";
-            this.btnCymYellow.UseVisualStyleBackColor = true;
-            this.btnCymYellow.Click += new System.EventHandler(this.ButtonPress);
-            // 
-            // nupCymBlue
-            // 
-            this.nupCymBlue.Location = new System.Drawing.Point(448, 44);
-            this.nupCymBlue.Margin = new System.Windows.Forms.Padding(4);
-            this.nupCymBlue.Maximum = new decimal(new int[] {
+            this.nupPedalRight.Location = new System.Drawing.Point(703, 479);
+            this.nupPedalRight.Margin = new System.Windows.Forms.Padding(4);
+            this.nupPedalRight.Maximum = new decimal(new int[] {
             127,
             0,
             0,
             0});
-            this.nupCymBlue.Name = "nupCymBlue";
-            this.nupCymBlue.Size = new System.Drawing.Size(64, 22);
-            this.nupCymBlue.TabIndex = 8;
-            this.nupCymBlue.Value = new decimal(new int[] {
-            64,
-            0,
-            0,
-            0});
-            // 
-            // btnBlue
-            // 
-            this.btnBlue.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnBlue.Location = new System.Drawing.Point(524, 248);
-            this.btnBlue.Margin = new System.Windows.Forms.Padding(4);
-            this.btnBlue.Name = "btnBlue";
-            this.btnBlue.Size = new System.Drawing.Size(53, 25);
-            this.btnBlue.TabIndex = 10;
-            this.btnBlue.Text = "Hit";
-            this.btnBlue.UseVisualStyleBackColor = true;
-            this.btnBlue.Click += new System.EventHandler(this.ButtonPress);
-            // 
-            // nupCymGreen
-            // 
-            this.nupCymGreen.Location = new System.Drawing.Point(666, 122);
-            this.nupCymGreen.Margin = new System.Windows.Forms.Padding(4);
-            this.nupCymGreen.Maximum = new decimal(new int[] {
-            127,
-            0,
-            0,
-            0});
-            this.nupCymGreen.Name = "nupCymGreen";
-            this.nupCymGreen.Size = new System.Drawing.Size(64, 22);
-            this.nupCymGreen.TabIndex = 5;
-            this.nupCymGreen.Value = new decimal(new int[] {
-            64,
-            0,
-            0,
-            0});
-            // 
-            // nupYellow
-            // 
-            this.nupYellow.Location = new System.Drawing.Point(225, 251);
-            this.nupYellow.Margin = new System.Windows.Forms.Padding(4);
-            this.nupYellow.Maximum = new decimal(new int[] {
-            127,
-            0,
-            0,
-            0});
-            this.nupYellow.Name = "nupYellow";
-            this.nupYellow.Size = new System.Drawing.Size(64, 22);
-            this.nupYellow.TabIndex = 7;
-            this.nupYellow.Value = new decimal(new int[] {
-            64,
-            0,
-            0,
-            0});
-            // 
-            // nupCymYellow
-            // 
-            this.nupCymYellow.Location = new System.Drawing.Point(62, 122);
-            this.nupCymYellow.Margin = new System.Windows.Forms.Padding(4);
-            this.nupCymYellow.Maximum = new decimal(new int[] {
-            127,
-            0,
-            0,
-            0});
-            this.nupCymYellow.Name = "nupCymYellow";
-            this.nupCymYellow.Size = new System.Drawing.Size(64, 22);
-            this.nupCymYellow.TabIndex = 5;
-            this.nupCymYellow.Value = new decimal(new int[] {
-            64,
-            0,
-            0,
-            0});
-            // 
-            // btnGreen
-            // 
-            this.btnGreen.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnGreen.Location = new System.Drawing.Point(740, 309);
-            this.btnGreen.Margin = new System.Windows.Forms.Padding(4);
-            this.btnGreen.Name = "btnGreen";
-            this.btnGreen.Size = new System.Drawing.Size(53, 25);
-            this.btnGreen.TabIndex = 11;
-            this.btnGreen.Text = "Hit";
-            this.btnGreen.UseVisualStyleBackColor = true;
-            this.btnGreen.Click += new System.EventHandler(this.ButtonPress);
-            // 
-            // nupBlue
-            // 
-            this.nupBlue.Location = new System.Drawing.Point(450, 248);
-            this.nupBlue.Margin = new System.Windows.Forms.Padding(4);
-            this.nupBlue.Maximum = new decimal(new int[] {
-            127,
-            0,
-            0,
-            0});
-            this.nupBlue.Name = "nupBlue";
-            this.nupBlue.Size = new System.Drawing.Size(64, 22);
-            this.nupBlue.TabIndex = 5;
-            this.nupBlue.Value = new decimal(new int[] {
-            64,
-            0,
-            0,
-            0});
-            // 
-            // btnRed
-            // 
-            this.btnRed.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnRed.Location = new System.Drawing.Point(134, 345);
-            this.btnRed.Margin = new System.Windows.Forms.Padding(4);
-            this.btnRed.Name = "btnRed";
-            this.btnRed.Size = new System.Drawing.Size(53, 25);
-            this.btnRed.TabIndex = 9;
-            this.btnRed.Text = "Hit";
-            this.btnRed.UseVisualStyleBackColor = true;
-            this.btnRed.Click += new System.EventHandler(this.ButtonPress);
-            // 
-            // nupGreen
-            // 
-            this.nupGreen.Location = new System.Drawing.Point(666, 309);
-            this.nupGreen.Margin = new System.Windows.Forms.Padding(4);
-            this.nupGreen.Maximum = new decimal(new int[] {
-            127,
-            0,
-            0,
-            0});
-            this.nupGreen.Name = "nupGreen";
-            this.nupGreen.Size = new System.Drawing.Size(64, 22);
-            this.nupGreen.TabIndex = 6;
-            this.nupGreen.Value = new decimal(new int[] {
-            64,
-            0,
-            0,
-            0});
-            // 
-            // nupRed
-            // 
-            this.nupRed.Location = new System.Drawing.Point(60, 345);
-            this.nupRed.Margin = new System.Windows.Forms.Padding(4);
-            this.nupRed.Maximum = new decimal(new int[] {
-            127,
-            0,
-            0,
-            0});
-            this.nupRed.Name = "nupRed";
-            this.nupRed.Size = new System.Drawing.Size(64, 22);
-            this.nupRed.TabIndex = 4;
-            this.nupRed.Value = new decimal(new int[] {
-            64,
+            this.nupPedalRight.Name = "nupPedalRight";
+            this.nupPedalRight.Size = new System.Drawing.Size(64, 22);
+            this.nupPedalRight.TabIndex = 3;
+            this.nupPedalRight.Value = new decimal(new int[] {
+            36,
             0,
             0,
             0});
@@ -1173,7 +2368,7 @@
             // 
             // btnSave
             // 
-            this.btnSave.Location = new System.Drawing.Point(561, 609);
+            this.btnSave.Location = new System.Drawing.Point(554, 27);
             this.btnSave.Margin = new System.Windows.Forms.Padding(4);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(116, 28);
@@ -1184,7 +2379,7 @@
             // 
             // btnLoad
             // 
-            this.btnLoad.Location = new System.Drawing.Point(437, 608);
+            this.btnLoad.Location = new System.Drawing.Point(430, 26);
             this.btnLoad.Margin = new System.Windows.Forms.Padding(4);
             this.btnLoad.Name = "btnLoad";
             this.btnLoad.Size = new System.Drawing.Size(116, 28);
@@ -1199,28 +2394,715 @@
             // 
             // btnReset
             // 
-            this.btnReset.Location = new System.Drawing.Point(313, 608);
+            this.btnReset.Location = new System.Drawing.Point(306, 26);
             this.btnReset.Margin = new System.Windows.Forms.Padding(4);
             this.btnReset.Name = "btnReset";
             this.btnReset.Size = new System.Drawing.Size(116, 28);
             this.btnReset.TabIndex = 24;
-            this.btnReset.Text = "Reset settings";
+            this.btnReset.Text = "Default settings";
             this.btnReset.UseVisualStyleBackColor = true;
             this.btnReset.Click += new System.EventHandler(this.LoadDefaultSettings);
+            // 
+            // tabControl1
+            // 
+            this.tabControl1.Controls.Add(this.tabPage1);
+            this.tabControl1.Controls.Add(this.tabPage2);
+            this.tabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tabControl1.Location = new System.Drawing.Point(0, 0);
+            this.tabControl1.Name = "tabControl1";
+            this.tabControl1.SelectedIndex = 0;
+            this.tabControl1.Size = new System.Drawing.Size(873, 643);
+            this.tabControl1.TabIndex = 25;
+            // 
+            // tabPage1
+            // 
+            this.tabPage1.Controls.Add(this.pnlHolder);
+            this.tabPage1.Location = new System.Drawing.Point(4, 25);
+            this.tabPage1.Name = "tabPage1";
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage1.Size = new System.Drawing.Size(865, 614);
+            this.tabPage1.TabIndex = 0;
+            this.tabPage1.Text = "Simple";
+            this.tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // tabPage2
+            // 
+            this.tabPage2.Controls.Add(this.groupBox11);
+            this.tabPage2.Controls.Add(this.groupBox10);
+            this.tabPage2.Controls.Add(this.groupBox9);
+            this.tabPage2.Controls.Add(this.groupBox8);
+            this.tabPage2.Location = new System.Drawing.Point(4, 25);
+            this.tabPage2.Name = "tabPage2";
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage2.Size = new System.Drawing.Size(865, 614);
+            this.tabPage2.TabIndex = 1;
+            this.tabPage2.Text = "Advanced";
+            this.tabPage2.UseVisualStyleBackColor = true;
+            // 
+            // groupBox11
+            // 
+            this.groupBox11.Controls.Add(this.tableLayoutPanel3);
+            this.groupBox11.Location = new System.Drawing.Point(447, 286);
+            this.groupBox11.Name = "groupBox11";
+            this.groupBox11.Size = new System.Drawing.Size(410, 118);
+            this.groupBox11.TabIndex = 12;
+            this.groupBox11.TabStop = false;
+            this.groupBox11.Text = "Pedals";
+            // 
+            // tableLayoutPanel3
+            // 
+            this.tableLayoutPanel3.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Single;
+            this.tableLayoutPanel3.ColumnCount = 4;
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel3.Controls.Add(label29, 0, 1);
+            this.tableLayoutPanel3.Controls.Add(this.ddlAdvSwitchPedalLeft, 3, 1);
+            this.tableLayoutPanel3.Controls.Add(label30, 0, 0);
+            this.tableLayoutPanel3.Controls.Add(label31, 1, 0);
+            this.tableLayoutPanel3.Controls.Add(label32, 2, 0);
+            this.tableLayoutPanel3.Controls.Add(label33, 3, 0);
+            this.tableLayoutPanel3.Controls.Add(this.nupAdvVelPedalLeft, 2, 1);
+            this.tableLayoutPanel3.Controls.Add(label34, 0, 2);
+            this.tableLayoutPanel3.Controls.Add(this.ddlAdvSwitchPedalRight, 3, 2);
+            this.tableLayoutPanel3.Controls.Add(this.nupAdvVelPedalRight, 2, 2);
+            this.tableLayoutPanel3.Controls.Add(this.nupAdvNotePedalRight, 1, 2);
+            this.tableLayoutPanel3.Controls.Add(this.nupAdvNotePedalLeft, 1, 1);
+            this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel3.Location = new System.Drawing.Point(3, 18);
+            this.tableLayoutPanel3.Name = "tableLayoutPanel3";
+            this.tableLayoutPanel3.RowCount = 3;
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(404, 97);
+            this.tableLayoutPanel3.TabIndex = 2;
+            // 
+            // ddlAdvSwitchPedalLeft
+            // 
+            this.ddlAdvSwitchPedalLeft.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.ddlAdvSwitchPedalLeft.FormattingEnabled = true;
+            this.ddlAdvSwitchPedalLeft.Location = new System.Drawing.Point(304, 35);
+            this.ddlAdvSwitchPedalLeft.Name = "ddlAdvSwitchPedalLeft";
+            this.ddlAdvSwitchPedalLeft.Size = new System.Drawing.Size(96, 24);
+            this.ddlAdvSwitchPedalLeft.TabIndex = 1;
+            // 
+            // nupAdvVelPedalLeft
+            // 
+            this.nupAdvVelPedalLeft.Location = new System.Drawing.Point(205, 36);
+            this.nupAdvVelPedalLeft.Margin = new System.Windows.Forms.Padding(4);
+            this.nupAdvVelPedalLeft.Maximum = new decimal(new int[] {
+            127,
+            0,
+            0,
+            0});
+            this.nupAdvVelPedalLeft.Name = "nupAdvVelPedalLeft";
+            this.nupAdvVelPedalLeft.Size = new System.Drawing.Size(91, 22);
+            this.nupAdvVelPedalLeft.TabIndex = 6;
+            this.nupAdvVelPedalLeft.Value = new decimal(new int[] {
+            64,
+            0,
+            0,
+            0});
+            // 
+            // ddlAdvSwitchPedalRight
+            // 
+            this.ddlAdvSwitchPedalRight.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.ddlAdvSwitchPedalRight.FormattingEnabled = true;
+            this.ddlAdvSwitchPedalRight.Location = new System.Drawing.Point(304, 66);
+            this.ddlAdvSwitchPedalRight.Name = "ddlAdvSwitchPedalRight";
+            this.ddlAdvSwitchPedalRight.Size = new System.Drawing.Size(96, 24);
+            this.ddlAdvSwitchPedalRight.TabIndex = 1;
+            // 
+            // nupAdvVelPedalRight
+            // 
+            this.nupAdvVelPedalRight.Location = new System.Drawing.Point(205, 67);
+            this.nupAdvVelPedalRight.Margin = new System.Windows.Forms.Padding(4);
+            this.nupAdvVelPedalRight.Maximum = new decimal(new int[] {
+            127,
+            0,
+            0,
+            0});
+            this.nupAdvVelPedalRight.Name = "nupAdvVelPedalRight";
+            this.nupAdvVelPedalRight.Size = new System.Drawing.Size(91, 22);
+            this.nupAdvVelPedalRight.TabIndex = 6;
+            this.nupAdvVelPedalRight.Value = new decimal(new int[] {
+            64,
+            0,
+            0,
+            0});
+            // 
+            // nupAdvNotePedalRight
+            // 
+            this.nupAdvNotePedalRight.Location = new System.Drawing.Point(105, 67);
+            this.nupAdvNotePedalRight.Margin = new System.Windows.Forms.Padding(4);
+            this.nupAdvNotePedalRight.Maximum = new decimal(new int[] {
+            127,
+            0,
+            0,
+            0});
+            this.nupAdvNotePedalRight.Name = "nupAdvNotePedalRight";
+            this.nupAdvNotePedalRight.Size = new System.Drawing.Size(91, 22);
+            this.nupAdvNotePedalRight.TabIndex = 6;
+            this.nupAdvNotePedalRight.Value = new decimal(new int[] {
+            64,
+            0,
+            0,
+            0});
+            // 
+            // nupAdvNotePedalLeft
+            // 
+            this.nupAdvNotePedalLeft.Location = new System.Drawing.Point(105, 36);
+            this.nupAdvNotePedalLeft.Margin = new System.Windows.Forms.Padding(4);
+            this.nupAdvNotePedalLeft.Maximum = new decimal(new int[] {
+            127,
+            0,
+            0,
+            0});
+            this.nupAdvNotePedalLeft.Name = "nupAdvNotePedalLeft";
+            this.nupAdvNotePedalLeft.Size = new System.Drawing.Size(91, 22);
+            this.nupAdvNotePedalLeft.TabIndex = 6;
+            this.nupAdvNotePedalLeft.Value = new decimal(new int[] {
+            64,
+            0,
+            0,
+            0});
+            // 
+            // groupBox10
+            // 
+            this.groupBox10.Controls.Add(this.tableLayoutPanel2);
+            this.groupBox10.Location = new System.Drawing.Point(447, 6);
+            this.groupBox10.Name = "groupBox10";
+            this.groupBox10.Size = new System.Drawing.Size(410, 274);
+            this.groupBox10.TabIndex = 12;
+            this.groupBox10.TabStop = false;
+            this.groupBox10.Text = "Drum Pads";
+            // 
+            // tableLayoutPanel2
+            // 
+            this.tableLayoutPanel2.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Single;
+            this.tableLayoutPanel2.ColumnCount = 4;
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 27.29529F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 27.04715F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 18.11414F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 28.0397F));
+            this.tableLayoutPanel2.Controls.Add(this.ddlAdvBoostRedTom, 3, 1);
+            this.tableLayoutPanel2.Controls.Add(label4, 0, 1);
+            this.tableLayoutPanel2.Controls.Add(label19, 0, 0);
+            this.tableLayoutPanel2.Controls.Add(label20, 1, 0);
+            this.tableLayoutPanel2.Controls.Add(label21, 2, 0);
+            this.tableLayoutPanel2.Controls.Add(label22, 3, 0);
+            this.tableLayoutPanel2.Controls.Add(label23, 0, 2);
+            this.tableLayoutPanel2.Controls.Add(label24, 0, 3);
+            this.tableLayoutPanel2.Controls.Add(label25, 0, 4);
+            this.tableLayoutPanel2.Controls.Add(label26, 0, 5);
+            this.tableLayoutPanel2.Controls.Add(label27, 0, 6);
+            this.tableLayoutPanel2.Controls.Add(label28, 0, 7);
+            this.tableLayoutPanel2.Controls.Add(this.nupAdvNoteGreenCymbal, 1, 7);
+            this.tableLayoutPanel2.Controls.Add(this.nupAdvNoteGreenTom, 1, 6);
+            this.tableLayoutPanel2.Controls.Add(this.nupAdvNoteBlueCymbal, 1, 5);
+            this.tableLayoutPanel2.Controls.Add(this.nupAdvNoteBlueTom, 1, 4);
+            this.tableLayoutPanel2.Controls.Add(this.nupAdvNoteYellowCymbal, 1, 3);
+            this.tableLayoutPanel2.Controls.Add(this.nupAdvNoteYellowTom, 1, 2);
+            this.tableLayoutPanel2.Controls.Add(this.nupAdvNoteRedTom, 1, 1);
+            this.tableLayoutPanel2.Controls.Add(this.chkAdvBoostRedTom, 2, 1);
+            this.tableLayoutPanel2.Controls.Add(this.chkAdvBoostYellowTom, 2, 2);
+            this.tableLayoutPanel2.Controls.Add(this.chkAdvBoostYellowCymbal, 2, 3);
+            this.tableLayoutPanel2.Controls.Add(this.chkAdvBoostBlueTom, 2, 4);
+            this.tableLayoutPanel2.Controls.Add(this.chkAdvBoostBlueCymbal, 2, 5);
+            this.tableLayoutPanel2.Controls.Add(this.chkAdvBoostGreenTom, 2, 6);
+            this.tableLayoutPanel2.Controls.Add(this.chkAdvBoostGreenCymbal, 2, 7);
+            this.tableLayoutPanel2.Controls.Add(this.ddlAdvBoostYellowTom, 3, 2);
+            this.tableLayoutPanel2.Controls.Add(this.ddlAdvBoostYellowCymbal, 3, 3);
+            this.tableLayoutPanel2.Controls.Add(this.ddlAdvBoostBlueTom, 3, 4);
+            this.tableLayoutPanel2.Controls.Add(this.ddlAdvBoostBlueCymbal, 3, 5);
+            this.tableLayoutPanel2.Controls.Add(this.ddlAdvBoostGreenTom, 3, 6);
+            this.tableLayoutPanel2.Controls.Add(this.ddlAdvBoostGreenCymbal, 3, 7);
+            this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(3, 18);
+            this.tableLayoutPanel2.Name = "tableLayoutPanel2";
+            this.tableLayoutPanel2.RowCount = 8;
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(404, 253);
+            this.tableLayoutPanel2.TabIndex = 2;
+            // 
+            // ddlAdvBoostRedTom
+            // 
+            this.ddlAdvBoostRedTom.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.ddlAdvBoostRedTom.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ddlAdvBoostRedTom.FormattingEnabled = true;
+            this.ddlAdvBoostRedTom.Location = new System.Drawing.Point(294, 36);
+            this.ddlAdvBoostRedTom.Margin = new System.Windows.Forms.Padding(4);
+            this.ddlAdvBoostRedTom.Name = "ddlAdvBoostRedTom";
+            this.ddlAdvBoostRedTom.Size = new System.Drawing.Size(100, 21);
+            this.ddlAdvBoostRedTom.TabIndex = 38;
+            // 
+            // nupAdvNoteGreenCymbal
+            // 
+            this.nupAdvNoteGreenCymbal.Location = new System.Drawing.Point(114, 222);
+            this.nupAdvNoteGreenCymbal.Margin = new System.Windows.Forms.Padding(4);
+            this.nupAdvNoteGreenCymbal.Maximum = new decimal(new int[] {
+            127,
+            0,
+            0,
+            0});
+            this.nupAdvNoteGreenCymbal.Name = "nupAdvNoteGreenCymbal";
+            this.nupAdvNoteGreenCymbal.Size = new System.Drawing.Size(99, 22);
+            this.nupAdvNoteGreenCymbal.TabIndex = 6;
+            this.nupAdvNoteGreenCymbal.Value = new decimal(new int[] {
+            64,
+            0,
+            0,
+            0});
+            // 
+            // nupAdvNoteGreenTom
+            // 
+            this.nupAdvNoteGreenTom.Location = new System.Drawing.Point(114, 191);
+            this.nupAdvNoteGreenTom.Margin = new System.Windows.Forms.Padding(4);
+            this.nupAdvNoteGreenTom.Maximum = new decimal(new int[] {
+            127,
+            0,
+            0,
+            0});
+            this.nupAdvNoteGreenTom.Name = "nupAdvNoteGreenTom";
+            this.nupAdvNoteGreenTom.Size = new System.Drawing.Size(99, 22);
+            this.nupAdvNoteGreenTom.TabIndex = 6;
+            this.nupAdvNoteGreenTom.Value = new decimal(new int[] {
+            64,
+            0,
+            0,
+            0});
+            // 
+            // nupAdvNoteBlueCymbal
+            // 
+            this.nupAdvNoteBlueCymbal.Location = new System.Drawing.Point(114, 160);
+            this.nupAdvNoteBlueCymbal.Margin = new System.Windows.Forms.Padding(4);
+            this.nupAdvNoteBlueCymbal.Maximum = new decimal(new int[] {
+            127,
+            0,
+            0,
+            0});
+            this.nupAdvNoteBlueCymbal.Name = "nupAdvNoteBlueCymbal";
+            this.nupAdvNoteBlueCymbal.Size = new System.Drawing.Size(99, 22);
+            this.nupAdvNoteBlueCymbal.TabIndex = 6;
+            this.nupAdvNoteBlueCymbal.Value = new decimal(new int[] {
+            64,
+            0,
+            0,
+            0});
+            // 
+            // nupAdvNoteBlueTom
+            // 
+            this.nupAdvNoteBlueTom.Location = new System.Drawing.Point(114, 129);
+            this.nupAdvNoteBlueTom.Margin = new System.Windows.Forms.Padding(4);
+            this.nupAdvNoteBlueTom.Maximum = new decimal(new int[] {
+            127,
+            0,
+            0,
+            0});
+            this.nupAdvNoteBlueTom.Name = "nupAdvNoteBlueTom";
+            this.nupAdvNoteBlueTom.Size = new System.Drawing.Size(99, 22);
+            this.nupAdvNoteBlueTom.TabIndex = 6;
+            this.nupAdvNoteBlueTom.Value = new decimal(new int[] {
+            64,
+            0,
+            0,
+            0});
+            // 
+            // nupAdvNoteYellowCymbal
+            // 
+            this.nupAdvNoteYellowCymbal.Location = new System.Drawing.Point(114, 98);
+            this.nupAdvNoteYellowCymbal.Margin = new System.Windows.Forms.Padding(4);
+            this.nupAdvNoteYellowCymbal.Maximum = new decimal(new int[] {
+            127,
+            0,
+            0,
+            0});
+            this.nupAdvNoteYellowCymbal.Name = "nupAdvNoteYellowCymbal";
+            this.nupAdvNoteYellowCymbal.Size = new System.Drawing.Size(99, 22);
+            this.nupAdvNoteYellowCymbal.TabIndex = 6;
+            this.nupAdvNoteYellowCymbal.Value = new decimal(new int[] {
+            64,
+            0,
+            0,
+            0});
+            // 
+            // nupAdvNoteYellowTom
+            // 
+            this.nupAdvNoteYellowTom.Location = new System.Drawing.Point(114, 67);
+            this.nupAdvNoteYellowTom.Margin = new System.Windows.Forms.Padding(4);
+            this.nupAdvNoteYellowTom.Maximum = new decimal(new int[] {
+            127,
+            0,
+            0,
+            0});
+            this.nupAdvNoteYellowTom.Name = "nupAdvNoteYellowTom";
+            this.nupAdvNoteYellowTom.Size = new System.Drawing.Size(99, 22);
+            this.nupAdvNoteYellowTom.TabIndex = 6;
+            this.nupAdvNoteYellowTom.Value = new decimal(new int[] {
+            64,
+            0,
+            0,
+            0});
+            // 
+            // nupAdvNoteRedTom
+            // 
+            this.nupAdvNoteRedTom.Location = new System.Drawing.Point(114, 36);
+            this.nupAdvNoteRedTom.Margin = new System.Windows.Forms.Padding(4);
+            this.nupAdvNoteRedTom.Maximum = new decimal(new int[] {
+            127,
+            0,
+            0,
+            0});
+            this.nupAdvNoteRedTom.Name = "nupAdvNoteRedTom";
+            this.nupAdvNoteRedTom.Size = new System.Drawing.Size(99, 22);
+            this.nupAdvNoteRedTom.TabIndex = 6;
+            this.nupAdvNoteRedTom.Value = new decimal(new int[] {
+            64,
+            0,
+            0,
+            0});
+            // 
+            // chkAdvBoostRedTom
+            // 
+            this.chkAdvBoostRedTom.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.chkAdvBoostRedTom.AutoSize = true;
+            this.chkAdvBoostRedTom.Location = new System.Drawing.Point(244, 38);
+            this.chkAdvBoostRedTom.Name = "chkAdvBoostRedTom";
+            this.chkAdvBoostRedTom.Size = new System.Drawing.Size(18, 17);
+            this.chkAdvBoostRedTom.TabIndex = 7;
+            this.chkAdvBoostRedTom.UseVisualStyleBackColor = true;
+            // 
+            // chkAdvBoostYellowTom
+            // 
+            this.chkAdvBoostYellowTom.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.chkAdvBoostYellowTom.AutoSize = true;
+            this.chkAdvBoostYellowTom.Location = new System.Drawing.Point(244, 69);
+            this.chkAdvBoostYellowTom.Name = "chkAdvBoostYellowTom";
+            this.chkAdvBoostYellowTom.Size = new System.Drawing.Size(18, 17);
+            this.chkAdvBoostYellowTom.TabIndex = 7;
+            this.chkAdvBoostYellowTom.UseVisualStyleBackColor = true;
+            // 
+            // chkAdvBoostYellowCymbal
+            // 
+            this.chkAdvBoostYellowCymbal.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.chkAdvBoostYellowCymbal.AutoSize = true;
+            this.chkAdvBoostYellowCymbal.Location = new System.Drawing.Point(244, 100);
+            this.chkAdvBoostYellowCymbal.Name = "chkAdvBoostYellowCymbal";
+            this.chkAdvBoostYellowCymbal.Size = new System.Drawing.Size(18, 17);
+            this.chkAdvBoostYellowCymbal.TabIndex = 7;
+            this.chkAdvBoostYellowCymbal.UseVisualStyleBackColor = true;
+            // 
+            // chkAdvBoostBlueTom
+            // 
+            this.chkAdvBoostBlueTom.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.chkAdvBoostBlueTom.AutoSize = true;
+            this.chkAdvBoostBlueTom.Location = new System.Drawing.Point(244, 131);
+            this.chkAdvBoostBlueTom.Name = "chkAdvBoostBlueTom";
+            this.chkAdvBoostBlueTom.Size = new System.Drawing.Size(18, 17);
+            this.chkAdvBoostBlueTom.TabIndex = 7;
+            this.chkAdvBoostBlueTom.UseVisualStyleBackColor = true;
+            // 
+            // chkAdvBoostBlueCymbal
+            // 
+            this.chkAdvBoostBlueCymbal.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.chkAdvBoostBlueCymbal.AutoSize = true;
+            this.chkAdvBoostBlueCymbal.Location = new System.Drawing.Point(244, 162);
+            this.chkAdvBoostBlueCymbal.Name = "chkAdvBoostBlueCymbal";
+            this.chkAdvBoostBlueCymbal.Size = new System.Drawing.Size(18, 17);
+            this.chkAdvBoostBlueCymbal.TabIndex = 7;
+            this.chkAdvBoostBlueCymbal.UseVisualStyleBackColor = true;
+            // 
+            // chkAdvBoostGreenTom
+            // 
+            this.chkAdvBoostGreenTom.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.chkAdvBoostGreenTom.AutoSize = true;
+            this.chkAdvBoostGreenTom.Location = new System.Drawing.Point(244, 193);
+            this.chkAdvBoostGreenTom.Name = "chkAdvBoostGreenTom";
+            this.chkAdvBoostGreenTom.Size = new System.Drawing.Size(18, 17);
+            this.chkAdvBoostGreenTom.TabIndex = 7;
+            this.chkAdvBoostGreenTom.UseVisualStyleBackColor = true;
+            // 
+            // chkAdvBoostGreenCymbal
+            // 
+            this.chkAdvBoostGreenCymbal.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.chkAdvBoostGreenCymbal.AutoSize = true;
+            this.chkAdvBoostGreenCymbal.Location = new System.Drawing.Point(244, 226);
+            this.chkAdvBoostGreenCymbal.Name = "chkAdvBoostGreenCymbal";
+            this.chkAdvBoostGreenCymbal.Size = new System.Drawing.Size(18, 17);
+            this.chkAdvBoostGreenCymbal.TabIndex = 7;
+            this.chkAdvBoostGreenCymbal.UseVisualStyleBackColor = true;
+            // 
+            // ddlAdvBoostYellowTom
+            // 
+            this.ddlAdvBoostYellowTom.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.ddlAdvBoostYellowTom.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ddlAdvBoostYellowTom.FormattingEnabled = true;
+            this.ddlAdvBoostYellowTom.Location = new System.Drawing.Point(294, 67);
+            this.ddlAdvBoostYellowTom.Margin = new System.Windows.Forms.Padding(4);
+            this.ddlAdvBoostYellowTom.Name = "ddlAdvBoostYellowTom";
+            this.ddlAdvBoostYellowTom.Size = new System.Drawing.Size(100, 21);
+            this.ddlAdvBoostYellowTom.TabIndex = 38;
+            // 
+            // ddlAdvBoostYellowCymbal
+            // 
+            this.ddlAdvBoostYellowCymbal.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.ddlAdvBoostYellowCymbal.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ddlAdvBoostYellowCymbal.FormattingEnabled = true;
+            this.ddlAdvBoostYellowCymbal.Location = new System.Drawing.Point(294, 98);
+            this.ddlAdvBoostYellowCymbal.Margin = new System.Windows.Forms.Padding(4);
+            this.ddlAdvBoostYellowCymbal.Name = "ddlAdvBoostYellowCymbal";
+            this.ddlAdvBoostYellowCymbal.Size = new System.Drawing.Size(100, 21);
+            this.ddlAdvBoostYellowCymbal.TabIndex = 38;
+            // 
+            // ddlAdvBoostBlueTom
+            // 
+            this.ddlAdvBoostBlueTom.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.ddlAdvBoostBlueTom.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ddlAdvBoostBlueTom.FormattingEnabled = true;
+            this.ddlAdvBoostBlueTom.Location = new System.Drawing.Point(294, 129);
+            this.ddlAdvBoostBlueTom.Margin = new System.Windows.Forms.Padding(4);
+            this.ddlAdvBoostBlueTom.Name = "ddlAdvBoostBlueTom";
+            this.ddlAdvBoostBlueTom.Size = new System.Drawing.Size(100, 21);
+            this.ddlAdvBoostBlueTom.TabIndex = 38;
+            // 
+            // ddlAdvBoostBlueCymbal
+            // 
+            this.ddlAdvBoostBlueCymbal.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.ddlAdvBoostBlueCymbal.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ddlAdvBoostBlueCymbal.FormattingEnabled = true;
+            this.ddlAdvBoostBlueCymbal.Location = new System.Drawing.Point(294, 160);
+            this.ddlAdvBoostBlueCymbal.Margin = new System.Windows.Forms.Padding(4);
+            this.ddlAdvBoostBlueCymbal.Name = "ddlAdvBoostBlueCymbal";
+            this.ddlAdvBoostBlueCymbal.Size = new System.Drawing.Size(100, 21);
+            this.ddlAdvBoostBlueCymbal.TabIndex = 38;
+            // 
+            // ddlAdvBoostGreenTom
+            // 
+            this.ddlAdvBoostGreenTom.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.ddlAdvBoostGreenTom.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ddlAdvBoostGreenTom.FormattingEnabled = true;
+            this.ddlAdvBoostGreenTom.Location = new System.Drawing.Point(294, 191);
+            this.ddlAdvBoostGreenTom.Margin = new System.Windows.Forms.Padding(4);
+            this.ddlAdvBoostGreenTom.Name = "ddlAdvBoostGreenTom";
+            this.ddlAdvBoostGreenTom.Size = new System.Drawing.Size(100, 21);
+            this.ddlAdvBoostGreenTom.TabIndex = 38;
+            // 
+            // ddlAdvBoostGreenCymbal
+            // 
+            this.ddlAdvBoostGreenCymbal.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.ddlAdvBoostGreenCymbal.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ddlAdvBoostGreenCymbal.FormattingEnabled = true;
+            this.ddlAdvBoostGreenCymbal.Location = new System.Drawing.Point(294, 222);
+            this.ddlAdvBoostGreenCymbal.Margin = new System.Windows.Forms.Padding(4);
+            this.ddlAdvBoostGreenCymbal.Name = "ddlAdvBoostGreenCymbal";
+            this.ddlAdvBoostGreenCymbal.Size = new System.Drawing.Size(100, 21);
+            this.ddlAdvBoostGreenCymbal.TabIndex = 38;
+            // 
+            // groupBox9
+            // 
+            this.groupBox9.Controls.Add(tableLayoutPanel1);
+            this.groupBox9.Location = new System.Drawing.Point(8, 6);
+            this.groupBox9.Name = "groupBox9";
+            this.groupBox9.Size = new System.Drawing.Size(433, 398);
+            this.groupBox9.TabIndex = 12;
+            this.groupBox9.TabStop = false;
+            this.groupBox9.Text = "Buttons";
+            // 
+            // groupBox8
+            // 
+            this.groupBox8.Controls.Add(label36);
+            this.groupBox8.Controls.Add(label35);
+            this.groupBox8.Controls.Add(label1);
+            this.groupBox8.Controls.Add(this.listBox1);
+            this.groupBox8.Controls.Add(this.button1);
+            this.groupBox8.Controls.Add(label2);
+            this.groupBox8.Controls.Add(this.button2);
+            this.groupBox8.Controls.Add(this.comboBox2);
+            this.groupBox8.Controls.Add(this.numericUpDown35);
+            this.groupBox8.Controls.Add(this.numericUpDown34);
+            this.groupBox8.Controls.Add(this.numericUpDown2);
+            this.groupBox8.Controls.Add(this.numericUpDown1);
+            this.groupBox8.Controls.Add(this.comboBox1);
+            this.groupBox8.Location = new System.Drawing.Point(8, 410);
+            this.groupBox8.Name = "groupBox8";
+            this.groupBox8.Size = new System.Drawing.Size(849, 145);
+            this.groupBox8.TabIndex = 12;
+            this.groupBox8.TabStop = false;
+            this.groupBox8.Text = "MultiNote";
+            // 
+            // listBox1
+            // 
+            this.listBox1.FormattingEnabled = true;
+            this.listBox1.ItemHeight = 16;
+            this.listBox1.Location = new System.Drawing.Point(439, 18);
+            this.listBox1.Name = "listBox1";
+            this.listBox1.Size = new System.Drawing.Size(404, 116);
+            this.listBox1.TabIndex = 11;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(331, 18);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(102, 53);
+            this.button1.TabIndex = 0;
+            this.button1.Text = "Add";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(331, 77);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(102, 52);
+            this.button2.TabIndex = 1;
+            this.button2.Text = "Remove";
+            this.button2.UseVisualStyleBackColor = true;
+            // 
+            // comboBox2
+            // 
+            this.comboBox2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox2.FormattingEnabled = true;
+            this.comboBox2.Items.AddRange(new object[] {
+            "Red Tom",
+            "Yellow Tom",
+            "Yellow Cymbal",
+            "Blue Tom",
+            "Blue Cymbal",
+            "Green Tom",
+            "Green Cymbal"});
+            this.comboBox2.Location = new System.Drawing.Point(9, 47);
+            this.comboBox2.Name = "comboBox2";
+            this.comboBox2.Size = new System.Drawing.Size(135, 24);
+            this.comboBox2.TabIndex = 9;
+            // 
+            // numericUpDown35
+            // 
+            this.numericUpDown35.Location = new System.Drawing.Point(260, 77);
+            this.numericUpDown35.Margin = new System.Windows.Forms.Padding(4);
+            this.numericUpDown35.Maximum = new decimal(new int[] {
+            127,
+            0,
+            0,
+            0});
+            this.numericUpDown35.Name = "numericUpDown35";
+            this.numericUpDown35.Size = new System.Drawing.Size(64, 22);
+            this.numericUpDown35.TabIndex = 6;
+            this.numericUpDown35.Value = new decimal(new int[] {
+            64,
+            0,
+            0,
+            0});
+            // 
+            // numericUpDown34
+            // 
+            this.numericUpDown34.DecimalPlaces = 2;
+            this.numericUpDown34.Increment = new decimal(new int[] {
+            1,
+            0,
+            0,
+            65536});
+            this.numericUpDown34.Location = new System.Drawing.Point(167, 77);
+            this.numericUpDown34.Margin = new System.Windows.Forms.Padding(4);
+            this.numericUpDown34.Maximum = new decimal(new int[] {
+            10,
+            0,
+            0,
+            0});
+            this.numericUpDown34.Name = "numericUpDown34";
+            this.numericUpDown34.Size = new System.Drawing.Size(64, 22);
+            this.numericUpDown34.TabIndex = 6;
+            // 
+            // numericUpDown2
+            // 
+            this.numericUpDown2.Location = new System.Drawing.Point(260, 19);
+            this.numericUpDown2.Margin = new System.Windows.Forms.Padding(4);
+            this.numericUpDown2.Maximum = new decimal(new int[] {
+            127,
+            0,
+            0,
+            0});
+            this.numericUpDown2.Name = "numericUpDown2";
+            this.numericUpDown2.Size = new System.Drawing.Size(64, 22);
+            this.numericUpDown2.TabIndex = 6;
+            this.numericUpDown2.Value = new decimal(new int[] {
+            64,
+            0,
+            0,
+            0});
+            // 
+            // numericUpDown1
+            // 
+            this.numericUpDown1.Location = new System.Drawing.Point(260, 49);
+            this.numericUpDown1.Margin = new System.Windows.Forms.Padding(4);
+            this.numericUpDown1.Maximum = new decimal(new int[] {
+            127,
+            0,
+            0,
+            0});
+            this.numericUpDown1.Name = "numericUpDown1";
+            this.numericUpDown1.Size = new System.Drawing.Size(64, 22);
+            this.numericUpDown1.TabIndex = 6;
+            this.numericUpDown1.Value = new decimal(new int[] {
+            64,
+            0,
+            0,
+            0});
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "Greater",
+            "Lesser"});
+            this.comboBox1.Location = new System.Drawing.Point(113, 18);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(103, 24);
+            this.comboBox1.TabIndex = 7;
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.btnSave);
+            this.panel1.Controls.Add(lblMIDIChannel);
+            this.panel1.Controls.Add(this.btnLoad);
+            this.panel1.Controls.Add(lblMIDIDevice);
+            this.panel1.Controls.Add(this.nupMIDIChannel);
+            this.panel1.Controls.Add(this.ddlMIDIDevice);
+            this.panel1.Controls.Add(this.btnReset);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel1.Location = new System.Drawing.Point(0, 583);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(873, 60);
+            this.panel1.TabIndex = 26;
             // 
             // FrmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(873, 643);
-            this.Controls.Add(this.lblMIDIChannel);
-            this.Controls.Add(this.pnlHolder);
-            this.Controls.Add(this.lblMIDIDevice);
-            this.Controls.Add(this.ddlMIDIDevice);
-            this.Controls.Add(this.btnReset);
-            this.Controls.Add(this.nupMIDIChannel);
-            this.Controls.Add(this.btnSave);
-            this.Controls.Add(this.btnLoad);
+            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.tabControl1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4);
@@ -1228,11 +3110,56 @@
             this.MinimumSize = new System.Drawing.Size(853, 510);
             this.Name = "FrmMain";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "PS360 MIDI Drummer v0.031";
+            this.Text = "PS360 MIDI Pro Drummer v0.05";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.SaveDefaultSettings);
+            tableLayoutPanel1.ResumeLayout(false);
+            tableLayoutPanel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nupAdvVelDPadUp)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nupAdvVelDPadRight)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nupAdvVelDPadDown)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nupAdvVelDPadLeft)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nupAdvVelTriangle)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nupAdvVelCircle)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nupAdvVelX)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nupAdvVelRectangle)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nupAdvVelSelect)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nupAdvVelBigButton)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nupAdvNoteStart)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nupAdvVelStart)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nupAdvNoteBigButton)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nupAdvNoteSelect)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nupAdvNoteRectangle)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nupAdvNoteX)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nupAdvNoteCircle)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nupAdvNoteTriangle)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nupAdvNoteDPadLeft)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nupAdvNoteDPadDown)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nupAdvNoteDPadRight)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nupAdvNoteDPadUp)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nupMIDIChannel)).EndInit();
             this.pnlHolder.ResumeLayout(false);
             this.pnlHolder.PerformLayout();
+            this.groupBox7.ResumeLayout(false);
+            this.groupBox7.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nupRedTom)).EndInit();
+            this.groupBox6.ResumeLayout(false);
+            this.groupBox6.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nupYellowTom)).EndInit();
+            this.groupBox5.ResumeLayout(false);
+            this.groupBox5.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nupBlueTom)).EndInit();
+            this.groupBox4.ResumeLayout(false);
+            this.groupBox4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nupGreenTom)).EndInit();
+            this.groupBox3.ResumeLayout(false);
+            this.groupBox3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nupGreenCymbal)).EndInit();
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nupBlueCymbal)).EndInit();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nupYellowCymbal)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nupDPadDown)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nupDPadLeft)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nupDPadUp)).EndInit();
@@ -1244,14 +3171,36 @@
             ((System.ComponentModel.ISupportInitialize)(this.nupX)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nupTriangle)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nupCircle)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nupPedal)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nupCymBlue)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nupCymGreen)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nupYellow)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nupCymYellow)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nupBlue)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nupGreen)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nupRed)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nupPedalLeft)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nupPedalRight)).EndInit();
+            this.tabControl1.ResumeLayout(false);
+            this.tabPage1.ResumeLayout(false);
+            this.tabPage2.ResumeLayout(false);
+            this.groupBox11.ResumeLayout(false);
+            this.tableLayoutPanel3.ResumeLayout(false);
+            this.tableLayoutPanel3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nupAdvVelPedalLeft)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nupAdvVelPedalRight)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nupAdvNotePedalRight)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nupAdvNotePedalLeft)).EndInit();
+            this.groupBox10.ResumeLayout(false);
+            this.tableLayoutPanel2.ResumeLayout(false);
+            this.tableLayoutPanel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nupAdvNoteGreenCymbal)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nupAdvNoteGreenTom)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nupAdvNoteBlueCymbal)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nupAdvNoteBlueTom)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nupAdvNoteYellowCymbal)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nupAdvNoteYellowTom)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nupAdvNoteRedTom)).EndInit();
+            this.groupBox9.ResumeLayout(false);
+            this.groupBox8.ResumeLayout(false);
+            this.groupBox8.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown35)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown34)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
+            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -1260,60 +3209,54 @@
 
         private System.Windows.Forms.Panel pnlHolder;
 
-        private System.Windows.Forms.NumericUpDown nupGreen;
-        private System.Windows.Forms.NumericUpDown nupRed;
-        private System.Windows.Forms.NumericUpDown nupBlue;
-        private System.Windows.Forms.NumericUpDown nupYellow;
-        private System.Windows.Forms.NumericUpDown nupPedal;
-        private System.Windows.Forms.NumericUpDown nupCymBlue;
+        private System.Windows.Forms.NumericUpDown nupGreenTom;
+        private System.Windows.Forms.NumericUpDown nupRedTom;
+        private System.Windows.Forms.NumericUpDown nupBlueTom;
+        private System.Windows.Forms.NumericUpDown nupYellowTom;
+        private System.Windows.Forms.NumericUpDown nupPedalRight;
+        private System.Windows.Forms.NumericUpDown nupBlueCymbal;
 
-        private System.Windows.Forms.Button btnGreen;
-        private System.Windows.Forms.Button btnRed;
-        private System.Windows.Forms.Button btnBlue;
-        private System.Windows.Forms.Button btnYellow;
-        private System.Windows.Forms.Button btnPedal;
-        private System.Windows.Forms.Button btnCymBlue;
+        private System.Windows.Forms.Button btnGreenTom;
+        private System.Windows.Forms.Button btnRedTom;
+        private System.Windows.Forms.Button btnBlueTom;
+        private System.Windows.Forms.Button btnYellowTom;
+        private System.Windows.Forms.Button btnBlueCymbal;
 
-        private System.Windows.Forms.ProgressBar pbGreen;
-        private System.Windows.Forms.ProgressBar pbRed;
-        private System.Windows.Forms.ProgressBar pbBlue;
-        private System.Windows.Forms.ProgressBar pbYellow;
-        private System.Windows.Forms.ProgressBar pbPedal;
-        private System.Windows.Forms.ProgressBar pbCymBlue;
-
-        private System.Windows.Forms.Label lblMIDIChannel;
+        private System.Windows.Forms.ProgressBar pbGreenTom;
+        private System.Windows.Forms.ProgressBar pbRedTom;
+        private System.Windows.Forms.ProgressBar pbBlueTom;
+        private System.Windows.Forms.ProgressBar pbYellowTom;
+        private System.Windows.Forms.ProgressBar pbBlueCymbal;
         private System.Windows.Forms.NumericUpDown nupMIDIChannel;
-        private System.Windows.Forms.Label lblMIDIDevice;
         private System.Windows.Forms.ComboBox ddlMIDIDevice;
 
         private System.Windows.Forms.Timer lowerValues;
         private System.Windows.Forms.SaveFileDialog saveFileDialog;
         private System.Windows.Forms.Button btnSave;
         private System.Windows.Forms.Button btnLoad;
-        private System.Windows.Forms.CheckBox chkGreen;
-        private System.Windows.Forms.CheckBox chkCymBlue;
-        private System.Windows.Forms.CheckBox chkBlue;
-        private System.Windows.Forms.CheckBox chkRed;
-        private System.Windows.Forms.CheckBox chkPedal;
+        private System.Windows.Forms.CheckBox chkBoostGreenTom;
+        private System.Windows.Forms.CheckBox chkBoostBlueCymbal;
+        private System.Windows.Forms.CheckBox chkBoostBlueTom;
+        private System.Windows.Forms.CheckBox chkBoostRedTom;
+        private System.Windows.Forms.CheckBox chkPedalRight;
         private System.Windows.Forms.OpenFileDialog openFileDialog;
         private System.Windows.Forms.Button btnReset;
-        private System.Windows.Forms.ComboBox ddlYellow;
-        private System.Windows.Forms.CheckBox chkYellow;
-        private System.Windows.Forms.ComboBox ddlCymBlue;
-        private System.Windows.Forms.ComboBox ddlGreen;
-        private System.Windows.Forms.ComboBox ddlBlue;
-        private System.Windows.Forms.ComboBox ddlRed;
-        private System.Windows.Forms.ComboBox ddlPedal;
-        private System.Windows.Forms.ComboBox ddlCymGreen;
-        private System.Windows.Forms.ComboBox ddlCymYellow;
-        private System.Windows.Forms.CheckBox chkCymGreen;
-        private System.Windows.Forms.CheckBox chkCymYellow;
-        private System.Windows.Forms.ProgressBar pbCymGreen;
-        private System.Windows.Forms.ProgressBar pbCymYellow;
-        private System.Windows.Forms.Button btnCymGreen;
-        private System.Windows.Forms.Button btnCymYellow;
-        private System.Windows.Forms.NumericUpDown nupCymGreen;
-        private System.Windows.Forms.NumericUpDown nupCymYellow;
+        private System.Windows.Forms.ComboBox ddlYellowTom;
+        private System.Windows.Forms.CheckBox chkBoostYellowTom;
+        private System.Windows.Forms.ComboBox ddlBlueCymbal;
+        private System.Windows.Forms.ComboBox ddlGreenTom;
+        private System.Windows.Forms.ComboBox ddlBlueTom;
+        private System.Windows.Forms.ComboBox ddlRedTom;
+        private System.Windows.Forms.ComboBox ddlGreenCymbal;
+        private System.Windows.Forms.ComboBox ddlYellowCymbal;
+        private System.Windows.Forms.CheckBox chkBoostGreenCymbal;
+        private System.Windows.Forms.CheckBox chkBoostYellowCymbal;
+        private System.Windows.Forms.ProgressBar pbGreenCymbal;
+        private System.Windows.Forms.ProgressBar pbYellowCymbal;
+        private System.Windows.Forms.Button btnGreenCymbal;
+        private System.Windows.Forms.Button btnYellowCymbal;
+        private System.Windows.Forms.NumericUpDown nupGreenCymbal;
+        private System.Windows.Forms.NumericUpDown nupYellowCymbal;
         private System.Windows.Forms.NumericUpDown nupDPadDown;
         private System.Windows.Forms.NumericUpDown nupDPadLeft;
         private System.Windows.Forms.NumericUpDown nupDPadUp;
@@ -1336,6 +3279,94 @@
         private System.Windows.Forms.CheckBox chkDPadRight;
         private System.Windows.Forms.CheckBox chkBigButton;
         private System.Windows.Forms.NumericUpDown nupBigButton;
+        private System.Windows.Forms.GroupBox groupBox7;
+        private System.Windows.Forms.GroupBox groupBox6;
+        private System.Windows.Forms.GroupBox groupBox5;
+        private System.Windows.Forms.GroupBox groupBox4;
+        private System.Windows.Forms.GroupBox groupBox3;
+        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.TabControl tabControl1;
+        private System.Windows.Forms.TabPage tabPage1;
+        private System.Windows.Forms.TabPage tabPage2;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.NumericUpDown numericUpDown1;
+        private System.Windows.Forms.NumericUpDown numericUpDown2;
+        private System.Windows.Forms.GroupBox groupBox9;
+        private System.Windows.Forms.ComboBox ddlAdvSwitchDPadUp;
+        private System.Windows.Forms.GroupBox groupBox8;
+        private System.Windows.Forms.ListBox listBox1;
+        private System.Windows.Forms.GroupBox groupBox11;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
+        private System.Windows.Forms.ComboBox ddlAdvSwitchPedalLeft;
+        private System.Windows.Forms.NumericUpDown nupAdvVelPedalLeft;
+        private System.Windows.Forms.ComboBox ddlAdvSwitchPedalRight;
+        private System.Windows.Forms.NumericUpDown nupAdvVelPedalRight;
+        private System.Windows.Forms.NumericUpDown nupAdvNotePedalRight;
+        private System.Windows.Forms.NumericUpDown nupAdvNotePedalLeft;
+        private System.Windows.Forms.GroupBox groupBox10;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
+        private System.Windows.Forms.NumericUpDown nupAdvNoteGreenCymbal;
+        private System.Windows.Forms.NumericUpDown nupAdvNoteGreenTom;
+        private System.Windows.Forms.NumericUpDown nupAdvNoteBlueCymbal;
+        private System.Windows.Forms.NumericUpDown nupAdvNoteBlueTom;
+        private System.Windows.Forms.NumericUpDown nupAdvNoteYellowCymbal;
+        private System.Windows.Forms.NumericUpDown nupAdvNoteYellowTom;
+        private System.Windows.Forms.NumericUpDown nupAdvNoteRedTom;
+        private System.Windows.Forms.CheckBox chkAdvBoostRedTom;
+        private System.Windows.Forms.CheckBox chkAdvBoostYellowTom;
+        private System.Windows.Forms.CheckBox chkAdvBoostYellowCymbal;
+        private System.Windows.Forms.CheckBox chkAdvBoostBlueTom;
+        private System.Windows.Forms.CheckBox chkAdvBoostBlueCymbal;
+        private System.Windows.Forms.CheckBox chkAdvBoostGreenTom;
+        private System.Windows.Forms.CheckBox chkAdvBoostGreenCymbal;
+        private System.Windows.Forms.NumericUpDown nupAdvVelDPadUp;
+        private System.Windows.Forms.ComboBox ddlAdvSwitchDPadRight;
+        private System.Windows.Forms.ComboBox ddlAdvSwitchDPadDown;
+        private System.Windows.Forms.ComboBox ddlAdvSwitchDPadLeft;
+        private System.Windows.Forms.ComboBox ddlAdvSwitchTriangle;
+        private System.Windows.Forms.ComboBox ddlAdvSwitchCircle;
+        private System.Windows.Forms.ComboBox ddlAdvSwitchX;
+        private System.Windows.Forms.ComboBox ddlAdvSwitchRectangle;
+        private System.Windows.Forms.ComboBox ddlAdvSwitchSelect;
+        private System.Windows.Forms.ComboBox ddlAdvSwitchStart;
+        private System.Windows.Forms.ComboBox ddlAdvSwitchBigButton;
+        private System.Windows.Forms.NumericUpDown nupAdvVelDPadRight;
+        private System.Windows.Forms.NumericUpDown nupAdvVelDPadDown;
+        private System.Windows.Forms.NumericUpDown nupAdvVelDPadLeft;
+        private System.Windows.Forms.NumericUpDown nupAdvVelTriangle;
+        private System.Windows.Forms.NumericUpDown nupAdvVelCircle;
+        private System.Windows.Forms.NumericUpDown nupAdvVelX;
+        private System.Windows.Forms.NumericUpDown nupAdvVelRectangle;
+        private System.Windows.Forms.NumericUpDown nupAdvVelSelect;
+        private System.Windows.Forms.NumericUpDown nupAdvVelBigButton;
+        private System.Windows.Forms.NumericUpDown nupAdvNoteStart;
+        private System.Windows.Forms.NumericUpDown nupAdvVelStart;
+        private System.Windows.Forms.NumericUpDown nupAdvNoteBigButton;
+        private System.Windows.Forms.NumericUpDown nupAdvNoteSelect;
+        private System.Windows.Forms.NumericUpDown nupAdvNoteRectangle;
+        private System.Windows.Forms.NumericUpDown nupAdvNoteX;
+        private System.Windows.Forms.NumericUpDown nupAdvNoteCircle;
+        private System.Windows.Forms.NumericUpDown nupAdvNoteTriangle;
+        private System.Windows.Forms.NumericUpDown nupAdvNoteDPadLeft;
+        private System.Windows.Forms.NumericUpDown nupAdvNoteDPadDown;
+        private System.Windows.Forms.NumericUpDown nupAdvNoteDPadRight;
+        private System.Windows.Forms.NumericUpDown numericUpDown35;
+        private System.Windows.Forms.NumericUpDown numericUpDown34;
+        private System.Windows.Forms.NumericUpDown nupAdvNoteDPadUp;
+        private System.Windows.Forms.CheckBox chkPedalLeft;
+        private System.Windows.Forms.NumericUpDown nupPedalLeft;
+        private System.Windows.Forms.ComboBox ddlAdvBoostRedTom;
+        private System.Windows.Forms.ComboBox ddlAdvBoostYellowTom;
+        private System.Windows.Forms.ComboBox ddlAdvBoostYellowCymbal;
+        private System.Windows.Forms.ComboBox ddlAdvBoostBlueTom;
+        private System.Windows.Forms.ComboBox ddlAdvBoostBlueCymbal;
+        private System.Windows.Forms.ComboBox ddlAdvBoostGreenTom;
+        private System.Windows.Forms.ComboBox ddlAdvBoostGreenCymbal;
     }
 }
 

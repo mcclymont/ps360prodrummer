@@ -16,15 +16,14 @@ namespace _PS360Drum
         Blue = 1 << 0,
         Green = 1 << 1,
         Red = 1 << 2,
-        Yellow = 1 << 3,
-        Pedal = 1 << 4
+        Yellow = 1 << 3
     }
     public enum PadType : byte
     {
         Tom = 1 << 2,
         Cymbal = 1 << 3
     }
-    public enum DrumPad
+    public enum DrumPad : byte
     {
         RedTom = 0,
         YellowTom = 1,
@@ -32,8 +31,7 @@ namespace _PS360Drum
         GreenTom = 3,
         YellowCymbal = 4,
         BlueCymbal = 5,
-        GreenCymbal = 6,
-        Pedal = 7
+        GreenCymbal = 6
     };
     public enum DrumDPad : byte
     {
@@ -55,12 +53,14 @@ namespace _PS360Drum
         Triangle,
         Rectangle,
         Circle,
-        X
+        X,
+        PedalLeft,
+        PedalRight
     }
     public class ProDrumController
     {
-        public const int NUM_PADS = 8;
-        public const int NUM_BUTTON_STATES = 7;
+        public const int NUM_PADS = 7;
+        public const int NUM_BUTTON_STATES = 9;
 
         public delegate void NoteHitDelegate(DrumPad pad, byte velocity);
         public delegate void ButtonDelegate(DrumButton button);
@@ -118,7 +118,7 @@ namespace _PS360Drum
                 HandleButtons(args.data);
                 if (args.data[1] > 0)
                 {
-                    if (args.data[2] != 0 || args.data[1] == (byte)PadColor.Pedal)
+                    if (args.data[2] != 0)
                         m_HitFilter.TriggerNotes(args.data[1], args.data[2], args.data[3], args.data, 12);
                 }
             }
@@ -177,6 +177,15 @@ namespace _PS360Drum
                     newState[(byte)DrumButton.BigButton] = true;
                 }
             }
+            if ((data[1] & 16) != 0) //Right pedal
+            {
+                newState[(byte)DrumButton.PedalRight] = true;
+            }
+            if ((data[1] & 32) != 0) //Right pedal
+            {
+                newState[(byte)DrumButton.PedalLeft] = true;
+            }
+
             for (int i = 0; i < NUM_BUTTON_STATES; ++i)
             {
                 if (newState[i])
