@@ -83,6 +83,7 @@
     <Compile Include="FrmMain.Designer.cs">
       <DependentUpon>FrmMain.cs</DependentUpon>
     </Compile>
+    <Compile Include="GuiLinker.cs" />
     <Compile Include="HitFilter.cs" />
     <Compile Include="MidiSender.cs" />
     <Compile Include="ProDrumController.cs" />

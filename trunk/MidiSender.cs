@@ -23,9 +23,9 @@ namespace _PS360Drum
             // Maximum value is 127
             hitVelocity = (byte)(hitVelocity / 2);
 
-            SendNoteOn(m_Main.GetMidiNote(pad), hitVelocity);
+            SendNoteOn(m_Main.GuiLinker.GetMidiNote(pad), hitVelocity);
             m_Main.UpdateVelocityPb(pad, hitVelocity);
-            SendNoteOff(m_Main.GetMidiNote(pad));
+            SendNoteOff(m_Main.GuiLinker.GetMidiNote(pad));
         }
         public void UpdateMidiSettings()
         {
