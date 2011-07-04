@@ -120,7 +120,9 @@ namespace _PS360Drum
             else
             {
                 GuiLinker.CheckboxButton(b, true);
-                MidiSender.SendNoteOn(GuiLinker.GetMidiNote(b), 127);
+                MidiSender.SendNoteOn(GuiLinker.GetMidiNote(b), GuiLinker.GetButtonVelocity(b));
+                if (GuiLinker.GetButtonSwitchType(b) != SwitchType.KeyboardLike)
+                    MidiSender.SendNoteOff(GuiLinker.GetMidiNote(b));
             }
         }
         private void DrumButtonReleased(DrumButton b)
@@ -132,7 +134,13 @@ namespace _PS360Drum
             else
             {
                 GuiLinker.CheckboxButton(b, false);
-                MidiSender.SendNoteOff(GuiLinker.GetMidiNote(b));
+                if (GuiLinker.GetButtonSwitchType(b) == SwitchType.KeyboardLike)
+                    MidiSender.SendNoteOff(GuiLinker.GetMidiNote(b));
+                else if (GuiLinker.GetButtonSwitchType(b) == SwitchType.OnOff)
+                {
+                    MidiSender.SendNoteOn(GuiLinker.GetMidiNote(b), GuiLinker.GetButtonVelocity(b));
+                    MidiSender.SendNoteOff(GuiLinker.GetMidiNote(b));
+                }
             }
         }
         private void DPadOn(DrumDPad dp)
@@ -142,7 +150,9 @@ namespace _PS360Drum
             if (GuiLinker.GetButtonChecked(dp) == false)
             {
                 GuiLinker.CheckboxButton(dp, true);
-                MidiSender.SendNoteOff(GuiLinker.GetMidiNote(dp));
+                MidiSender.SendNoteOn(GuiLinker.GetMidiNote(dp), GuiLinker.GetButtonVelocity(dp));
+                if (GuiLinker.GetButtonSwitchType(dp) != SwitchType.KeyboardLike)
+                    MidiSender.SendNoteOff(GuiLinker.GetMidiNote(dp));
             }
         }
         private void DPadOn(DrumDPad dp, DrumDPad dp2)
@@ -153,12 +163,16 @@ namespace _PS360Drum
             if (GuiLinker.GetButtonChecked(dp) == false)
             {
                 GuiLinker.CheckboxButton(dp, true);
-                MidiSender.SendNoteOn(GuiLinker.GetMidiNote(dp), 127);
+                MidiSender.SendNoteOn(GuiLinker.GetMidiNote(dp), GuiLinker.GetButtonVelocity(dp));
+                if (GuiLinker.GetButtonSwitchType(dp) != SwitchType.KeyboardLike)
+                    MidiSender.SendNoteOff(GuiLinker.GetMidiNote(dp));
             }
             if (GuiLinker.GetButtonChecked(dp2) == false)
             {
                 GuiLinker.CheckboxButton(dp2, true);
-                MidiSender.SendNoteOn(GuiLinker.GetMidiNote(dp2), 127);
+                MidiSender.SendNoteOn(GuiLinker.GetMidiNote(dp2), GuiLinker.GetButtonVelocity(dp));
+                if (GuiLinker.GetButtonSwitchType(dp) != SwitchType.KeyboardLike)
+                    MidiSender.SendNoteOff(GuiLinker.GetMidiNote(dp));
             }
         }
         private void DPadOff(DrumDPad dp)
@@ -169,7 +183,13 @@ namespace _PS360Drum
             if (GuiLinker.GetButtonChecked(dp) == true)
             {
                 GuiLinker.CheckboxButton(dp, false);
-                MidiSender.SendNoteOff(GuiLinker.GetMidiNote(dp));
+                if (GuiLinker.GetButtonSwitchType(dp) == SwitchType.KeyboardLike)
+                    MidiSender.SendNoteOff(GuiLinker.GetMidiNote(dp));
+                else if (GuiLinker.GetButtonSwitchType(dp) == SwitchType.OnOff)
+                {
+                    MidiSender.SendNoteOn(GuiLinker.GetMidiNote(dp), GuiLinker.GetButtonVelocity(dp));
+                    MidiSender.SendNoteOff(GuiLinker.GetMidiNote(dp));
+                }
             }
         }
         private void DrumDPadStateChanged(DrumDPad dp)
