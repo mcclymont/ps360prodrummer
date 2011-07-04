@@ -395,9 +395,9 @@
             tableLayoutPanel1.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Single;
             tableLayoutPanel1.ColumnCount = 4;
             tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 19.48357F));
+            tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 21.59624F));
+            tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.80282F));
             tableLayoutPanel1.Controls.Add(label3, 0, 1);
             tableLayoutPanel1.Controls.Add(this.ddlAdvSwitchDPadUp, 3, 1);
             tableLayoutPanel1.Controls.Add(label5, 0, 0);
@@ -469,9 +469,9 @@
             // 
             this.ddlAdvSwitchDPadUp.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.ddlAdvSwitchDPadUp.FormattingEnabled = true;
-            this.ddlAdvSwitchDPadUp.Location = new System.Drawing.Point(322, 35);
+            this.ddlAdvSwitchDPadUp.Location = new System.Drawing.Point(285, 35);
             this.ddlAdvSwitchDPadUp.Name = "ddlAdvSwitchDPadUp";
-            this.ddlAdvSwitchDPadUp.Size = new System.Drawing.Size(101, 24);
+            this.ddlAdvSwitchDPadUp.Size = new System.Drawing.Size(138, 24);
             this.ddlAdvSwitchDPadUp.TabIndex = 1;
             // 
             // label5
@@ -489,7 +489,7 @@
             label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             label6.Location = new System.Drawing.Point(110, 1);
             label6.Name = "label6";
-            label6.Size = new System.Drawing.Size(99, 27);
+            label6.Size = new System.Drawing.Size(76, 27);
             label6.TabIndex = 0;
             label6.Text = "Note";
             label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -497,9 +497,9 @@
             // label7
             // 
             label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            label7.Location = new System.Drawing.Point(216, 1);
+            label7.Location = new System.Drawing.Point(193, 1);
             label7.Name = "label7";
-            label7.Size = new System.Drawing.Size(99, 27);
+            label7.Size = new System.Drawing.Size(85, 27);
             label7.TabIndex = 0;
             label7.Text = "Velocity";
             label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -507,7 +507,7 @@
             // label8
             // 
             label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            label8.Location = new System.Drawing.Point(322, 1);
+            label8.Location = new System.Drawing.Point(285, 1);
             label8.Name = "label8";
             label8.Size = new System.Drawing.Size(101, 27);
             label8.TabIndex = 0;
@@ -516,7 +516,7 @@
             // 
             // nupAdvVelDPadUp
             // 
-            this.nupAdvVelDPadUp.Location = new System.Drawing.Point(217, 36);
+            this.nupAdvVelDPadUp.Location = new System.Drawing.Point(194, 36);
             this.nupAdvVelDPadUp.Margin = new System.Windows.Forms.Padding(4);
             this.nupAdvVelDPadUp.Maximum = new decimal(new int[] {
             127,
@@ -524,7 +524,7 @@
             0,
             0});
             this.nupAdvVelDPadUp.Name = "nupAdvVelDPadUp";
-            this.nupAdvVelDPadUp.Size = new System.Drawing.Size(97, 22);
+            this.nupAdvVelDPadUp.Size = new System.Drawing.Size(83, 22);
             this.nupAdvVelDPadUp.TabIndex = 6;
             this.nupAdvVelDPadUp.Value = new decimal(new int[] {
             64,
@@ -626,95 +626,95 @@
             // 
             this.ddlAdvSwitchDPadRight.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.ddlAdvSwitchDPadRight.FormattingEnabled = true;
-            this.ddlAdvSwitchDPadRight.Location = new System.Drawing.Point(322, 66);
+            this.ddlAdvSwitchDPadRight.Location = new System.Drawing.Point(285, 66);
             this.ddlAdvSwitchDPadRight.Name = "ddlAdvSwitchDPadRight";
-            this.ddlAdvSwitchDPadRight.Size = new System.Drawing.Size(101, 24);
+            this.ddlAdvSwitchDPadRight.Size = new System.Drawing.Size(138, 24);
             this.ddlAdvSwitchDPadRight.TabIndex = 1;
             // 
             // ddlAdvSwitchDPadDown
             // 
             this.ddlAdvSwitchDPadDown.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.ddlAdvSwitchDPadDown.FormattingEnabled = true;
-            this.ddlAdvSwitchDPadDown.Location = new System.Drawing.Point(322, 97);
+            this.ddlAdvSwitchDPadDown.Location = new System.Drawing.Point(285, 97);
             this.ddlAdvSwitchDPadDown.Name = "ddlAdvSwitchDPadDown";
-            this.ddlAdvSwitchDPadDown.Size = new System.Drawing.Size(101, 24);
+            this.ddlAdvSwitchDPadDown.Size = new System.Drawing.Size(138, 24);
             this.ddlAdvSwitchDPadDown.TabIndex = 1;
             // 
             // ddlAdvSwitchDPadLeft
             // 
             this.ddlAdvSwitchDPadLeft.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.ddlAdvSwitchDPadLeft.FormattingEnabled = true;
-            this.ddlAdvSwitchDPadLeft.Location = new System.Drawing.Point(322, 128);
+            this.ddlAdvSwitchDPadLeft.Location = new System.Drawing.Point(285, 128);
             this.ddlAdvSwitchDPadLeft.Name = "ddlAdvSwitchDPadLeft";
-            this.ddlAdvSwitchDPadLeft.Size = new System.Drawing.Size(101, 24);
+            this.ddlAdvSwitchDPadLeft.Size = new System.Drawing.Size(138, 24);
             this.ddlAdvSwitchDPadLeft.TabIndex = 1;
             // 
             // ddlAdvSwitchTriangle
             // 
             this.ddlAdvSwitchTriangle.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.ddlAdvSwitchTriangle.FormattingEnabled = true;
-            this.ddlAdvSwitchTriangle.Location = new System.Drawing.Point(322, 159);
+            this.ddlAdvSwitchTriangle.Location = new System.Drawing.Point(285, 159);
             this.ddlAdvSwitchTriangle.Name = "ddlAdvSwitchTriangle";
-            this.ddlAdvSwitchTriangle.Size = new System.Drawing.Size(101, 24);
+            this.ddlAdvSwitchTriangle.Size = new System.Drawing.Size(138, 24);
             this.ddlAdvSwitchTriangle.TabIndex = 1;
             // 
             // ddlAdvSwitchCircle
             // 
             this.ddlAdvSwitchCircle.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.ddlAdvSwitchCircle.FormattingEnabled = true;
-            this.ddlAdvSwitchCircle.Location = new System.Drawing.Point(322, 190);
+            this.ddlAdvSwitchCircle.Location = new System.Drawing.Point(285, 190);
             this.ddlAdvSwitchCircle.Name = "ddlAdvSwitchCircle";
-            this.ddlAdvSwitchCircle.Size = new System.Drawing.Size(101, 24);
+            this.ddlAdvSwitchCircle.Size = new System.Drawing.Size(138, 24);
             this.ddlAdvSwitchCircle.TabIndex = 1;
             // 
             // ddlAdvSwitchX
             // 
             this.ddlAdvSwitchX.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.ddlAdvSwitchX.FormattingEnabled = true;
-            this.ddlAdvSwitchX.Location = new System.Drawing.Point(322, 221);
+            this.ddlAdvSwitchX.Location = new System.Drawing.Point(285, 221);
             this.ddlAdvSwitchX.Name = "ddlAdvSwitchX";
-            this.ddlAdvSwitchX.Size = new System.Drawing.Size(101, 24);
+            this.ddlAdvSwitchX.Size = new System.Drawing.Size(138, 24);
             this.ddlAdvSwitchX.TabIndex = 1;
             // 
             // ddlAdvSwitchRectangle
             // 
             this.ddlAdvSwitchRectangle.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.ddlAdvSwitchRectangle.FormattingEnabled = true;
-            this.ddlAdvSwitchRectangle.Location = new System.Drawing.Point(322, 252);
+            this.ddlAdvSwitchRectangle.Location = new System.Drawing.Point(285, 252);
             this.ddlAdvSwitchRectangle.Name = "ddlAdvSwitchRectangle";
-            this.ddlAdvSwitchRectangle.Size = new System.Drawing.Size(101, 24);
+            this.ddlAdvSwitchRectangle.Size = new System.Drawing.Size(138, 24);
             this.ddlAdvSwitchRectangle.TabIndex = 1;
             // 
             // ddlAdvSwitchSelect
             // 
             this.ddlAdvSwitchSelect.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.ddlAdvSwitchSelect.FormattingEnabled = true;
-            this.ddlAdvSwitchSelect.Location = new System.Drawing.Point(322, 283);
+            this.ddlAdvSwitchSelect.Location = new System.Drawing.Point(285, 283);
             this.ddlAdvSwitchSelect.Name = "ddlAdvSwitchSelect";
-            this.ddlAdvSwitchSelect.Size = new System.Drawing.Size(101, 24);
+            this.ddlAdvSwitchSelect.Size = new System.Drawing.Size(138, 24);
             this.ddlAdvSwitchSelect.TabIndex = 1;
             // 
             // ddlAdvSwitchStart
             // 
             this.ddlAdvSwitchStart.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.ddlAdvSwitchStart.FormattingEnabled = true;
-            this.ddlAdvSwitchStart.Location = new System.Drawing.Point(322, 314);
+            this.ddlAdvSwitchStart.Location = new System.Drawing.Point(285, 314);
             this.ddlAdvSwitchStart.Name = "ddlAdvSwitchStart";
-            this.ddlAdvSwitchStart.Size = new System.Drawing.Size(101, 24);
+            this.ddlAdvSwitchStart.Size = new System.Drawing.Size(138, 24);
             this.ddlAdvSwitchStart.TabIndex = 1;
             // 
             // ddlAdvSwitchBigButton
             // 
             this.ddlAdvSwitchBigButton.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.ddlAdvSwitchBigButton.FormattingEnabled = true;
-            this.ddlAdvSwitchBigButton.Location = new System.Drawing.Point(322, 345);
+            this.ddlAdvSwitchBigButton.Location = new System.Drawing.Point(285, 345);
             this.ddlAdvSwitchBigButton.Name = "ddlAdvSwitchBigButton";
-            this.ddlAdvSwitchBigButton.Size = new System.Drawing.Size(101, 24);
+            this.ddlAdvSwitchBigButton.Size = new System.Drawing.Size(138, 24);
             this.ddlAdvSwitchBigButton.TabIndex = 1;
             // 
             // nupAdvVelDPadRight
             // 
-            this.nupAdvVelDPadRight.Location = new System.Drawing.Point(217, 67);
+            this.nupAdvVelDPadRight.Location = new System.Drawing.Point(194, 67);
             this.nupAdvVelDPadRight.Margin = new System.Windows.Forms.Padding(4);
             this.nupAdvVelDPadRight.Maximum = new decimal(new int[] {
             127,
@@ -722,7 +722,7 @@
             0,
             0});
             this.nupAdvVelDPadRight.Name = "nupAdvVelDPadRight";
-            this.nupAdvVelDPadRight.Size = new System.Drawing.Size(97, 22);
+            this.nupAdvVelDPadRight.Size = new System.Drawing.Size(83, 22);
             this.nupAdvVelDPadRight.TabIndex = 6;
             this.nupAdvVelDPadRight.Value = new decimal(new int[] {
             64,
@@ -732,7 +732,7 @@
             // 
             // nupAdvVelDPadDown
             // 
-            this.nupAdvVelDPadDown.Location = new System.Drawing.Point(217, 98);
+            this.nupAdvVelDPadDown.Location = new System.Drawing.Point(194, 98);
             this.nupAdvVelDPadDown.Margin = new System.Windows.Forms.Padding(4);
             this.nupAdvVelDPadDown.Maximum = new decimal(new int[] {
             127,
@@ -740,7 +740,7 @@
             0,
             0});
             this.nupAdvVelDPadDown.Name = "nupAdvVelDPadDown";
-            this.nupAdvVelDPadDown.Size = new System.Drawing.Size(97, 22);
+            this.nupAdvVelDPadDown.Size = new System.Drawing.Size(83, 22);
             this.nupAdvVelDPadDown.TabIndex = 6;
             this.nupAdvVelDPadDown.Value = new decimal(new int[] {
             64,
@@ -750,7 +750,7 @@
             // 
             // nupAdvVelDPadLeft
             // 
-            this.nupAdvVelDPadLeft.Location = new System.Drawing.Point(217, 129);
+            this.nupAdvVelDPadLeft.Location = new System.Drawing.Point(194, 129);
             this.nupAdvVelDPadLeft.Margin = new System.Windows.Forms.Padding(4);
             this.nupAdvVelDPadLeft.Maximum = new decimal(new int[] {
             127,
@@ -758,7 +758,7 @@
             0,
             0});
             this.nupAdvVelDPadLeft.Name = "nupAdvVelDPadLeft";
-            this.nupAdvVelDPadLeft.Size = new System.Drawing.Size(97, 22);
+            this.nupAdvVelDPadLeft.Size = new System.Drawing.Size(83, 22);
             this.nupAdvVelDPadLeft.TabIndex = 6;
             this.nupAdvVelDPadLeft.Value = new decimal(new int[] {
             64,
@@ -768,7 +768,7 @@
             // 
             // nupAdvVelTriangle
             // 
-            this.nupAdvVelTriangle.Location = new System.Drawing.Point(217, 160);
+            this.nupAdvVelTriangle.Location = new System.Drawing.Point(194, 160);
             this.nupAdvVelTriangle.Margin = new System.Windows.Forms.Padding(4);
             this.nupAdvVelTriangle.Maximum = new decimal(new int[] {
             127,
@@ -776,7 +776,7 @@
             0,
             0});
             this.nupAdvVelTriangle.Name = "nupAdvVelTriangle";
-            this.nupAdvVelTriangle.Size = new System.Drawing.Size(97, 22);
+            this.nupAdvVelTriangle.Size = new System.Drawing.Size(83, 22);
             this.nupAdvVelTriangle.TabIndex = 6;
             this.nupAdvVelTriangle.Value = new decimal(new int[] {
             64,
@@ -786,7 +786,7 @@
             // 
             // nupAdvVelCircle
             // 
-            this.nupAdvVelCircle.Location = new System.Drawing.Point(217, 191);
+            this.nupAdvVelCircle.Location = new System.Drawing.Point(194, 191);
             this.nupAdvVelCircle.Margin = new System.Windows.Forms.Padding(4);
             this.nupAdvVelCircle.Maximum = new decimal(new int[] {
             127,
@@ -794,7 +794,7 @@
             0,
             0});
             this.nupAdvVelCircle.Name = "nupAdvVelCircle";
-            this.nupAdvVelCircle.Size = new System.Drawing.Size(97, 22);
+            this.nupAdvVelCircle.Size = new System.Drawing.Size(83, 22);
             this.nupAdvVelCircle.TabIndex = 6;
             this.nupAdvVelCircle.Value = new decimal(new int[] {
             64,
@@ -804,7 +804,7 @@
             // 
             // nupAdvVelX
             // 
-            this.nupAdvVelX.Location = new System.Drawing.Point(217, 222);
+            this.nupAdvVelX.Location = new System.Drawing.Point(194, 222);
             this.nupAdvVelX.Margin = new System.Windows.Forms.Padding(4);
             this.nupAdvVelX.Maximum = new decimal(new int[] {
             127,
@@ -812,7 +812,7 @@
             0,
             0});
             this.nupAdvVelX.Name = "nupAdvVelX";
-            this.nupAdvVelX.Size = new System.Drawing.Size(97, 22);
+            this.nupAdvVelX.Size = new System.Drawing.Size(83, 22);
             this.nupAdvVelX.TabIndex = 6;
             this.nupAdvVelX.Value = new decimal(new int[] {
             64,
@@ -822,7 +822,7 @@
             // 
             // nupAdvVelRectangle
             // 
-            this.nupAdvVelRectangle.Location = new System.Drawing.Point(217, 253);
+            this.nupAdvVelRectangle.Location = new System.Drawing.Point(194, 253);
             this.nupAdvVelRectangle.Margin = new System.Windows.Forms.Padding(4);
             this.nupAdvVelRectangle.Maximum = new decimal(new int[] {
             127,
@@ -830,7 +830,7 @@
             0,
             0});
             this.nupAdvVelRectangle.Name = "nupAdvVelRectangle";
-            this.nupAdvVelRectangle.Size = new System.Drawing.Size(97, 22);
+            this.nupAdvVelRectangle.Size = new System.Drawing.Size(83, 22);
             this.nupAdvVelRectangle.TabIndex = 6;
             this.nupAdvVelRectangle.Value = new decimal(new int[] {
             64,
@@ -840,7 +840,7 @@
             // 
             // nupAdvVelSelect
             // 
-            this.nupAdvVelSelect.Location = new System.Drawing.Point(217, 284);
+            this.nupAdvVelSelect.Location = new System.Drawing.Point(194, 284);
             this.nupAdvVelSelect.Margin = new System.Windows.Forms.Padding(4);
             this.nupAdvVelSelect.Maximum = new decimal(new int[] {
             127,
@@ -848,7 +848,7 @@
             0,
             0});
             this.nupAdvVelSelect.Name = "nupAdvVelSelect";
-            this.nupAdvVelSelect.Size = new System.Drawing.Size(97, 22);
+            this.nupAdvVelSelect.Size = new System.Drawing.Size(83, 22);
             this.nupAdvVelSelect.TabIndex = 6;
             this.nupAdvVelSelect.Value = new decimal(new int[] {
             64,
@@ -858,7 +858,7 @@
             // 
             // nupAdvVelBigButton
             // 
-            this.nupAdvVelBigButton.Location = new System.Drawing.Point(217, 346);
+            this.nupAdvVelBigButton.Location = new System.Drawing.Point(194, 346);
             this.nupAdvVelBigButton.Margin = new System.Windows.Forms.Padding(4);
             this.nupAdvVelBigButton.Maximum = new decimal(new int[] {
             127,
@@ -866,7 +866,7 @@
             0,
             0});
             this.nupAdvVelBigButton.Name = "nupAdvVelBigButton";
-            this.nupAdvVelBigButton.Size = new System.Drawing.Size(97, 22);
+            this.nupAdvVelBigButton.Size = new System.Drawing.Size(83, 22);
             this.nupAdvVelBigButton.TabIndex = 6;
             this.nupAdvVelBigButton.Value = new decimal(new int[] {
             64,
@@ -884,7 +884,7 @@
             0,
             0});
             this.nupAdvNoteStart.Name = "nupAdvNoteStart";
-            this.nupAdvNoteStart.Size = new System.Drawing.Size(97, 22);
+            this.nupAdvNoteStart.Size = new System.Drawing.Size(74, 22);
             this.nupAdvNoteStart.TabIndex = 6;
             this.nupAdvNoteStart.Value = new decimal(new int[] {
             64,
@@ -894,7 +894,7 @@
             // 
             // nupAdvVelStart
             // 
-            this.nupAdvVelStart.Location = new System.Drawing.Point(217, 315);
+            this.nupAdvVelStart.Location = new System.Drawing.Point(194, 315);
             this.nupAdvVelStart.Margin = new System.Windows.Forms.Padding(4);
             this.nupAdvVelStart.Maximum = new decimal(new int[] {
             127,
@@ -902,7 +902,7 @@
             0,
             0});
             this.nupAdvVelStart.Name = "nupAdvVelStart";
-            this.nupAdvVelStart.Size = new System.Drawing.Size(97, 22);
+            this.nupAdvVelStart.Size = new System.Drawing.Size(83, 22);
             this.nupAdvVelStart.TabIndex = 6;
             this.nupAdvVelStart.Value = new decimal(new int[] {
             64,
@@ -920,7 +920,7 @@
             0,
             0});
             this.nupAdvNoteBigButton.Name = "nupAdvNoteBigButton";
-            this.nupAdvNoteBigButton.Size = new System.Drawing.Size(97, 22);
+            this.nupAdvNoteBigButton.Size = new System.Drawing.Size(74, 22);
             this.nupAdvNoteBigButton.TabIndex = 6;
             this.nupAdvNoteBigButton.Value = new decimal(new int[] {
             64,
@@ -938,7 +938,7 @@
             0,
             0});
             this.nupAdvNoteSelect.Name = "nupAdvNoteSelect";
-            this.nupAdvNoteSelect.Size = new System.Drawing.Size(97, 22);
+            this.nupAdvNoteSelect.Size = new System.Drawing.Size(74, 22);
             this.nupAdvNoteSelect.TabIndex = 6;
             this.nupAdvNoteSelect.Value = new decimal(new int[] {
             64,
@@ -956,7 +956,7 @@
             0,
             0});
             this.nupAdvNoteRectangle.Name = "nupAdvNoteRectangle";
-            this.nupAdvNoteRectangle.Size = new System.Drawing.Size(97, 22);
+            this.nupAdvNoteRectangle.Size = new System.Drawing.Size(74, 22);
             this.nupAdvNoteRectangle.TabIndex = 6;
             this.nupAdvNoteRectangle.Value = new decimal(new int[] {
             64,
@@ -974,7 +974,7 @@
             0,
             0});
             this.nupAdvNoteX.Name = "nupAdvNoteX";
-            this.nupAdvNoteX.Size = new System.Drawing.Size(97, 22);
+            this.nupAdvNoteX.Size = new System.Drawing.Size(74, 22);
             this.nupAdvNoteX.TabIndex = 6;
             this.nupAdvNoteX.Value = new decimal(new int[] {
             64,
@@ -992,7 +992,7 @@
             0,
             0});
             this.nupAdvNoteCircle.Name = "nupAdvNoteCircle";
-            this.nupAdvNoteCircle.Size = new System.Drawing.Size(97, 22);
+            this.nupAdvNoteCircle.Size = new System.Drawing.Size(74, 22);
             this.nupAdvNoteCircle.TabIndex = 6;
             this.nupAdvNoteCircle.Value = new decimal(new int[] {
             64,
@@ -1010,7 +1010,7 @@
             0,
             0});
             this.nupAdvNoteTriangle.Name = "nupAdvNoteTriangle";
-            this.nupAdvNoteTriangle.Size = new System.Drawing.Size(97, 22);
+            this.nupAdvNoteTriangle.Size = new System.Drawing.Size(74, 22);
             this.nupAdvNoteTriangle.TabIndex = 6;
             this.nupAdvNoteTriangle.Value = new decimal(new int[] {
             64,
@@ -1028,7 +1028,7 @@
             0,
             0});
             this.nupAdvNoteDPadLeft.Name = "nupAdvNoteDPadLeft";
-            this.nupAdvNoteDPadLeft.Size = new System.Drawing.Size(97, 22);
+            this.nupAdvNoteDPadLeft.Size = new System.Drawing.Size(74, 22);
             this.nupAdvNoteDPadLeft.TabIndex = 6;
             this.nupAdvNoteDPadLeft.Value = new decimal(new int[] {
             64,
@@ -1046,7 +1046,7 @@
             0,
             0});
             this.nupAdvNoteDPadDown.Name = "nupAdvNoteDPadDown";
-            this.nupAdvNoteDPadDown.Size = new System.Drawing.Size(97, 22);
+            this.nupAdvNoteDPadDown.Size = new System.Drawing.Size(74, 22);
             this.nupAdvNoteDPadDown.TabIndex = 6;
             this.nupAdvNoteDPadDown.Value = new decimal(new int[] {
             64,
@@ -1064,7 +1064,7 @@
             0,
             0});
             this.nupAdvNoteDPadRight.Name = "nupAdvNoteDPadRight";
-            this.nupAdvNoteDPadRight.Size = new System.Drawing.Size(97, 22);
+            this.nupAdvNoteDPadRight.Size = new System.Drawing.Size(74, 22);
             this.nupAdvNoteDPadRight.TabIndex = 6;
             this.nupAdvNoteDPadRight.Value = new decimal(new int[] {
             64,
@@ -1082,7 +1082,7 @@
             0,
             0});
             this.nupAdvNoteDPadUp.Name = "nupAdvNoteDPadUp";
-            this.nupAdvNoteDPadUp.Size = new System.Drawing.Size(97, 22);
+            this.nupAdvNoteDPadUp.Size = new System.Drawing.Size(74, 22);
             this.nupAdvNoteDPadUp.TabIndex = 6;
             this.nupAdvNoteDPadUp.Value = new decimal(new int[] {
             64,
