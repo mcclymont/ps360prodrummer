@@ -26,7 +26,8 @@ namespace _PS360Drum
 
         public MidiSender MidiSender { get; private set; }
         private ProDrumController m_DrumController;
-        private Serializer m_Serializer;
+        private Serialize.Serializer m_Serializer;
+        public MultiNoteGui MultiNoteGui { get; private set; }
 
 
         private DrumDPad m_PrevDPadState = DrumDPad.None;
@@ -35,7 +36,7 @@ namespace _PS360Drum
         {    
             InitializeComponent();
 
-            m_Serializer = new Serializer(this);
+            m_Serializer = new Serialize.Serializer(this);
             m_DrumController = new ProDrumController(this);
             m_DrumController.ButtonPressedEvent += DrumButtonPressed;
             m_DrumController.ButtonReleasedEvent += DrumButtonReleased;
@@ -89,6 +90,10 @@ namespace _PS360Drum
             referenceVelocity[(int)DrumPad.YellowCymbal] = pbYellowCymbal;
             referenceVelocity[(int)DrumPad.BlueCymbal] = pbBlueCymbal;
             referenceVelocity[(int)DrumPad.GreenCymbal] = pbGreenCymbal;
+            #endregion
+            #region MultiNoteGUi
+            MultiNoteGui = new MultiNoteGui(ddlMNvelCheck, nupMNvelCheck, ddlMNnote, nupMNnoteTo,
+                                              nupMNvelMult, nupMNvelAdd, btnMNAdd, btnMNRemove, lbMN);
             #endregion
 
             // Tries to load default settings or reverts to 
@@ -289,7 +294,7 @@ namespace _PS360Drum
         }
         private void LoadDefaultSettings(object sender, EventArgs e)
         {
-            m_Serializer.Load(defaultFilePath);
+            m_Serializer.LoadDefaultSettings();
         }
         #endregion
         #region Override WndProc and OnHandleCreate

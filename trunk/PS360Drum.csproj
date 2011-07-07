@@ -86,6 +86,7 @@
     <Compile Include="GuiLinker.cs" />
     <Compile Include="HitFilter.cs" />
     <Compile Include="MidiSender.cs" />
+    <Compile Include="MultiNote.cs" />
     <Compile Include="ProDrumController.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

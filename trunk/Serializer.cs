@@ -5,7 +5,7 @@ using System.Xml.Serialization;
 using System.IO;
 using System.Windows.Forms;
 
-namespace _PS360Drum
+namespace _PS360Drum.Serialize
 {
     public class Serializer
     {
@@ -145,6 +145,14 @@ namespace _PS360Drum
             //Midi
             settings.MidiSettings.MidiChannel = m_Main.GetMidiChannel();
             settings.MidiSettings.MidiDevice = m_Main.GetMidiOutDeviceName();
+
+            //MultiNotes
+            settings.MultiNotes.Clear();
+            foreach (_PS360Drum.MultiNote m in m_Main.MultiNoteGui.GetMultiNotes())
+            {
+                settings.MultiNotes.Add(new MultiNote(m.CheckType, m.Velocity,
+                    m.Pad, m.NoteTo, m.VelocityMult, m.VelocityAdd));
+            }
         }
         private void ApplySettings(Settings settings)
         {
@@ -236,6 +244,14 @@ namespace _PS360Drum
             //Midi
             m_Main.SetMidiChannel(settings.MidiSettings.MidiChannel);
             m_Main.SetMidiOutDeviceName(settings.MidiSettings.MidiDevice);
+
+            //MultiNotes
+            m_Main.MultiNoteGui.Clear();
+            foreach (MultiNote m in settings.MultiNotes)
+	        {
+                m_Main.MultiNoteGui.Add(new _PS360Drum.MultiNote(m.CheckType, m.Velocity,
+                    m.Pad, m.NoteTo, m.VelocityMult, m.VelocityAdd));
+	        }
         }
 
         [XmlRoot("Settings")]
@@ -270,7 +286,6 @@ namespace _PS360Drum
             [XmlElement("DPadLeft")]
             public Button DPadLeft { get; set; }
 
-
             [XmlElement("Triangle")]
             public Button Triangle { get; set; }
             [XmlElement("Circle")]
@@ -294,6 +309,9 @@ namespace _PS360Drum
 
             [XmlElement("MidiSettings")]
             public MidiSettings MidiSettings { get; set; }
+
+            [XmlElement("MultiNotes")]
+            public List<MultiNote> MultiNotes { get; set; }
 
             public void SetDefaultValues()
             {
@@ -323,6 +341,8 @@ namespace _PS360Drum
                 PedalRight = new Button(36, 100, SwitchType.KeyboardLike);  //Bass Drum: 36
 
                 MidiSettings = new MidiSettings("LoopBe Internal MIDI", 10);
+
+                MultiNotes = new List<MultiNote>();
             }
         }
         public class Trigger
@@ -396,6 +416,39 @@ namespace _PS360Drum
 
             [XmlAttribute("SwitchType")]
             public SwitchType SwitchType { get; set; }
+        }
+        public class MultiNote
+        {
+            [XmlAttribute("Velocity")]
+            public byte Velocity { get; set; }
+            [XmlAttribute("CheckType")]
+            public MultNoteCheckType CheckType { get; set; }
+
+            [XmlAttribute("Pad")]
+            public DrumPad Pad { get; set; }
+            [XmlAttribute("NoteTo")]
+            public byte NoteTo { get; set; }
+
+            [XmlAttribute("VelocityMult")]
+            public float VelocityMult { get; set; }
+            [XmlAttribute("VelocityAdd")]
+            public byte VelocityAdd { get; set; }
+
+            public MultiNote ()
+	        {
+	        }
+
+            public MultiNote(MultNoteCheckType checkType, byte velocity,
+                         DrumPad pad, byte noteTo,
+                         float velMult, byte velAdd)
+            {
+                CheckType = checkType;
+                Velocity = velocity;
+                Pad = pad;
+                NoteTo = noteTo;
+                VelocityMult = velMult;
+                VelocityAdd = velAdd;
+            }
         }
         public class MidiSettings
         {
