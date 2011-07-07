@@ -215,15 +215,15 @@
             this.ddlAdvBoostGreenCymbal = new System.Windows.Forms.ComboBox();
             this.groupBox9 = new System.Windows.Forms.GroupBox();
             this.groupBox8 = new System.Windows.Forms.GroupBox();
-            this.listBox1 = new System.Windows.Forms.ListBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.numericUpDown35 = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown34 = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown2 = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.lbMN = new System.Windows.Forms.ListBox();
+            this.btnMNAdd = new System.Windows.Forms.Button();
+            this.btnMNRemove = new System.Windows.Forms.Button();
+            this.ddlMNnote = new System.Windows.Forms.ComboBox();
+            this.nupMNvelAdd = new System.Windows.Forms.NumericUpDown();
+            this.nupMNvelMult = new System.Windows.Forms.NumericUpDown();
+            this.nupMNvelCheck = new System.Windows.Forms.NumericUpDown();
+            this.nupMNnoteTo = new System.Windows.Forms.NumericUpDown();
+            this.ddlMNvelCheck = new System.Windows.Forms.ComboBox();
             this.panel1 = new System.Windows.Forms.Panel();
             lblMIDIChannel = new System.Windows.Forms.Label();
             lblMIDIDevice = new System.Windows.Forms.Label();
@@ -336,10 +336,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.nupAdvNoteRedTom)).BeginInit();
             this.groupBox9.SuspendLayout();
             this.groupBox8.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown35)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown34)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nupMNvelAdd)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nupMNvelMult)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nupMNvelCheck)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nupMNnoteTo)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -1256,9 +1256,9 @@
             label35.AutoSize = true;
             label35.Location = new System.Drawing.Point(6, 77);
             label35.Name = "label35";
-            label35.Size = new System.Drawing.Size(158, 17);
+            label35.Size = new System.Drawing.Size(162, 17);
             label35.TabIndex = 8;
-            label35.Text = "New velocity = velocity *";
+            label35.Text = "New velocity = velocity  *";
             // 
             // label36
             // 
@@ -2932,19 +2932,19 @@
             // 
             // groupBox8
             // 
+            this.groupBox8.Controls.Add(this.nupMNvelMult);
             this.groupBox8.Controls.Add(label36);
             this.groupBox8.Controls.Add(label35);
             this.groupBox8.Controls.Add(label1);
-            this.groupBox8.Controls.Add(this.listBox1);
-            this.groupBox8.Controls.Add(this.button1);
+            this.groupBox8.Controls.Add(this.lbMN);
+            this.groupBox8.Controls.Add(this.btnMNAdd);
             this.groupBox8.Controls.Add(label2);
-            this.groupBox8.Controls.Add(this.button2);
-            this.groupBox8.Controls.Add(this.comboBox2);
-            this.groupBox8.Controls.Add(this.numericUpDown35);
-            this.groupBox8.Controls.Add(this.numericUpDown34);
-            this.groupBox8.Controls.Add(this.numericUpDown2);
-            this.groupBox8.Controls.Add(this.numericUpDown1);
-            this.groupBox8.Controls.Add(this.comboBox1);
+            this.groupBox8.Controls.Add(this.btnMNRemove);
+            this.groupBox8.Controls.Add(this.ddlMNnote);
+            this.groupBox8.Controls.Add(this.nupMNvelAdd);
+            this.groupBox8.Controls.Add(this.nupMNvelCheck);
+            this.groupBox8.Controls.Add(this.nupMNnoteTo);
+            this.groupBox8.Controls.Add(this.ddlMNvelCheck);
             this.groupBox8.Location = new System.Drawing.Point(8, 410);
             this.groupBox8.Name = "groupBox8";
             this.groupBox8.Size = new System.Drawing.Size(849, 145);
@@ -2952,134 +2952,123 @@
             this.groupBox8.TabStop = false;
             this.groupBox8.Text = "MultiNote";
             // 
-            // listBox1
+            // lbMN
             // 
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.ItemHeight = 16;
-            this.listBox1.Location = new System.Drawing.Point(439, 18);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(404, 116);
-            this.listBox1.TabIndex = 11;
+            this.lbMN.FormattingEnabled = true;
+            this.lbMN.ItemHeight = 16;
+            this.lbMN.Location = new System.Drawing.Point(439, 18);
+            this.lbMN.Name = "lbMN";
+            this.lbMN.Size = new System.Drawing.Size(404, 116);
+            this.lbMN.TabIndex = 11;
             // 
-            // button1
+            // btnMNAdd
             // 
-            this.button1.Location = new System.Drawing.Point(331, 18);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(102, 53);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "Add";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnMNAdd.Location = new System.Drawing.Point(331, 18);
+            this.btnMNAdd.Name = "btnMNAdd";
+            this.btnMNAdd.Size = new System.Drawing.Size(102, 53);
+            this.btnMNAdd.TabIndex = 0;
+            this.btnMNAdd.Text = "Add";
+            this.btnMNAdd.UseVisualStyleBackColor = true;
             // 
-            // button2
+            // btnMNRemove
             // 
-            this.button2.Location = new System.Drawing.Point(331, 77);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(102, 52);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "Remove";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btnMNRemove.Location = new System.Drawing.Point(331, 77);
+            this.btnMNRemove.Name = "btnMNRemove";
+            this.btnMNRemove.Size = new System.Drawing.Size(102, 52);
+            this.btnMNRemove.TabIndex = 1;
+            this.btnMNRemove.Text = "Remove";
+            this.btnMNRemove.UseVisualStyleBackColor = true;
             // 
-            // comboBox2
+            // ddlMNnote
             // 
-            this.comboBox2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Items.AddRange(new object[] {
-            "Red Tom",
-            "Yellow Tom",
-            "Yellow Cymbal",
-            "Blue Tom",
-            "Blue Cymbal",
-            "Green Tom",
-            "Green Cymbal"});
-            this.comboBox2.Location = new System.Drawing.Point(9, 47);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(135, 24);
-            this.comboBox2.TabIndex = 9;
+            this.ddlMNnote.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.ddlMNnote.FormattingEnabled = true;
+            this.ddlMNnote.Location = new System.Drawing.Point(9, 47);
+            this.ddlMNnote.Name = "ddlMNnote";
+            this.ddlMNnote.Size = new System.Drawing.Size(135, 24);
+            this.ddlMNnote.TabIndex = 9;
             // 
-            // numericUpDown35
+            // nupMNvelAdd
             // 
-            this.numericUpDown35.Location = new System.Drawing.Point(260, 77);
-            this.numericUpDown35.Margin = new System.Windows.Forms.Padding(4);
-            this.numericUpDown35.Maximum = new decimal(new int[] {
+            this.nupMNvelAdd.Location = new System.Drawing.Point(260, 77);
+            this.nupMNvelAdd.Margin = new System.Windows.Forms.Padding(4);
+            this.nupMNvelAdd.Maximum = new decimal(new int[] {
             127,
             0,
             0,
             0});
-            this.numericUpDown35.Name = "numericUpDown35";
-            this.numericUpDown35.Size = new System.Drawing.Size(64, 22);
-            this.numericUpDown35.TabIndex = 6;
-            this.numericUpDown35.Value = new decimal(new int[] {
+            this.nupMNvelAdd.Name = "nupMNvelAdd";
+            this.nupMNvelAdd.Size = new System.Drawing.Size(64, 22);
+            this.nupMNvelAdd.TabIndex = 6;
+            this.nupMNvelAdd.Value = new decimal(new int[] {
             64,
             0,
             0,
             0});
             // 
-            // numericUpDown34
+            // nupMNvelMult
             // 
-            this.numericUpDown34.DecimalPlaces = 2;
-            this.numericUpDown34.Increment = new decimal(new int[] {
+            this.nupMNvelMult.DecimalPlaces = 2;
+            this.nupMNvelMult.Increment = new decimal(new int[] {
             1,
             0,
             0,
             65536});
-            this.numericUpDown34.Location = new System.Drawing.Point(167, 77);
-            this.numericUpDown34.Margin = new System.Windows.Forms.Padding(4);
-            this.numericUpDown34.Maximum = new decimal(new int[] {
+            this.nupMNvelMult.Location = new System.Drawing.Point(167, 77);
+            this.nupMNvelMult.Margin = new System.Windows.Forms.Padding(4);
+            this.nupMNvelMult.Maximum = new decimal(new int[] {
             10,
             0,
             0,
             0});
-            this.numericUpDown34.Name = "numericUpDown34";
-            this.numericUpDown34.Size = new System.Drawing.Size(64, 22);
-            this.numericUpDown34.TabIndex = 6;
+            this.nupMNvelMult.Name = "nupMNvelMult";
+            this.nupMNvelMult.Size = new System.Drawing.Size(64, 22);
+            this.nupMNvelMult.TabIndex = 6;
             // 
-            // numericUpDown2
+            // nupMNvelCheck
             // 
-            this.numericUpDown2.Location = new System.Drawing.Point(260, 19);
-            this.numericUpDown2.Margin = new System.Windows.Forms.Padding(4);
-            this.numericUpDown2.Maximum = new decimal(new int[] {
+            this.nupMNvelCheck.Location = new System.Drawing.Point(260, 19);
+            this.nupMNvelCheck.Margin = new System.Windows.Forms.Padding(4);
+            this.nupMNvelCheck.Maximum = new decimal(new int[] {
             127,
             0,
             0,
             0});
-            this.numericUpDown2.Name = "numericUpDown2";
-            this.numericUpDown2.Size = new System.Drawing.Size(64, 22);
-            this.numericUpDown2.TabIndex = 6;
-            this.numericUpDown2.Value = new decimal(new int[] {
+            this.nupMNvelCheck.Name = "nupMNvelCheck";
+            this.nupMNvelCheck.Size = new System.Drawing.Size(64, 22);
+            this.nupMNvelCheck.TabIndex = 6;
+            this.nupMNvelCheck.Value = new decimal(new int[] {
             64,
             0,
             0,
             0});
             // 
-            // numericUpDown1
+            // nupMNnoteTo
             // 
-            this.numericUpDown1.Location = new System.Drawing.Point(260, 49);
-            this.numericUpDown1.Margin = new System.Windows.Forms.Padding(4);
-            this.numericUpDown1.Maximum = new decimal(new int[] {
+            this.nupMNnoteTo.Location = new System.Drawing.Point(260, 49);
+            this.nupMNnoteTo.Margin = new System.Windows.Forms.Padding(4);
+            this.nupMNnoteTo.Maximum = new decimal(new int[] {
             127,
             0,
             0,
             0});
-            this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(64, 22);
-            this.numericUpDown1.TabIndex = 6;
-            this.numericUpDown1.Value = new decimal(new int[] {
+            this.nupMNnoteTo.Name = "nupMNnoteTo";
+            this.nupMNnoteTo.Size = new System.Drawing.Size(64, 22);
+            this.nupMNnoteTo.TabIndex = 6;
+            this.nupMNnoteTo.Value = new decimal(new int[] {
             64,
             0,
             0,
             0});
             // 
-            // comboBox1
+            // ddlMNvelCheck
             // 
-            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
-            "Greater",
-            "Lesser"});
-            this.comboBox1.Location = new System.Drawing.Point(113, 18);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(103, 24);
-            this.comboBox1.TabIndex = 7;
+            this.ddlMNvelCheck.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.ddlMNvelCheck.FormattingEnabled = true;
+            this.ddlMNvelCheck.Location = new System.Drawing.Point(113, 18);
+            this.ddlMNvelCheck.Name = "ddlMNvelCheck";
+            this.ddlMNvelCheck.Size = new System.Drawing.Size(103, 24);
+            this.ddlMNvelCheck.TabIndex = 7;
             // 
             // panel1
             // 
@@ -3196,10 +3185,10 @@
             this.groupBox9.ResumeLayout(false);
             this.groupBox8.ResumeLayout(false);
             this.groupBox8.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown35)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown34)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nupMNvelAdd)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nupMNvelMult)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nupMNvelCheck)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nupMNnoteTo)).EndInit();
             this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -3290,16 +3279,16 @@
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.NumericUpDown numericUpDown1;
-        private System.Windows.Forms.NumericUpDown numericUpDown2;
+        private System.Windows.Forms.Button btnMNRemove;
+        private System.Windows.Forms.Button btnMNAdd;
+        private System.Windows.Forms.ComboBox ddlMNvelCheck;
+        private System.Windows.Forms.ComboBox ddlMNnote;
+        private System.Windows.Forms.NumericUpDown nupMNnoteTo;
+        private System.Windows.Forms.NumericUpDown nupMNvelCheck;
         private System.Windows.Forms.GroupBox groupBox9;
         private System.Windows.Forms.ComboBox ddlAdvSwitchDPadUp;
         private System.Windows.Forms.GroupBox groupBox8;
-        private System.Windows.Forms.ListBox listBox1;
+        private System.Windows.Forms.ListBox lbMN;
         private System.Windows.Forms.GroupBox groupBox11;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
         private System.Windows.Forms.ComboBox ddlAdvSwitchPedalLeft;
@@ -3355,8 +3344,8 @@
         private System.Windows.Forms.NumericUpDown nupAdvNoteDPadLeft;
         private System.Windows.Forms.NumericUpDown nupAdvNoteDPadDown;
         private System.Windows.Forms.NumericUpDown nupAdvNoteDPadRight;
-        private System.Windows.Forms.NumericUpDown numericUpDown35;
-        private System.Windows.Forms.NumericUpDown numericUpDown34;
+        private System.Windows.Forms.NumericUpDown nupMNvelAdd;
+        private System.Windows.Forms.NumericUpDown nupMNvelMult;
         private System.Windows.Forms.NumericUpDown nupAdvNoteDPadUp;
         private System.Windows.Forms.CheckBox chkPedalLeft;
         private System.Windows.Forms.NumericUpDown nupPedalLeft;
