@@ -77,6 +77,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Drums\GHWT\GHWTDrumController.cs" />
+    <Compile Include="Drums\GHWT\GHWTRawToGui.cs" />
+    <Compile Include="Drums\Ps3Pro\ProDrumRawToGui.cs" />
     <Compile Include="FrmMain.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -85,9 +88,11 @@
     </Compile>
     <Compile Include="GuiLinker.cs" />
     <Compile Include="HitFilter.cs" />
+    <Compile Include="Drums\IDrumController.cs" />
+    <Compile Include="Drums\IRawToGui.cs" />
     <Compile Include="MidiSender.cs" />
     <Compile Include="MultiNote.cs" />
-    <Compile Include="ProDrumController.cs" />
+    <Compile Include="Drums\Ps3Pro\ProDrumController.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Serializer.cs" />

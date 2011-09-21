@@ -20,6 +20,40 @@ namespace _PS360Drum
         DPadVelocity,
         DrumPad
     }
+    public enum GuiDrumPad : byte
+    {
+        RedTom = 0,
+        YellowTom = 1,
+        BlueTom = 2,
+        GreenTom = 3,
+        YellowCymbal = 4,
+        BlueCymbal = 5,
+        GreenCymbal = 6,
+        PedalLeft = 7,
+        PedalRight = 8
+    };
+    public enum GuiDrumDPad : byte
+    {
+        Up = 0,
+        RightUp = 1,
+        Right = 2,
+        RightDown = 3,
+        Down = 4,
+        LeftDown = 5,
+        Left = 6,
+        LeftUp = 7,
+        None = 8
+    }
+    public enum GuiDrumButton : byte
+    {
+        Select,
+        Start,
+        BigButton,
+        Triangle,
+        Rectangle,
+        Circle,
+        X
+    }
     class GuiLinkerTag
     {
         public GuiLinkerTag(GuiLinkerType type, object data)
@@ -34,21 +68,24 @@ namespace _PS360Drum
     public class GuiLinker
     {
         public static readonly byte[] allowedBoostValues = new byte[8] { 10, 20, 30, 40, 50, 60, 70, 80 };
+        private const int NUM_PADS = 9;
+        private const int NUM_BUTTON_STATES = 7;
+
         SwitchType[] allowedSwitchTypes = new SwitchType[] { SwitchType.KeyboardLike, SwitchType.OnOff, SwitchType.Toggle };
 
-        NumericUpDown[] m_NupNoteArray = new NumericUpDown[ProDrumController.NUM_PADS + ProDrumController.NUM_BUTTON_STATES + 4];
-        NumericUpDown[] m_NupAdvNoteArray = new NumericUpDown[ProDrumController.NUM_PADS + ProDrumController.NUM_BUTTON_STATES + 4];
+        NumericUpDown[] m_NupNoteArray = new NumericUpDown[NUM_PADS + NUM_BUTTON_STATES + 4];
+        NumericUpDown[] m_NupAdvNoteArray = new NumericUpDown[NUM_PADS + NUM_BUTTON_STATES + 4];
 
-        NumericUpDown[] m_NupAdvButtonVelArray = new NumericUpDown[ProDrumController.NUM_BUTTON_STATES + 4];
-        ComboBox[] m_DdlAdvSwitchStateArray = new ComboBox[ProDrumController.NUM_BUTTON_STATES + 4];
+        NumericUpDown[] m_NupAdvButtonVelArray = new NumericUpDown[NUM_BUTTON_STATES + 4];
+        ComboBox[] m_DdlAdvSwitchStateArray = new ComboBox[NUM_BUTTON_STATES + 4];
 
-        CheckBox[] m_ChkNoteOnCheck = new CheckBox[ProDrumController.NUM_BUTTON_STATES + 4];
+        CheckBox[] m_ChkNoteOnCheck = new CheckBox[NUM_BUTTON_STATES + 4];
 
-        CheckBox[] m_ChkDrumBoostOn = new CheckBox[ProDrumController.NUM_PADS];
-        CheckBox[] m_ChkAdvDrumBoostOn = new CheckBox[ProDrumController.NUM_PADS];
+        CheckBox[] m_ChkDrumBoostOn = new CheckBox[NUM_PADS];
+        CheckBox[] m_ChkAdvDrumBoostOn = new CheckBox[NUM_PADS];
 
-        ComboBox[] m_DdlBoostValue = new ComboBox[ProDrumController.NUM_PADS];
-        ComboBox[] m_DdlAdvBoostValue = new ComboBox[ProDrumController.NUM_PADS];
+        ComboBox[] m_DdlBoostValue = new ComboBox[NUM_PADS];
+        ComboBox[] m_DdlAdvBoostValue = new ComboBox[NUM_PADS];
 
         FrmMain m_Main;
 
@@ -57,19 +94,18 @@ namespace _PS360Drum
             m_Main = main;
         }
 
-        public void AddButton(DrumButton button,
+        public void AddButton(GuiDrumButton button,
                        NumericUpDown nupNoteNormal, NumericUpDown nupNoteAdv,
                        NumericUpDown nupButtonNoteVelocityAdv, ComboBox ddlSwitchStateAdv,
                        CheckBox chkNoteOnCheck)
         {
-            m_NupNoteArray[ProDrumController.NUM_PADS + (byte)button] = nupNoteNormal;
-            m_NupAdvNoteArray[ProDrumController.NUM_PADS + (byte)button] = nupNoteAdv;
+            m_NupNoteArray[NUM_PADS + (byte)button] = nupNoteNormal;
+            m_NupAdvNoteArray[NUM_PADS + (byte)button] = nupNoteAdv;
 
             m_NupAdvButtonVelArray[(byte)button] = nupButtonNoteVelocityAdv;
             m_DdlAdvSwitchStateArray[(byte)button] = ddlSwitchStateAdv;
 
             m_ChkNoteOnCheck[(byte)button] = chkNoteOnCheck;
-
 
             InitControl((byte)button, GuiLinkerType.Button, nupNoteNormal);
             InitControl((byte)button, GuiLinkerType.ButtonVelocity, nupButtonNoteVelocityAdv);
@@ -83,18 +119,18 @@ namespace _PS360Drum
 
             InitDDLSwitchState(ddlSwitchStateAdv);
         }
-        public void AddDPad(DrumDPad dpad,
+        public void AddDPad(GuiDrumDPad dpad,
                      NumericUpDown nupNoteNormal, NumericUpDown nupNoteAdv,
                      NumericUpDown nupButtonNoteVelocityAdv, ComboBox ddlSwitchStateAdv,
                      CheckBox chkNoteOnCheck)
         {
-            m_NupNoteArray[ProDrumController.NUM_PADS + ProDrumController.NUM_BUTTON_STATES + (byte)dpad / 2] = nupNoteNormal;
-            m_NupAdvNoteArray[ProDrumController.NUM_PADS + ProDrumController.NUM_BUTTON_STATES + (byte)dpad / 2] = nupNoteAdv;
+            m_NupNoteArray[NUM_PADS + NUM_BUTTON_STATES + (byte)dpad / 2] = nupNoteNormal;
+            m_NupAdvNoteArray[NUM_PADS + NUM_BUTTON_STATES + (byte)dpad / 2] = nupNoteAdv;
 
-            m_NupAdvButtonVelArray[ProDrumController.NUM_BUTTON_STATES + (byte)dpad / 2] = nupButtonNoteVelocityAdv;
-            m_DdlAdvSwitchStateArray[ProDrumController.NUM_BUTTON_STATES + (byte)dpad / 2] = ddlSwitchStateAdv;
+            m_NupAdvButtonVelArray[NUM_BUTTON_STATES + (byte)dpad / 2] = nupButtonNoteVelocityAdv;
+            m_DdlAdvSwitchStateArray[NUM_BUTTON_STATES + (byte)dpad / 2] = ddlSwitchStateAdv;
 
-            m_ChkNoteOnCheck[ProDrumController.NUM_BUTTON_STATES + (byte)dpad / 2] = chkNoteOnCheck;
+            m_ChkNoteOnCheck[NUM_BUTTON_STATES + (byte)dpad / 2] = chkNoteOnCheck;
 
 
             InitControl((byte)dpad, GuiLinkerType.DPad, nupNoteNormal);
@@ -109,7 +145,7 @@ namespace _PS360Drum
 
             InitDDLSwitchState(ddlSwitchStateAdv);
         }
-        public void AddDrum(DrumPad pad,
+        public void AddDrum(GuiDrumPad pad,
                      NumericUpDown nupNoteNormal, NumericUpDown nupNoteAdv,
                      CheckBox chkBoostOn, CheckBox chkBoostOnAdv,
                      ComboBox ddlBoostValue, ComboBox ddlAdvBoostValue)
@@ -182,15 +218,15 @@ namespace _PS360Drum
             switch (tag.type)
             {
                 case GuiLinkerType.DrumPad:
-                    SetMidiNote((DrumPad)tag.data, (byte)obj.Value); break;
+                    SetMidiNote((GuiDrumPad)tag.data, (byte)obj.Value); break;
                 case GuiLinkerType.Button:
-                    SetMidiNote((DrumButton)tag.data, (byte)obj.Value); break;
+                    SetMidiNote((GuiDrumButton)tag.data, (byte)obj.Value); break;
                 case GuiLinkerType.ButtonVelocity:
-                    SetButtonVelocity((DrumButton)tag.data, (byte)obj.Value); break;
+                    SetButtonVelocity((GuiDrumButton)tag.data, (byte)obj.Value); break;
                 case GuiLinkerType.DPad:
-                    SetMidiNote((DrumDPad)tag.data, (byte)obj.Value); break;
+                    SetMidiNote((GuiDrumDPad)tag.data, (byte)obj.Value); break;
                 case GuiLinkerType.DPadVelocity:
-                    SetButtonVelocity((DrumDPad)tag.data, (byte)obj.Value); break;
+                    SetButtonVelocity((GuiDrumDPad)tag.data, (byte)obj.Value); break;
                 default:
                     Debug.Assert(false, "unkown type"); break;
             }
@@ -204,7 +240,7 @@ namespace _PS360Drum
             switch (tag.type)
             {
                 case GuiLinkerType.DrumPad:
-                    SetBoostEnabled((DrumPad)tag.data, obj.Checked); break;
+                    SetBoostEnabled((GuiDrumPad)tag.data, obj.Checked); break;
                 case GuiLinkerType.Button:
                 case GuiLinkerType.ButtonVelocity:
                 case GuiLinkerType.DPad:
@@ -223,11 +259,11 @@ namespace _PS360Drum
             switch (tag.type)
             {
                 case GuiLinkerType.DrumPad:
-                    SetBoostValue((DrumPad)tag.data, (byte)obj.SelectedItem); break;
+                    SetBoostValue((GuiDrumPad)tag.data, (byte)obj.SelectedItem); break;
                 case GuiLinkerType.Button:
-                    SetButtonSwitchType((DrumButton)tag.data, (SwitchType)obj.SelectedItem); break;
+                    SetButtonSwitchType((GuiDrumButton)tag.data, (SwitchType)obj.SelectedItem); break;
                 case GuiLinkerType.DPad:
-                    SetButtonSwitchType((DrumDPad)tag.data, (SwitchType)obj.SelectedItem); break;
+                    SetButtonSwitchType((GuiDrumDPad)tag.data, (SwitchType)obj.SelectedItem); break;
 
                 case GuiLinkerType.DPadVelocity:
                 case GuiLinkerType.ButtonVelocity:
@@ -239,54 +275,54 @@ namespace _PS360Drum
         #endregion
 
         #region Getters/Setters
-        internal void CheckboxButton(DrumButton b, bool check)
+        internal void CheckboxButton(GuiDrumButton b, bool check)
         {
             m_ChkNoteOnCheck[(byte)b].Checked = check;
         }
-        internal void CheckboxButton(DrumDPad dp, bool check)
+        internal void CheckboxButton(GuiDrumDPad dp, bool check)
         {
             Debug.Assert((byte)dp % 2 == 0, "only left, up, right, down is allowed here");
-            m_ChkNoteOnCheck[ProDrumController.NUM_BUTTON_STATES + (byte)dp / 2].Checked = check;
+            m_ChkNoteOnCheck[NUM_BUTTON_STATES + (byte)dp / 2].Checked = check;
         }
 
-        internal bool GetButtonChecked(DrumDPad dp)
+        internal bool GetButtonChecked(GuiDrumDPad dp)
         {
             Debug.Assert((byte)dp % 2 == 0, "only left, up, right, down is allowed here");
-            return m_ChkNoteOnCheck[ProDrumController.NUM_BUTTON_STATES + (byte)dp / 2].Checked;
+            return m_ChkNoteOnCheck[NUM_BUTTON_STATES + (byte)dp / 2].Checked;
         }
 
-        internal byte GetMidiNote(DrumPad pad)
+        internal byte GetMidiNote(GuiDrumPad pad)
         {
             return (byte)m_NupAdvNoteArray[(byte)pad].Value;
         }
-        internal byte GetMidiNote(DrumButton b)
+        internal byte GetMidiNote(GuiDrumButton b)
         {
-            return (byte)m_NupAdvNoteArray[ProDrumController.NUM_PADS + (byte)b].Value;
+            return (byte)m_NupAdvNoteArray[NUM_PADS + (byte)b].Value;
         }
-        internal byte GetMidiNote(DrumDPad dp)
+        internal byte GetMidiNote(GuiDrumDPad dp)
         {
             Debug.Assert((byte)dp % 2 == 0, "only left, up, right, down is allowed here");
-            return (byte)m_NupAdvNoteArray[ProDrumController.NUM_PADS + ProDrumController.NUM_BUTTON_STATES + (byte)dp / 2].Value;
+            return (byte)m_NupAdvNoteArray[NUM_PADS + NUM_BUTTON_STATES + (byte)dp / 2].Value;
         }
 
-        internal void SetMidiNote(DrumPad pad, byte note)
+        internal void SetMidiNote(GuiDrumPad pad, byte note)
         {
             m_NupAdvNoteArray[(byte)pad].Value = note;
             m_NupNoteArray[(byte)pad].Value = note;
         }
-        internal void SetMidiNote(DrumButton b, byte note)
+        internal void SetMidiNote(GuiDrumButton b, byte note)
         {
-            m_NupAdvNoteArray[ProDrumController.NUM_PADS + (byte)b].Value = note;
-            m_NupNoteArray[ProDrumController.NUM_PADS + (byte)b].Value = note;
+            m_NupAdvNoteArray[NUM_PADS + (byte)b].Value = note;
+            m_NupNoteArray[NUM_PADS + (byte)b].Value = note;
         }
-        internal void SetMidiNote(DrumDPad dp, byte note)
+        internal void SetMidiNote(GuiDrumDPad dp, byte note)
         {
             Debug.Assert((byte)dp % 2 == 0, "only left, up, right, down is allowed here");
-            m_NupAdvNoteArray[ProDrumController.NUM_PADS + ProDrumController.NUM_BUTTON_STATES + (byte)dp / 2].Value = note;
-            m_NupNoteArray[ProDrumController.NUM_PADS + ProDrumController.NUM_BUTTON_STATES + (byte)dp / 2].Value = note;
+            m_NupAdvNoteArray[NUM_PADS + NUM_BUTTON_STATES + (byte)dp / 2].Value = note;
+            m_NupNoteArray[NUM_PADS + NUM_BUTTON_STATES + (byte)dp / 2].Value = note;
         }
 
-        internal byte GetBoost(DrumPad pad)
+        internal byte GetBoost(GuiDrumPad pad)
         {
             if (m_Main.InvokeRequired)
             {
@@ -297,7 +333,7 @@ namespace _PS360Drum
                 return (byte)m_DdlAdvBoostValue[(byte)pad].SelectedItem;
             }
         }
-        internal bool GetBoostEnabled(DrumPad pad)
+        internal bool GetBoostEnabled(GuiDrumPad pad)
         {
             if (m_Main.InvokeRequired)
             {
@@ -309,53 +345,53 @@ namespace _PS360Drum
             }
         }
 
-        internal void SetBoostValue(DrumPad pad, byte value)
+        internal void SetBoostValue(GuiDrumPad pad, byte value)
         {
             SetSelectIndex(ref m_DdlAdvBoostValue[(byte)pad], value);
             SetSelectIndex(ref m_DdlBoostValue[(byte)pad], value);
         }
-        internal void SetBoostEnabled(DrumPad pad, bool enabled)
+        internal void SetBoostEnabled(GuiDrumPad pad, bool enabled)
         {
             m_ChkDrumBoostOn[(byte)pad].Checked = enabled;
             m_ChkAdvDrumBoostOn[(byte)pad].Checked = enabled;
         }
 
-        internal void SetButtonVelocity(DrumButton drumButton, byte vel)
+        internal void SetButtonVelocity(GuiDrumButton drumButton, byte vel)
         {
             m_NupAdvButtonVelArray[(byte)drumButton].Value = vel;
         }
-        internal void SetButtonVelocity(DrumDPad drumDPad, byte vel)
+        internal void SetButtonVelocity(GuiDrumDPad drumDPad, byte vel)
         {
             Debug.Assert((byte)drumDPad % 2 == 0, "only left, up, right, down is allowed here");
-            m_NupAdvButtonVelArray[ProDrumController.NUM_BUTTON_STATES + (byte)drumDPad / 2].Value = vel;
+            m_NupAdvButtonVelArray[NUM_BUTTON_STATES + (byte)drumDPad / 2].Value = vel;
         }
 
-        internal void SetButtonSwitchType(DrumButton b, SwitchType type)
+        internal void SetButtonSwitchType(GuiDrumButton b, SwitchType type)
         {
             SetSelectIndex(ref m_DdlAdvSwitchStateArray[(byte)b], type);
         }
-        internal void SetButtonSwitchType(DrumDPad dp, SwitchType type)
+        internal void SetButtonSwitchType(GuiDrumDPad dp, SwitchType type)
         {
             Debug.Assert((byte)dp % 2 == 0, "only left, up, right, down is allowed here");
-            SetSelectIndex(ref m_DdlAdvSwitchStateArray[ProDrumController.NUM_BUTTON_STATES + (byte)dp / 2], type);
+            SetSelectIndex(ref m_DdlAdvSwitchStateArray[NUM_BUTTON_STATES + (byte)dp / 2], type);
         }
 
-        internal byte GetButtonVelocity(DrumDPad drumDPad)
+        internal byte GetButtonVelocity(GuiDrumDPad drumDPad)
         {
             Debug.Assert((byte)drumDPad % 2 == 0, "only left, up, right, down is allowed here");
-            return (byte)m_NupAdvButtonVelArray[ProDrumController.NUM_BUTTON_STATES + (byte)drumDPad / 2].Value;
+            return (byte)m_NupAdvButtonVelArray[NUM_BUTTON_STATES + (byte)drumDPad / 2].Value;
         }
-        internal byte GetButtonVelocity(DrumButton drumButton)
+        internal byte GetButtonVelocity(GuiDrumButton drumButton)
         {
             return (byte)m_NupAdvButtonVelArray[(byte)drumButton].Value;
         }
 
-        internal SwitchType GetButtonSwitchType(DrumDPad drumDPad)
+        internal SwitchType GetButtonSwitchType(GuiDrumDPad drumDPad)
         {
             Debug.Assert((byte)drumDPad % 2 == 0, "only left, up, right, down is allowed here");
-            return (SwitchType)m_DdlAdvSwitchStateArray[ProDrumController.NUM_BUTTON_STATES + (byte)drumDPad / 2].SelectedItem;
+            return (SwitchType)m_DdlAdvSwitchStateArray[NUM_BUTTON_STATES + (byte)drumDPad / 2].SelectedItem;
         }
-        internal SwitchType GetButtonSwitchType(DrumButton drumButton)
+        internal SwitchType GetButtonSwitchType(GuiDrumButton drumButton)
         {
             return (SwitchType)m_DdlAdvSwitchStateArray[(byte)drumButton].SelectedItem;
         }
