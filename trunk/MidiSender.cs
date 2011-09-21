@@ -18,10 +18,11 @@ namespace _PS360Drum
             m_Main = main;
         }
 
-        public void TriggerNote(DrumPad pad, byte hitVelocity)
+        public void TriggerNote(GuiDrumPad pad, byte hitVelocity)
         {
             // Maximum value is 127
             hitVelocity = (byte)(hitVelocity / 2);
+            System.Diagnostics.Debug.Assert(hitVelocity <= 127);
 
             byte note = m_Main.GuiLinker.GetMidiNote(pad);
             m_Main.MultiNoteGui.Morph(pad, ref hitVelocity, ref note);

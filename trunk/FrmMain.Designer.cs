@@ -111,6 +111,10 @@
             this.btnRedTom = new System.Windows.Forms.Button();
             this.pbRedTom = new System.Windows.Forms.ProgressBar();
             this.chkBoostRedTom = new System.Windows.Forms.CheckBox();
+            this.btnPedalRight = new System.Windows.Forms.Button();
+            this.pbPedalRight = new System.Windows.Forms.ProgressBar();
+            this.chkBoostPedalRight = new System.Windows.Forms.CheckBox();
+            this.ddlPedalRight = new System.Windows.Forms.ComboBox();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
             this.ddlYellowTom = new System.Windows.Forms.ComboBox();
             this.nupYellowTom = new System.Windows.Forms.NumericUpDown();
@@ -158,8 +162,6 @@
             this.chkX = new System.Windows.Forms.CheckBox();
             this.chkCircle = new System.Windows.Forms.CheckBox();
             this.chkTriangle = new System.Windows.Forms.CheckBox();
-            this.chkPedalLeft = new System.Windows.Forms.CheckBox();
-            this.chkPedalRight = new System.Windows.Forms.CheckBox();
             this.nupDPadDown = new System.Windows.Forms.NumericUpDown();
             this.nupDPadLeft = new System.Windows.Forms.NumericUpDown();
             this.nupDPadUp = new System.Windows.Forms.NumericUpDown();
@@ -184,12 +186,12 @@
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.groupBox11 = new System.Windows.Forms.GroupBox();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
-            this.ddlAdvSwitchPedalLeft = new System.Windows.Forms.ComboBox();
-            this.nupAdvVelPedalLeft = new System.Windows.Forms.NumericUpDown();
-            this.ddlAdvSwitchPedalRight = new System.Windows.Forms.ComboBox();
-            this.nupAdvVelPedalRight = new System.Windows.Forms.NumericUpDown();
             this.nupAdvNotePedalRight = new System.Windows.Forms.NumericUpDown();
             this.nupAdvNotePedalLeft = new System.Windows.Forms.NumericUpDown();
+            this.chkAdvBoostPedalLeft = new System.Windows.Forms.CheckBox();
+            this.chkAdvBoostPedalRight = new System.Windows.Forms.CheckBox();
+            this.ddlAdvBoostPedalLeft = new System.Windows.Forms.ComboBox();
+            this.ddlAdvBoostPedalRight = new System.Windows.Forms.ComboBox();
             this.groupBox10 = new System.Windows.Forms.GroupBox();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.ddlAdvBoostRedTom = new System.Windows.Forms.ComboBox();
@@ -215,16 +217,22 @@
             this.ddlAdvBoostGreenCymbal = new System.Windows.Forms.ComboBox();
             this.groupBox9 = new System.Windows.Forms.GroupBox();
             this.groupBox8 = new System.Windows.Forms.GroupBox();
+            this.nupMNvelMult = new System.Windows.Forms.NumericUpDown();
             this.lbMN = new System.Windows.Forms.ListBox();
             this.btnMNAdd = new System.Windows.Forms.Button();
             this.btnMNRemove = new System.Windows.Forms.Button();
             this.ddlMNnote = new System.Windows.Forms.ComboBox();
             this.nupMNvelAdd = new System.Windows.Forms.NumericUpDown();
-            this.nupMNvelMult = new System.Windows.Forms.NumericUpDown();
             this.nupMNvelCheck = new System.Windows.Forms.NumericUpDown();
             this.nupMNnoteTo = new System.Windows.Forms.NumericUpDown();
             this.ddlMNvelCheck = new System.Windows.Forms.ComboBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.groupBox12 = new System.Windows.Forms.GroupBox();
+            this.groupBox13 = new System.Windows.Forms.GroupBox();
+            this.ddlPedalLeft = new System.Windows.Forms.ComboBox();
+            this.btnPedalLeft = new System.Windows.Forms.Button();
+            this.pbPedalLeft = new System.Windows.Forms.ProgressBar();
+            this.chkBoostPedalLeft = new System.Windows.Forms.CheckBox();
             lblMIDIChannel = new System.Windows.Forms.Label();
             lblMIDIDevice = new System.Windows.Forms.Label();
             label1 = new System.Windows.Forms.Label();
@@ -321,8 +329,6 @@
             this.tabPage2.SuspendLayout();
             this.groupBox11.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.nupAdvVelPedalLeft)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nupAdvVelPedalRight)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nupAdvNotePedalRight)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nupAdvNotePedalLeft)).BeginInit();
             this.groupBox10.SuspendLayout();
@@ -336,11 +342,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.nupAdvNoteRedTom)).BeginInit();
             this.groupBox9.SuspendLayout();
             this.groupBox8.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.nupMNvelAdd)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nupMNvelMult)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nupMNvelAdd)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nupMNvelCheck)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nupMNnoteTo)).BeginInit();
             this.panel1.SuspendLayout();
+            this.groupBox12.SuspendLayout();
+            this.groupBox13.SuspendLayout();
             this.SuspendLayout();
             // 
             // lblMIDIChannel
@@ -1215,7 +1223,7 @@
             // label31
             // 
             label31.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            label31.Location = new System.Drawing.Point(104, 1);
+            label31.Location = new System.Drawing.Point(112, 1);
             label31.Name = "label31";
             label31.Size = new System.Drawing.Size(93, 27);
             label31.TabIndex = 0;
@@ -1225,21 +1233,21 @@
             // label32
             // 
             label32.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            label32.Location = new System.Drawing.Point(204, 1);
+            label32.Location = new System.Drawing.Point(221, 1);
             label32.Name = "label32";
-            label32.Size = new System.Drawing.Size(93, 27);
+            label32.Size = new System.Drawing.Size(65, 27);
             label32.TabIndex = 0;
-            label32.Text = "Velocity";
+            label32.Text = "Boost";
             label32.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label33
             // 
             label33.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            label33.Location = new System.Drawing.Point(304, 1);
+            label33.Location = new System.Drawing.Point(293, 1);
             label33.Name = "label33";
             label33.Size = new System.Drawing.Size(96, 27);
             label33.TabIndex = 0;
-            label33.Text = "Switch mode";
+            label33.Text = "Boost";
             label33.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label34
@@ -1302,6 +1310,8 @@
             this.pnlHolder.Controls.Add(this.groupBox7);
             this.pnlHolder.Controls.Add(this.groupBox6);
             this.pnlHolder.Controls.Add(this.groupBox5);
+            this.pnlHolder.Controls.Add(this.groupBox13);
+            this.pnlHolder.Controls.Add(this.groupBox12);
             this.pnlHolder.Controls.Add(this.groupBox4);
             this.pnlHolder.Controls.Add(this.groupBox3);
             this.pnlHolder.Controls.Add(this.groupBox2);
@@ -1317,8 +1327,6 @@
             this.pnlHolder.Controls.Add(this.chkX);
             this.pnlHolder.Controls.Add(this.chkCircle);
             this.pnlHolder.Controls.Add(this.chkTriangle);
-            this.pnlHolder.Controls.Add(this.chkPedalLeft);
-            this.pnlHolder.Controls.Add(this.chkPedalRight);
             this.pnlHolder.Controls.Add(this.nupDPadDown);
             this.pnlHolder.Controls.Add(this.nupDPadLeft);
             this.pnlHolder.Controls.Add(this.nupDPadUp);
@@ -1330,8 +1338,6 @@
             this.pnlHolder.Controls.Add(this.nupX);
             this.pnlHolder.Controls.Add(this.nupTriangle);
             this.pnlHolder.Controls.Add(this.nupCircle);
-            this.pnlHolder.Controls.Add(this.nupPedalLeft);
-            this.pnlHolder.Controls.Add(this.nupPedalRight);
             this.pnlHolder.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlHolder.Location = new System.Drawing.Point(3, 3);
             this.pnlHolder.Margin = new System.Windows.Forms.Padding(4);
@@ -1423,6 +1429,57 @@
             this.chkBoostRedTom.TabIndex = 28;
             this.chkBoostRedTom.Text = "Boost";
             this.chkBoostRedTom.UseVisualStyleBackColor = false;
+            // 
+            // btnPedalRight
+            // 
+            this.btnPedalRight.ForeColor = System.Drawing.Color.Black;
+            this.btnPedalRight.Location = new System.Drawing.Point(80, 19);
+            this.btnPedalRight.Margin = new System.Windows.Forms.Padding(4);
+            this.btnPedalRight.Name = "btnPedalRight";
+            this.btnPedalRight.Size = new System.Drawing.Size(53, 25);
+            this.btnPedalRight.TabIndex = 10;
+            this.btnPedalRight.Text = "Hit";
+            this.btnPedalRight.UseVisualStyleBackColor = true;
+            this.btnPedalRight.Click += new System.EventHandler(this.ButtonPress);
+            // 
+            // pbPedalRight
+            // 
+            this.pbPedalRight.BackColor = System.Drawing.Color.Black;
+            this.pbPedalRight.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(175)))), ((int)(((byte)(230)))));
+            this.pbPedalRight.Location = new System.Drawing.Point(5, 49);
+            this.pbPedalRight.Margin = new System.Windows.Forms.Padding(4);
+            this.pbPedalRight.Maximum = 127;
+            this.pbPedalRight.Name = "pbPedalRight";
+            this.pbPedalRight.Size = new System.Drawing.Size(128, 15);
+            this.pbPedalRight.Style = System.Windows.Forms.ProgressBarStyle.Continuous;
+            this.pbPedalRight.TabIndex = 24;
+            // 
+            // chkBoostPedalRight
+            // 
+            this.chkBoostPedalRight.AutoSize = true;
+            this.chkBoostPedalRight.BackColor = System.Drawing.Color.Transparent;
+            this.chkBoostPedalRight.Checked = true;
+            this.chkBoostPedalRight.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.chkBoostPedalRight.ForeColor = System.Drawing.Color.White;
+            this.chkBoostPedalRight.Location = new System.Drawing.Point(5, 72);
+            this.chkBoostPedalRight.Margin = new System.Windows.Forms.Padding(4);
+            this.chkBoostPedalRight.Name = "chkBoostPedalRight";
+            this.chkBoostPedalRight.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.chkBoostPedalRight.Size = new System.Drawing.Size(66, 21);
+            this.chkBoostPedalRight.TabIndex = 29;
+            this.chkBoostPedalRight.Text = "Boost";
+            this.chkBoostPedalRight.UseVisualStyleBackColor = false;
+            // 
+            // ddlPedalRight
+            // 
+            this.ddlPedalRight.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.ddlPedalRight.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ddlPedalRight.FormattingEnabled = true;
+            this.ddlPedalRight.Location = new System.Drawing.Point(79, 72);
+            this.ddlPedalRight.Margin = new System.Windows.Forms.Padding(4);
+            this.ddlPedalRight.Name = "ddlPedalRight";
+            this.ddlPedalRight.Size = new System.Drawing.Size(52, 21);
+            this.ddlPedalRight.TabIndex = 35;
             // 
             // groupBox6
             // 
@@ -2095,32 +2152,6 @@
             this.chkTriangle.TabIndex = 39;
             this.chkTriangle.UseVisualStyleBackColor = true;
             // 
-            // chkPedalLeft
-            // 
-            this.chkPedalLeft.AutoSize = true;
-            this.chkPedalLeft.BackColor = System.Drawing.Color.Transparent;
-            this.chkPedalLeft.ForeColor = System.Drawing.Color.White;
-            this.chkPedalLeft.Location = new System.Drawing.Point(138, 472);
-            this.chkPedalLeft.Margin = new System.Windows.Forms.Padding(4);
-            this.chkPedalLeft.Name = "chkPedalLeft";
-            this.chkPedalLeft.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.chkPedalLeft.Size = new System.Drawing.Size(18, 17);
-            this.chkPedalLeft.TabIndex = 32;
-            this.chkPedalLeft.UseVisualStyleBackColor = false;
-            // 
-            // chkPedalRight
-            // 
-            this.chkPedalRight.AutoSize = true;
-            this.chkPedalRight.BackColor = System.Drawing.Color.Transparent;
-            this.chkPedalRight.ForeColor = System.Drawing.Color.White;
-            this.chkPedalRight.Location = new System.Drawing.Point(750, 464);
-            this.chkPedalRight.Margin = new System.Windows.Forms.Padding(4);
-            this.chkPedalRight.Name = "chkPedalRight";
-            this.chkPedalRight.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.chkPedalRight.Size = new System.Drawing.Size(18, 17);
-            this.chkPedalRight.TabIndex = 32;
-            this.chkPedalRight.UseVisualStyleBackColor = false;
-            // 
             // nupDPadDown
             // 
             this.nupDPadDown.Location = new System.Drawing.Point(270, 487);
@@ -2321,7 +2352,7 @@
             // 
             // nupPedalLeft
             // 
-            this.nupPedalLeft.Location = new System.Drawing.Point(91, 487);
+            this.nupPedalLeft.Location = new System.Drawing.Point(8, 20);
             this.nupPedalLeft.Margin = new System.Windows.Forms.Padding(4);
             this.nupPedalLeft.Maximum = new decimal(new int[] {
             127,
@@ -2339,7 +2370,7 @@
             // 
             // nupPedalRight
             // 
-            this.nupPedalRight.Location = new System.Drawing.Point(703, 479);
+            this.nupPedalRight.Location = new System.Drawing.Point(8, 21);
             this.nupPedalRight.Margin = new System.Windows.Forms.Padding(4);
             this.nupPedalRight.Maximum = new decimal(new int[] {
             127,
@@ -2354,6 +2385,7 @@
             0,
             0,
             0});
+            this.nupPedalRight.ValueChanged += new System.EventHandler(this.nupPedalRight_ValueChanged);
             // 
             // lowerValues
             // 
@@ -2453,22 +2485,22 @@
             // 
             this.tableLayoutPanel3.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Single;
             this.tableLayoutPanel3.ColumnCount = 4;
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 26.79901F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 27.04715F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 17.866F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 28.0397F));
             this.tableLayoutPanel3.Controls.Add(label29, 0, 1);
-            this.tableLayoutPanel3.Controls.Add(this.ddlAdvSwitchPedalLeft, 3, 1);
             this.tableLayoutPanel3.Controls.Add(label30, 0, 0);
             this.tableLayoutPanel3.Controls.Add(label31, 1, 0);
             this.tableLayoutPanel3.Controls.Add(label32, 2, 0);
             this.tableLayoutPanel3.Controls.Add(label33, 3, 0);
-            this.tableLayoutPanel3.Controls.Add(this.nupAdvVelPedalLeft, 2, 1);
             this.tableLayoutPanel3.Controls.Add(label34, 0, 2);
-            this.tableLayoutPanel3.Controls.Add(this.ddlAdvSwitchPedalRight, 3, 2);
-            this.tableLayoutPanel3.Controls.Add(this.nupAdvVelPedalRight, 2, 2);
             this.tableLayoutPanel3.Controls.Add(this.nupAdvNotePedalRight, 1, 2);
             this.tableLayoutPanel3.Controls.Add(this.nupAdvNotePedalLeft, 1, 1);
+            this.tableLayoutPanel3.Controls.Add(this.chkAdvBoostPedalLeft, 2, 1);
+            this.tableLayoutPanel3.Controls.Add(this.chkAdvBoostPedalRight, 2, 2);
+            this.tableLayoutPanel3.Controls.Add(this.ddlAdvBoostPedalLeft, 3, 1);
+            this.tableLayoutPanel3.Controls.Add(this.ddlAdvBoostPedalRight, 3, 2);
             this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel3.Location = new System.Drawing.Point(3, 18);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
@@ -2488,63 +2520,9 @@
             this.tableLayoutPanel3.Size = new System.Drawing.Size(404, 97);
             this.tableLayoutPanel3.TabIndex = 2;
             // 
-            // ddlAdvSwitchPedalLeft
-            // 
-            this.ddlAdvSwitchPedalLeft.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.ddlAdvSwitchPedalLeft.FormattingEnabled = true;
-            this.ddlAdvSwitchPedalLeft.Location = new System.Drawing.Point(304, 35);
-            this.ddlAdvSwitchPedalLeft.Name = "ddlAdvSwitchPedalLeft";
-            this.ddlAdvSwitchPedalLeft.Size = new System.Drawing.Size(96, 24);
-            this.ddlAdvSwitchPedalLeft.TabIndex = 1;
-            // 
-            // nupAdvVelPedalLeft
-            // 
-            this.nupAdvVelPedalLeft.Location = new System.Drawing.Point(205, 36);
-            this.nupAdvVelPedalLeft.Margin = new System.Windows.Forms.Padding(4);
-            this.nupAdvVelPedalLeft.Maximum = new decimal(new int[] {
-            127,
-            0,
-            0,
-            0});
-            this.nupAdvVelPedalLeft.Name = "nupAdvVelPedalLeft";
-            this.nupAdvVelPedalLeft.Size = new System.Drawing.Size(91, 22);
-            this.nupAdvVelPedalLeft.TabIndex = 6;
-            this.nupAdvVelPedalLeft.Value = new decimal(new int[] {
-            64,
-            0,
-            0,
-            0});
-            // 
-            // ddlAdvSwitchPedalRight
-            // 
-            this.ddlAdvSwitchPedalRight.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.ddlAdvSwitchPedalRight.FormattingEnabled = true;
-            this.ddlAdvSwitchPedalRight.Location = new System.Drawing.Point(304, 66);
-            this.ddlAdvSwitchPedalRight.Name = "ddlAdvSwitchPedalRight";
-            this.ddlAdvSwitchPedalRight.Size = new System.Drawing.Size(96, 24);
-            this.ddlAdvSwitchPedalRight.TabIndex = 1;
-            // 
-            // nupAdvVelPedalRight
-            // 
-            this.nupAdvVelPedalRight.Location = new System.Drawing.Point(205, 67);
-            this.nupAdvVelPedalRight.Margin = new System.Windows.Forms.Padding(4);
-            this.nupAdvVelPedalRight.Maximum = new decimal(new int[] {
-            127,
-            0,
-            0,
-            0});
-            this.nupAdvVelPedalRight.Name = "nupAdvVelPedalRight";
-            this.nupAdvVelPedalRight.Size = new System.Drawing.Size(91, 22);
-            this.nupAdvVelPedalRight.TabIndex = 6;
-            this.nupAdvVelPedalRight.Value = new decimal(new int[] {
-            64,
-            0,
-            0,
-            0});
-            // 
             // nupAdvNotePedalRight
             // 
-            this.nupAdvNotePedalRight.Location = new System.Drawing.Point(105, 67);
+            this.nupAdvNotePedalRight.Location = new System.Drawing.Point(113, 67);
             this.nupAdvNotePedalRight.Margin = new System.Windows.Forms.Padding(4);
             this.nupAdvNotePedalRight.Maximum = new decimal(new int[] {
             127,
@@ -2552,7 +2530,7 @@
             0,
             0});
             this.nupAdvNotePedalRight.Name = "nupAdvNotePedalRight";
-            this.nupAdvNotePedalRight.Size = new System.Drawing.Size(91, 22);
+            this.nupAdvNotePedalRight.Size = new System.Drawing.Size(100, 22);
             this.nupAdvNotePedalRight.TabIndex = 6;
             this.nupAdvNotePedalRight.Value = new decimal(new int[] {
             64,
@@ -2562,7 +2540,7 @@
             // 
             // nupAdvNotePedalLeft
             // 
-            this.nupAdvNotePedalLeft.Location = new System.Drawing.Point(105, 36);
+            this.nupAdvNotePedalLeft.Location = new System.Drawing.Point(113, 36);
             this.nupAdvNotePedalLeft.Margin = new System.Windows.Forms.Padding(4);
             this.nupAdvNotePedalLeft.Maximum = new decimal(new int[] {
             127,
@@ -2570,13 +2548,55 @@
             0,
             0});
             this.nupAdvNotePedalLeft.Name = "nupAdvNotePedalLeft";
-            this.nupAdvNotePedalLeft.Size = new System.Drawing.Size(91, 22);
+            this.nupAdvNotePedalLeft.Size = new System.Drawing.Size(100, 22);
             this.nupAdvNotePedalLeft.TabIndex = 6;
             this.nupAdvNotePedalLeft.Value = new decimal(new int[] {
             64,
             0,
             0,
             0});
+            // 
+            // chkAdvBoostPedalLeft
+            // 
+            this.chkAdvBoostPedalLeft.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.chkAdvBoostPedalLeft.AutoSize = true;
+            this.chkAdvBoostPedalLeft.Location = new System.Drawing.Point(244, 38);
+            this.chkAdvBoostPedalLeft.Name = "chkAdvBoostPedalLeft";
+            this.chkAdvBoostPedalLeft.Size = new System.Drawing.Size(18, 17);
+            this.chkAdvBoostPedalLeft.TabIndex = 7;
+            this.chkAdvBoostPedalLeft.UseVisualStyleBackColor = true;
+            // 
+            // chkAdvBoostPedalRight
+            // 
+            this.chkAdvBoostPedalRight.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.chkAdvBoostPedalRight.AutoSize = true;
+            this.chkAdvBoostPedalRight.Location = new System.Drawing.Point(244, 71);
+            this.chkAdvBoostPedalRight.Name = "chkAdvBoostPedalRight";
+            this.chkAdvBoostPedalRight.Size = new System.Drawing.Size(18, 17);
+            this.chkAdvBoostPedalRight.TabIndex = 7;
+            this.chkAdvBoostPedalRight.UseVisualStyleBackColor = true;
+            // 
+            // ddlAdvBoostPedalLeft
+            // 
+            this.ddlAdvBoostPedalLeft.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.ddlAdvBoostPedalLeft.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ddlAdvBoostPedalLeft.FormattingEnabled = true;
+            this.ddlAdvBoostPedalLeft.Location = new System.Drawing.Point(294, 36);
+            this.ddlAdvBoostPedalLeft.Margin = new System.Windows.Forms.Padding(4);
+            this.ddlAdvBoostPedalLeft.Name = "ddlAdvBoostPedalLeft";
+            this.ddlAdvBoostPedalLeft.Size = new System.Drawing.Size(105, 21);
+            this.ddlAdvBoostPedalLeft.TabIndex = 38;
+            // 
+            // ddlAdvBoostPedalRight
+            // 
+            this.ddlAdvBoostPedalRight.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.ddlAdvBoostPedalRight.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ddlAdvBoostPedalRight.FormattingEnabled = true;
+            this.ddlAdvBoostPedalRight.Location = new System.Drawing.Point(294, 67);
+            this.ddlAdvBoostPedalRight.Margin = new System.Windows.Forms.Padding(4);
+            this.ddlAdvBoostPedalRight.Name = "ddlAdvBoostPedalRight";
+            this.ddlAdvBoostPedalRight.Size = new System.Drawing.Size(105, 21);
+            this.ddlAdvBoostPedalRight.TabIndex = 38;
             // 
             // groupBox10
             // 
@@ -2952,6 +2972,25 @@
             this.groupBox8.TabStop = false;
             this.groupBox8.Text = "MultiNote";
             // 
+            // nupMNvelMult
+            // 
+            this.nupMNvelMult.DecimalPlaces = 2;
+            this.nupMNvelMult.Increment = new decimal(new int[] {
+            1,
+            0,
+            0,
+            65536});
+            this.nupMNvelMult.Location = new System.Drawing.Point(167, 77);
+            this.nupMNvelMult.Margin = new System.Windows.Forms.Padding(4);
+            this.nupMNvelMult.Maximum = new decimal(new int[] {
+            10,
+            0,
+            0,
+            0});
+            this.nupMNvelMult.Name = "nupMNvelMult";
+            this.nupMNvelMult.Size = new System.Drawing.Size(64, 22);
+            this.nupMNvelMult.TabIndex = 6;
+            // 
             // lbMN
             // 
             this.lbMN.FormattingEnabled = true;
@@ -3005,25 +3044,6 @@
             0,
             0,
             0});
-            // 
-            // nupMNvelMult
-            // 
-            this.nupMNvelMult.DecimalPlaces = 2;
-            this.nupMNvelMult.Increment = new decimal(new int[] {
-            1,
-            0,
-            0,
-            65536});
-            this.nupMNvelMult.Location = new System.Drawing.Point(167, 77);
-            this.nupMNvelMult.Margin = new System.Windows.Forms.Padding(4);
-            this.nupMNvelMult.Maximum = new decimal(new int[] {
-            10,
-            0,
-            0,
-            0});
-            this.nupMNvelMult.Name = "nupMNvelMult";
-            this.nupMNvelMult.Size = new System.Drawing.Size(64, 22);
-            this.nupMNvelMult.TabIndex = 6;
             // 
             // nupMNvelCheck
             // 
@@ -3085,6 +3105,87 @@
             this.panel1.Size = new System.Drawing.Size(873, 60);
             this.panel1.TabIndex = 26;
             // 
+            // groupBox12
+            // 
+            this.groupBox12.Controls.Add(this.ddlPedalRight);
+            this.groupBox12.Controls.Add(this.btnPedalRight);
+            this.groupBox12.Controls.Add(this.nupPedalRight);
+            this.groupBox12.Controls.Add(this.pbPedalRight);
+            this.groupBox12.Controls.Add(this.chkBoostPedalRight);
+            this.groupBox12.ForeColor = System.Drawing.Color.White;
+            this.groupBox12.Location = new System.Drawing.Point(692, 433);
+            this.groupBox12.Name = "groupBox12";
+            this.groupBox12.Size = new System.Drawing.Size(138, 100);
+            this.groupBox12.TabIndex = 41;
+            this.groupBox12.TabStop = false;
+            this.groupBox12.Text = "Pedal Right";
+            // 
+            // groupBox13
+            // 
+            this.groupBox13.Controls.Add(this.ddlPedalLeft);
+            this.groupBox13.Controls.Add(this.btnPedalLeft);
+            this.groupBox13.Controls.Add(this.pbPedalLeft);
+            this.groupBox13.Controls.Add(this.chkBoostPedalLeft);
+            this.groupBox13.Controls.Add(this.nupPedalLeft);
+            this.groupBox13.ForeColor = System.Drawing.Color.White;
+            this.groupBox13.Location = new System.Drawing.Point(75, 448);
+            this.groupBox13.Name = "groupBox13";
+            this.groupBox13.Size = new System.Drawing.Size(138, 100);
+            this.groupBox13.TabIndex = 41;
+            this.groupBox13.TabStop = false;
+            this.groupBox13.Text = "Pedal Left";
+            // 
+            // ddlPedalLeft
+            // 
+            this.ddlPedalLeft.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.ddlPedalLeft.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ddlPedalLeft.FormattingEnabled = true;
+            this.ddlPedalLeft.Location = new System.Drawing.Point(79, 72);
+            this.ddlPedalLeft.Margin = new System.Windows.Forms.Padding(4);
+            this.ddlPedalLeft.Name = "ddlPedalLeft";
+            this.ddlPedalLeft.Size = new System.Drawing.Size(52, 21);
+            this.ddlPedalLeft.TabIndex = 35;
+            // 
+            // btnPedalLeft
+            // 
+            this.btnPedalLeft.ForeColor = System.Drawing.Color.Black;
+            this.btnPedalLeft.Location = new System.Drawing.Point(80, 19);
+            this.btnPedalLeft.Margin = new System.Windows.Forms.Padding(4);
+            this.btnPedalLeft.Name = "btnPedalLeft";
+            this.btnPedalLeft.Size = new System.Drawing.Size(53, 25);
+            this.btnPedalLeft.TabIndex = 10;
+            this.btnPedalLeft.Text = "Hit";
+            this.btnPedalLeft.UseVisualStyleBackColor = true;
+            this.btnPedalLeft.Click += new System.EventHandler(this.ButtonPress);
+            // 
+            // pbPedalLeft
+            // 
+            this.pbPedalLeft.BackColor = System.Drawing.Color.Black;
+            this.pbPedalLeft.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(175)))), ((int)(((byte)(230)))));
+            this.pbPedalLeft.Location = new System.Drawing.Point(5, 49);
+            this.pbPedalLeft.Margin = new System.Windows.Forms.Padding(4);
+            this.pbPedalLeft.Maximum = 127;
+            this.pbPedalLeft.Name = "pbPedalLeft";
+            this.pbPedalLeft.Size = new System.Drawing.Size(128, 15);
+            this.pbPedalLeft.Style = System.Windows.Forms.ProgressBarStyle.Continuous;
+            this.pbPedalLeft.TabIndex = 24;
+            // 
+            // chkBoostPedalLeft
+            // 
+            this.chkBoostPedalLeft.AutoSize = true;
+            this.chkBoostPedalLeft.BackColor = System.Drawing.Color.Transparent;
+            this.chkBoostPedalLeft.Checked = true;
+            this.chkBoostPedalLeft.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.chkBoostPedalLeft.ForeColor = System.Drawing.Color.White;
+            this.chkBoostPedalLeft.Location = new System.Drawing.Point(5, 72);
+            this.chkBoostPedalLeft.Margin = new System.Windows.Forms.Padding(4);
+            this.chkBoostPedalLeft.Name = "chkBoostPedalLeft";
+            this.chkBoostPedalLeft.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.chkBoostPedalLeft.Size = new System.Drawing.Size(66, 21);
+            this.chkBoostPedalLeft.TabIndex = 29;
+            this.chkBoostPedalLeft.Text = "Boost";
+            this.chkBoostPedalLeft.UseVisualStyleBackColor = false;
+            // 
             // FrmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -3099,7 +3200,7 @@
             this.MinimumSize = new System.Drawing.Size(853, 510);
             this.Name = "FrmMain";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "PS360 MIDI Pro Drummer v0.05";
+            this.Text = "PS360 MIDI Pro Drummer v0.06";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.SaveDefaultSettings);
             tableLayoutPanel1.ResumeLayout(false);
             tableLayoutPanel1.PerformLayout();
@@ -3168,8 +3269,6 @@
             this.groupBox11.ResumeLayout(false);
             this.tableLayoutPanel3.ResumeLayout(false);
             this.tableLayoutPanel3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.nupAdvVelPedalLeft)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nupAdvVelPedalRight)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nupAdvNotePedalRight)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nupAdvNotePedalLeft)).EndInit();
             this.groupBox10.ResumeLayout(false);
@@ -3185,11 +3284,15 @@
             this.groupBox9.ResumeLayout(false);
             this.groupBox8.ResumeLayout(false);
             this.groupBox8.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.nupMNvelAdd)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nupMNvelMult)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nupMNvelAdd)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nupMNvelCheck)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nupMNnoteTo)).EndInit();
             this.panel1.ResumeLayout(false);
+            this.groupBox12.ResumeLayout(false);
+            this.groupBox12.PerformLayout();
+            this.groupBox13.ResumeLayout(false);
+            this.groupBox13.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -3227,7 +3330,6 @@
         private System.Windows.Forms.CheckBox chkBoostBlueCymbal;
         private System.Windows.Forms.CheckBox chkBoostBlueTom;
         private System.Windows.Forms.CheckBox chkBoostRedTom;
-        private System.Windows.Forms.CheckBox chkPedalRight;
         private System.Windows.Forms.OpenFileDialog openFileDialog;
         private System.Windows.Forms.Button btnReset;
         private System.Windows.Forms.ComboBox ddlYellowTom;
@@ -3291,10 +3393,6 @@
         private System.Windows.Forms.ListBox lbMN;
         private System.Windows.Forms.GroupBox groupBox11;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
-        private System.Windows.Forms.ComboBox ddlAdvSwitchPedalLeft;
-        private System.Windows.Forms.NumericUpDown nupAdvVelPedalLeft;
-        private System.Windows.Forms.ComboBox ddlAdvSwitchPedalRight;
-        private System.Windows.Forms.NumericUpDown nupAdvVelPedalRight;
         private System.Windows.Forms.NumericUpDown nupAdvNotePedalRight;
         private System.Windows.Forms.NumericUpDown nupAdvNotePedalLeft;
         private System.Windows.Forms.GroupBox groupBox10;
@@ -3347,7 +3445,6 @@
         private System.Windows.Forms.NumericUpDown nupMNvelAdd;
         private System.Windows.Forms.NumericUpDown nupMNvelMult;
         private System.Windows.Forms.NumericUpDown nupAdvNoteDPadUp;
-        private System.Windows.Forms.CheckBox chkPedalLeft;
         private System.Windows.Forms.NumericUpDown nupPedalLeft;
         private System.Windows.Forms.ComboBox ddlAdvBoostRedTom;
         private System.Windows.Forms.ComboBox ddlAdvBoostYellowTom;
@@ -3356,6 +3453,20 @@
         private System.Windows.Forms.ComboBox ddlAdvBoostBlueCymbal;
         private System.Windows.Forms.ComboBox ddlAdvBoostGreenTom;
         private System.Windows.Forms.ComboBox ddlAdvBoostGreenCymbal;
+        private System.Windows.Forms.Button btnPedalRight;
+        private System.Windows.Forms.ProgressBar pbPedalRight;
+        private System.Windows.Forms.CheckBox chkBoostPedalRight;
+        private System.Windows.Forms.ComboBox ddlPedalRight;
+        private System.Windows.Forms.CheckBox chkAdvBoostPedalLeft;
+        private System.Windows.Forms.CheckBox chkAdvBoostPedalRight;
+        private System.Windows.Forms.ComboBox ddlAdvBoostPedalLeft;
+        private System.Windows.Forms.ComboBox ddlAdvBoostPedalRight;
+        private System.Windows.Forms.GroupBox groupBox12;
+        private System.Windows.Forms.GroupBox groupBox13;
+        private System.Windows.Forms.ComboBox ddlPedalLeft;
+        private System.Windows.Forms.Button btnPedalLeft;
+        private System.Windows.Forms.ProgressBar pbPedalLeft;
+        private System.Windows.Forms.CheckBox chkBoostPedalLeft;
     }
 }
 

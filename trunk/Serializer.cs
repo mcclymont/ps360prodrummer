@@ -58,89 +58,88 @@ namespace _PS360Drum.Serialize
         private void GetSettings(ref Settings settings)
         {
             //RedTom
-            settings.RedTom.MidiNote = m_Main.GuiLinker.GetMidiNote(DrumPad.RedTom);
-            settings.RedTom.BoostAmount = m_Main.GuiLinker.GetBoost(DrumPad.RedTom);
-            settings.RedTom.UseBoost = m_Main.GuiLinker.GetBoostEnabled(DrumPad.RedTom);
+            settings.RedTom.MidiNote = m_Main.GuiLinker.GetMidiNote(GuiDrumPad.RedTom);
+            settings.RedTom.BoostAmount = m_Main.GuiLinker.GetBoost(GuiDrumPad.RedTom);
+            settings.RedTom.UseBoost = m_Main.GuiLinker.GetBoostEnabled(GuiDrumPad.RedTom);
             //YellowTom
-            settings.YellowTom.MidiNote = m_Main.GuiLinker.GetMidiNote(DrumPad.YellowTom);
-            settings.YellowTom.BoostAmount = m_Main.GuiLinker.GetBoost(DrumPad.YellowTom);
-            settings.YellowTom.UseBoost = m_Main.GuiLinker.GetBoostEnabled(DrumPad.YellowTom);
+            settings.YellowTom.MidiNote = m_Main.GuiLinker.GetMidiNote(GuiDrumPad.YellowTom);
+            settings.YellowTom.BoostAmount = m_Main.GuiLinker.GetBoost(GuiDrumPad.YellowTom);
+            settings.YellowTom.UseBoost = m_Main.GuiLinker.GetBoostEnabled(GuiDrumPad.YellowTom);
             //BlueTom
-            settings.BlueTom.MidiNote = m_Main.GuiLinker.GetMidiNote(DrumPad.BlueTom);
-            settings.BlueTom.BoostAmount = m_Main.GuiLinker.GetBoost(DrumPad.BlueTom);
-            settings.BlueTom.UseBoost = m_Main.GuiLinker.GetBoostEnabled(DrumPad.BlueTom);
+            settings.BlueTom.MidiNote = m_Main.GuiLinker.GetMidiNote(GuiDrumPad.BlueTom);
+            settings.BlueTom.BoostAmount = m_Main.GuiLinker.GetBoost(GuiDrumPad.BlueTom);
+            settings.BlueTom.UseBoost = m_Main.GuiLinker.GetBoostEnabled(GuiDrumPad.BlueTom);
             //GreenTom
-            settings.GreenTom.MidiNote = m_Main.GuiLinker.GetMidiNote(DrumPad.GreenTom);
-            settings.GreenTom.BoostAmount = m_Main.GuiLinker.GetBoost(DrumPad.GreenTom);
-            settings.GreenTom.UseBoost = m_Main.GuiLinker.GetBoostEnabled(DrumPad.GreenTom);
+            settings.GreenTom.MidiNote = m_Main.GuiLinker.GetMidiNote(GuiDrumPad.GreenTom);
+            settings.GreenTom.BoostAmount = m_Main.GuiLinker.GetBoost(GuiDrumPad.GreenTom);
+            settings.GreenTom.UseBoost = m_Main.GuiLinker.GetBoostEnabled(GuiDrumPad.GreenTom);
             //YellowCymbal
-            settings.YellowCymbal.MidiNote = m_Main.GuiLinker.GetMidiNote(DrumPad.YellowCymbal);
-            settings.YellowCymbal.BoostAmount = m_Main.GuiLinker.GetBoost(DrumPad.YellowCymbal);
-            settings.YellowCymbal.UseBoost = m_Main.GuiLinker.GetBoostEnabled(DrumPad.YellowCymbal);
+            settings.YellowCymbal.MidiNote = m_Main.GuiLinker.GetMidiNote(GuiDrumPad.YellowCymbal);
+            settings.YellowCymbal.BoostAmount = m_Main.GuiLinker.GetBoost(GuiDrumPad.YellowCymbal);
+            settings.YellowCymbal.UseBoost = m_Main.GuiLinker.GetBoostEnabled(GuiDrumPad.YellowCymbal);
             //BlueCymbal
-            settings.BlueCymbal.MidiNote = m_Main.GuiLinker.GetMidiNote(DrumPad.BlueCymbal);
-            settings.BlueCymbal.BoostAmount = m_Main.GuiLinker.GetBoost(DrumPad.BlueCymbal);
-            settings.BlueCymbal.UseBoost = m_Main.GuiLinker.GetBoostEnabled(DrumPad.BlueCymbal);
+            settings.BlueCymbal.MidiNote = m_Main.GuiLinker.GetMidiNote(GuiDrumPad.BlueCymbal);
+            settings.BlueCymbal.BoostAmount = m_Main.GuiLinker.GetBoost(GuiDrumPad.BlueCymbal);
+            settings.BlueCymbal.UseBoost = m_Main.GuiLinker.GetBoostEnabled(GuiDrumPad.BlueCymbal);
             //GreenCymbal
-            settings.GreenCymbal.MidiNote = m_Main.GuiLinker.GetMidiNote(DrumPad.GreenCymbal);
-            settings.GreenCymbal.BoostAmount = m_Main.GuiLinker.GetBoost(DrumPad.GreenCymbal);
-            settings.GreenCymbal.UseBoost = m_Main.GuiLinker.GetBoostEnabled(DrumPad.GreenCymbal);
+            settings.GreenCymbal.MidiNote = m_Main.GuiLinker.GetMidiNote(GuiDrumPad.GreenCymbal);
+            settings.GreenCymbal.BoostAmount = m_Main.GuiLinker.GetBoost(GuiDrumPad.GreenCymbal);
+            settings.GreenCymbal.UseBoost = m_Main.GuiLinker.GetBoostEnabled(GuiDrumPad.GreenCymbal);            
+            //PedalLeft
+            settings.PedalLeft.MidiNote = m_Main.GuiLinker.GetMidiNote(GuiDrumPad.PedalLeft);
+            settings.PedalLeft.BoostAmount = m_Main.GuiLinker.GetBoost(GuiDrumPad.PedalLeft);
+            settings.PedalLeft.UseBoost = m_Main.GuiLinker.GetBoostEnabled(GuiDrumPad.PedalLeft);
+            //PedalRight
+            settings.PedalRight.MidiNote = m_Main.GuiLinker.GetMidiNote(GuiDrumPad.PedalRight);
+            settings.PedalRight.BoostAmount = m_Main.GuiLinker.GetBoost(GuiDrumPad.PedalRight);
+            settings.PedalRight.UseBoost = m_Main.GuiLinker.GetBoostEnabled(GuiDrumPad.PedalRight);
 
             //DPadUp
-            settings.DPadUp.MidiNote = m_Main.GuiLinker.GetMidiNote(DrumDPad.Up);
-            settings.DPadUp.Velocity = m_Main.GuiLinker.GetButtonVelocity(DrumDPad.Up);
-            settings.DPadUp.SwitchType = m_Main.GuiLinker.GetButtonSwitchType(DrumDPad.Up);
+            settings.DPadUp.MidiNote = m_Main.GuiLinker.GetMidiNote(GuiDrumDPad.Up);
+            settings.DPadUp.Velocity = m_Main.GuiLinker.GetButtonVelocity(GuiDrumDPad.Up);
+            settings.DPadUp.SwitchType = m_Main.GuiLinker.GetButtonSwitchType(GuiDrumDPad.Up);
             //DPadRight
-            settings.DPadRight.MidiNote = m_Main.GuiLinker.GetMidiNote(DrumDPad.Right);
-            settings.DPadRight.Velocity = m_Main.GuiLinker.GetButtonVelocity(DrumDPad.Right);
-            settings.DPadRight.SwitchType = m_Main.GuiLinker.GetButtonSwitchType(DrumDPad.Right);
+            settings.DPadRight.MidiNote = m_Main.GuiLinker.GetMidiNote(GuiDrumDPad.Right);
+            settings.DPadRight.Velocity = m_Main.GuiLinker.GetButtonVelocity(GuiDrumDPad.Right);
+            settings.DPadRight.SwitchType = m_Main.GuiLinker.GetButtonSwitchType(GuiDrumDPad.Right);
             //DPadDown
-            settings.DPadDown.MidiNote = m_Main.GuiLinker.GetMidiNote(DrumDPad.Down);
-            settings.DPadDown.Velocity = m_Main.GuiLinker.GetButtonVelocity(DrumDPad.Down);
-            settings.DPadDown.SwitchType = m_Main.GuiLinker.GetButtonSwitchType(DrumDPad.Down);
+            settings.DPadDown.MidiNote = m_Main.GuiLinker.GetMidiNote(GuiDrumDPad.Down);
+            settings.DPadDown.Velocity = m_Main.GuiLinker.GetButtonVelocity(GuiDrumDPad.Down);
+            settings.DPadDown.SwitchType = m_Main.GuiLinker.GetButtonSwitchType(GuiDrumDPad.Down);
             //DPadLeft
-            settings.DPadLeft.MidiNote = m_Main.GuiLinker.GetMidiNote(DrumDPad.Left);
-            settings.DPadLeft.Velocity = m_Main.GuiLinker.GetButtonVelocity(DrumDPad.Left);
-            settings.DPadLeft.SwitchType = m_Main.GuiLinker.GetButtonSwitchType(DrumDPad.Left);
+            settings.DPadLeft.MidiNote = m_Main.GuiLinker.GetMidiNote(GuiDrumDPad.Left);
+            settings.DPadLeft.Velocity = m_Main.GuiLinker.GetButtonVelocity(GuiDrumDPad.Left);
+            settings.DPadLeft.SwitchType = m_Main.GuiLinker.GetButtonSwitchType(GuiDrumDPad.Left);
 
             //Triangle
-            settings.Triangle.MidiNote = m_Main.GuiLinker.GetMidiNote(DrumButton.Triangle);
-            settings.Triangle.Velocity = m_Main.GuiLinker.GetButtonVelocity(DrumButton.Triangle);
-            settings.Triangle.SwitchType = m_Main.GuiLinker.GetButtonSwitchType(DrumButton.Triangle);
+            settings.Triangle.MidiNote = m_Main.GuiLinker.GetMidiNote(GuiDrumButton.Triangle);
+            settings.Triangle.Velocity = m_Main.GuiLinker.GetButtonVelocity(GuiDrumButton.Triangle);
+            settings.Triangle.SwitchType = m_Main.GuiLinker.GetButtonSwitchType(GuiDrumButton.Triangle);
             //Circle
-            settings.Circle.MidiNote = m_Main.GuiLinker.GetMidiNote(DrumButton.Circle);
-            settings.Circle.Velocity = m_Main.GuiLinker.GetButtonVelocity(DrumButton.Circle);
-            settings.Circle.SwitchType = m_Main.GuiLinker.GetButtonSwitchType(DrumButton.Circle);
+            settings.Circle.MidiNote = m_Main.GuiLinker.GetMidiNote(GuiDrumButton.Circle);
+            settings.Circle.Velocity = m_Main.GuiLinker.GetButtonVelocity(GuiDrumButton.Circle);
+            settings.Circle.SwitchType = m_Main.GuiLinker.GetButtonSwitchType(GuiDrumButton.Circle);
             //X
-            settings.X.MidiNote = m_Main.GuiLinker.GetMidiNote(DrumButton.X);
-            settings.X.Velocity = m_Main.GuiLinker.GetButtonVelocity(DrumButton.X);
-            settings.X.SwitchType = m_Main.GuiLinker.GetButtonSwitchType(DrumButton.X);
+            settings.X.MidiNote = m_Main.GuiLinker.GetMidiNote(GuiDrumButton.X);
+            settings.X.Velocity = m_Main.GuiLinker.GetButtonVelocity(GuiDrumButton.X);
+            settings.X.SwitchType = m_Main.GuiLinker.GetButtonSwitchType(GuiDrumButton.X);
             //Rectangle
-            settings.Rectangle.MidiNote = m_Main.GuiLinker.GetMidiNote(DrumButton.Rectangle);
-            settings.Rectangle.Velocity = m_Main.GuiLinker.GetButtonVelocity(DrumButton.Rectangle);
-            settings.Rectangle.SwitchType = m_Main.GuiLinker.GetButtonSwitchType(DrumButton.Rectangle);
+            settings.Rectangle.MidiNote = m_Main.GuiLinker.GetMidiNote(GuiDrumButton.Rectangle);
+            settings.Rectangle.Velocity = m_Main.GuiLinker.GetButtonVelocity(GuiDrumButton.Rectangle);
+            settings.Rectangle.SwitchType = m_Main.GuiLinker.GetButtonSwitchType(GuiDrumButton.Rectangle);
 
             //Select
-            settings.Select.MidiNote = m_Main.GuiLinker.GetMidiNote(DrumButton.Select);
-            settings.Select.Velocity = m_Main.GuiLinker.GetButtonVelocity(DrumButton.Select);
-            settings.Select.SwitchType = m_Main.GuiLinker.GetButtonSwitchType(DrumButton.Select);
+            settings.Select.MidiNote = m_Main.GuiLinker.GetMidiNote(GuiDrumButton.Select);
+            settings.Select.Velocity = m_Main.GuiLinker.GetButtonVelocity(GuiDrumButton.Select);
+            settings.Select.SwitchType = m_Main.GuiLinker.GetButtonSwitchType(GuiDrumButton.Select);
             //Start
-            settings.Start.MidiNote = m_Main.GuiLinker.GetMidiNote(DrumButton.Start);
-            settings.Start.Velocity = m_Main.GuiLinker.GetButtonVelocity(DrumButton.Start);
-            settings.Start.SwitchType = m_Main.GuiLinker.GetButtonSwitchType(DrumButton.Start);
+            settings.Start.MidiNote = m_Main.GuiLinker.GetMidiNote(GuiDrumButton.Start);
+            settings.Start.Velocity = m_Main.GuiLinker.GetButtonVelocity(GuiDrumButton.Start);
+            settings.Start.SwitchType = m_Main.GuiLinker.GetButtonSwitchType(GuiDrumButton.Start);
             //BigButton
-            settings.BigButton.MidiNote = m_Main.GuiLinker.GetMidiNote(DrumButton.BigButton);
-            settings.BigButton.Velocity = m_Main.GuiLinker.GetButtonVelocity(DrumButton.BigButton);
-            settings.BigButton.SwitchType = m_Main.GuiLinker.GetButtonSwitchType(DrumButton.BigButton);
-
-            //PedalLeft
-            settings.PedalLeft.MidiNote = m_Main.GuiLinker.GetMidiNote(DrumButton.PedalLeft);
-            settings.PedalLeft.Velocity = m_Main.GuiLinker.GetButtonVelocity(DrumButton.PedalLeft);
-            settings.PedalLeft.SwitchType = m_Main.GuiLinker.GetButtonSwitchType(DrumButton.PedalLeft);
-            //PedalRight
-            settings.PedalRight.MidiNote = m_Main.GuiLinker.GetMidiNote(DrumButton.PedalRight);
-            settings.PedalRight.Velocity = m_Main.GuiLinker.GetButtonVelocity(DrumButton.PedalRight);
-            settings.PedalRight.SwitchType = m_Main.GuiLinker.GetButtonSwitchType(DrumButton.PedalRight);
+            settings.BigButton.MidiNote = m_Main.GuiLinker.GetMidiNote(GuiDrumButton.BigButton);
+            settings.BigButton.Velocity = m_Main.GuiLinker.GetButtonVelocity(GuiDrumButton.BigButton);
+            settings.BigButton.SwitchType = m_Main.GuiLinker.GetButtonSwitchType(GuiDrumButton.BigButton);
 
             //Midi
             settings.MidiSettings.MidiChannel = m_Main.GetMidiChannel();
@@ -157,89 +156,88 @@ namespace _PS360Drum.Serialize
         private void ApplySettings(Settings settings)
         {
             //RedTom
-            m_Main.GuiLinker.SetMidiNote(DrumPad.RedTom, settings.RedTom.MidiNote);
-            m_Main.GuiLinker.SetBoostValue(DrumPad.RedTom, settings.RedTom.BoostAmount);
-            m_Main.GuiLinker.SetBoostEnabled(DrumPad.RedTom, settings.RedTom.UseBoost);
+            m_Main.GuiLinker.SetMidiNote(GuiDrumPad.RedTom, settings.RedTom.MidiNote);
+            m_Main.GuiLinker.SetBoostValue(GuiDrumPad.RedTom, settings.RedTom.BoostAmount);
+            m_Main.GuiLinker.SetBoostEnabled(GuiDrumPad.RedTom, settings.RedTom.UseBoost);
             //YellowTom
-            m_Main.GuiLinker.SetMidiNote(DrumPad.YellowTom, settings.YellowTom.MidiNote);
-            m_Main.GuiLinker.SetBoostValue(DrumPad.YellowTom, settings.YellowTom.BoostAmount);
-            m_Main.GuiLinker.SetBoostEnabled(DrumPad.YellowTom, settings.YellowTom.UseBoost);
+            m_Main.GuiLinker.SetMidiNote(GuiDrumPad.YellowTom, settings.YellowTom.MidiNote);
+            m_Main.GuiLinker.SetBoostValue(GuiDrumPad.YellowTom, settings.YellowTom.BoostAmount);
+            m_Main.GuiLinker.SetBoostEnabled(GuiDrumPad.YellowTom, settings.YellowTom.UseBoost);
             //BlueTom
-            m_Main.GuiLinker.SetMidiNote(DrumPad.BlueTom, settings.BlueTom.MidiNote);
-            m_Main.GuiLinker.SetBoostValue(DrumPad.BlueTom, settings.BlueTom.BoostAmount);
-            m_Main.GuiLinker.SetBoostEnabled(DrumPad.BlueTom, settings.BlueTom.UseBoost);
+            m_Main.GuiLinker.SetMidiNote(GuiDrumPad.BlueTom, settings.BlueTom.MidiNote);
+            m_Main.GuiLinker.SetBoostValue(GuiDrumPad.BlueTom, settings.BlueTom.BoostAmount);
+            m_Main.GuiLinker.SetBoostEnabled(GuiDrumPad.BlueTom, settings.BlueTom.UseBoost);
             //GreenTom
-            m_Main.GuiLinker.SetMidiNote(DrumPad.GreenTom, settings.GreenTom.MidiNote);
-            m_Main.GuiLinker.SetBoostValue(DrumPad.GreenTom, settings.GreenTom.BoostAmount);
-            m_Main.GuiLinker.SetBoostEnabled(DrumPad.GreenTom, settings.GreenTom.UseBoost);
+            m_Main.GuiLinker.SetMidiNote(GuiDrumPad.GreenTom, settings.GreenTom.MidiNote);
+            m_Main.GuiLinker.SetBoostValue(GuiDrumPad.GreenTom, settings.GreenTom.BoostAmount);
+            m_Main.GuiLinker.SetBoostEnabled(GuiDrumPad.GreenTom, settings.GreenTom.UseBoost);
             //YellowCymbal
-            m_Main.GuiLinker.SetMidiNote(DrumPad.YellowCymbal, settings.YellowCymbal.MidiNote);
-            m_Main.GuiLinker.SetBoostValue(DrumPad.YellowCymbal, settings.YellowCymbal.BoostAmount);
-            m_Main.GuiLinker.SetBoostEnabled(DrumPad.YellowCymbal, settings.YellowCymbal.UseBoost);
+            m_Main.GuiLinker.SetMidiNote(GuiDrumPad.YellowCymbal, settings.YellowCymbal.MidiNote);
+            m_Main.GuiLinker.SetBoostValue(GuiDrumPad.YellowCymbal, settings.YellowCymbal.BoostAmount);
+            m_Main.GuiLinker.SetBoostEnabled(GuiDrumPad.YellowCymbal, settings.YellowCymbal.UseBoost);
             //BlueCymbal
-            m_Main.GuiLinker.SetMidiNote(DrumPad.BlueCymbal, settings.BlueCymbal.MidiNote);
-            m_Main.GuiLinker.SetBoostValue(DrumPad.BlueCymbal, settings.BlueCymbal.BoostAmount);
-            m_Main.GuiLinker.SetBoostEnabled(DrumPad.BlueCymbal, settings.BlueCymbal.UseBoost);
+            m_Main.GuiLinker.SetMidiNote(GuiDrumPad.BlueCymbal, settings.BlueCymbal.MidiNote);
+            m_Main.GuiLinker.SetBoostValue(GuiDrumPad.BlueCymbal, settings.BlueCymbal.BoostAmount);
+            m_Main.GuiLinker.SetBoostEnabled(GuiDrumPad.BlueCymbal, settings.BlueCymbal.UseBoost);
             //GreenCymbal
-            m_Main.GuiLinker.SetMidiNote(DrumPad.GreenCymbal, settings.GreenCymbal.MidiNote);
-            m_Main.GuiLinker.SetBoostValue(DrumPad.GreenCymbal, settings.GreenCymbal.BoostAmount);
-            m_Main.GuiLinker.SetBoostEnabled(DrumPad.GreenCymbal, settings.GreenCymbal.UseBoost);     
+            m_Main.GuiLinker.SetMidiNote(GuiDrumPad.GreenCymbal, settings.GreenCymbal.MidiNote);
+            m_Main.GuiLinker.SetBoostValue(GuiDrumPad.GreenCymbal, settings.GreenCymbal.BoostAmount);
+            m_Main.GuiLinker.SetBoostEnabled(GuiDrumPad.GreenCymbal, settings.GreenCymbal.UseBoost);
+            //PedalLeft
+            m_Main.GuiLinker.SetMidiNote(GuiDrumPad.PedalLeft, settings.PedalLeft.MidiNote);
+            m_Main.GuiLinker.SetBoostValue(GuiDrumPad.PedalLeft, settings.PedalLeft.BoostAmount);
+            m_Main.GuiLinker.SetBoostEnabled(GuiDrumPad.PedalLeft, settings.PedalLeft.UseBoost);
+            //PedalRight
+            m_Main.GuiLinker.SetMidiNote(GuiDrumPad.PedalRight, settings.PedalRight.MidiNote);
+            m_Main.GuiLinker.SetBoostValue(GuiDrumPad.PedalRight, settings.PedalRight.BoostAmount);
+            m_Main.GuiLinker.SetBoostEnabled(GuiDrumPad.PedalRight, settings.PedalRight.UseBoost);     
 
             //DPadUp
-            m_Main.GuiLinker.SetMidiNote(DrumDPad.Up, settings.DPadUp.MidiNote);
-            m_Main.GuiLinker.SetButtonVelocity(DrumDPad.Up, settings.DPadUp.Velocity);
-            m_Main.GuiLinker.SetButtonSwitchType(DrumDPad.Up, settings.DPadUp.SwitchType);
+            m_Main.GuiLinker.SetMidiNote(GuiDrumDPad.Up, settings.DPadUp.MidiNote);
+            m_Main.GuiLinker.SetButtonVelocity(GuiDrumDPad.Up, settings.DPadUp.Velocity);
+            m_Main.GuiLinker.SetButtonSwitchType(GuiDrumDPad.Up, settings.DPadUp.SwitchType);
             //DPadRight
-            m_Main.GuiLinker.SetMidiNote(DrumDPad.Right, settings.DPadRight.MidiNote);
-            m_Main.GuiLinker.SetButtonVelocity(DrumDPad.Right, settings.DPadRight.Velocity);
-            m_Main.GuiLinker.SetButtonSwitchType(DrumDPad.Right, settings.DPadRight.SwitchType);
+            m_Main.GuiLinker.SetMidiNote(GuiDrumDPad.Right, settings.DPadRight.MidiNote);
+            m_Main.GuiLinker.SetButtonVelocity(GuiDrumDPad.Right, settings.DPadRight.Velocity);
+            m_Main.GuiLinker.SetButtonSwitchType(GuiDrumDPad.Right, settings.DPadRight.SwitchType);
             //DPadDown
-            m_Main.GuiLinker.SetMidiNote(DrumDPad.Down, settings.DPadDown.MidiNote);
-            m_Main.GuiLinker.SetButtonVelocity(DrumDPad.Down, settings.DPadDown.Velocity);
-            m_Main.GuiLinker.SetButtonSwitchType(DrumDPad.Down, settings.DPadDown.SwitchType);
+            m_Main.GuiLinker.SetMidiNote(GuiDrumDPad.Down, settings.DPadDown.MidiNote);
+            m_Main.GuiLinker.SetButtonVelocity(GuiDrumDPad.Down, settings.DPadDown.Velocity);
+            m_Main.GuiLinker.SetButtonSwitchType(GuiDrumDPad.Down, settings.DPadDown.SwitchType);
             //DPadLeft
-            m_Main.GuiLinker.SetMidiNote(DrumDPad.Left, settings.DPadLeft.MidiNote);
-            m_Main.GuiLinker.SetButtonVelocity(DrumDPad.Left, settings.DPadLeft.Velocity);
-            m_Main.GuiLinker.SetButtonSwitchType(DrumDPad.Left, settings.DPadLeft.SwitchType);
+            m_Main.GuiLinker.SetMidiNote(GuiDrumDPad.Left, settings.DPadLeft.MidiNote);
+            m_Main.GuiLinker.SetButtonVelocity(GuiDrumDPad.Left, settings.DPadLeft.Velocity);
+            m_Main.GuiLinker.SetButtonSwitchType(GuiDrumDPad.Left, settings.DPadLeft.SwitchType);
 
             //Triangle
-            m_Main.GuiLinker.SetMidiNote(DrumButton.Triangle, settings.Triangle.MidiNote);
-            m_Main.GuiLinker.SetButtonVelocity(DrumButton.Triangle, settings.Triangle.Velocity);
-            m_Main.GuiLinker.SetButtonSwitchType(DrumButton.Triangle, settings.Triangle.SwitchType);
+            m_Main.GuiLinker.SetMidiNote(GuiDrumButton.Triangle, settings.Triangle.MidiNote);
+            m_Main.GuiLinker.SetButtonVelocity(GuiDrumButton.Triangle, settings.Triangle.Velocity);
+            m_Main.GuiLinker.SetButtonSwitchType(GuiDrumButton.Triangle, settings.Triangle.SwitchType);
             //Circle
-            m_Main.GuiLinker.SetMidiNote(DrumButton.Circle, settings.Circle.MidiNote);
-            m_Main.GuiLinker.SetButtonVelocity(DrumButton.Circle, settings.Circle.Velocity);
-            m_Main.GuiLinker.SetButtonSwitchType(DrumButton.Circle, settings.Circle.SwitchType);
+            m_Main.GuiLinker.SetMidiNote(GuiDrumButton.Circle, settings.Circle.MidiNote);
+            m_Main.GuiLinker.SetButtonVelocity(GuiDrumButton.Circle, settings.Circle.Velocity);
+            m_Main.GuiLinker.SetButtonSwitchType(GuiDrumButton.Circle, settings.Circle.SwitchType);
             //X
-            m_Main.GuiLinker.SetMidiNote(DrumButton.X, settings.X.MidiNote);
-            m_Main.GuiLinker.SetButtonVelocity(DrumButton.X, settings.X.Velocity);
-            m_Main.GuiLinker.SetButtonSwitchType(DrumButton.X, settings.X.SwitchType);
+            m_Main.GuiLinker.SetMidiNote(GuiDrumButton.X, settings.X.MidiNote);
+            m_Main.GuiLinker.SetButtonVelocity(GuiDrumButton.X, settings.X.Velocity);
+            m_Main.GuiLinker.SetButtonSwitchType(GuiDrumButton.X, settings.X.SwitchType);
             //Rectangle
-            m_Main.GuiLinker.SetMidiNote(DrumButton.Rectangle, settings.Rectangle.MidiNote);
-            m_Main.GuiLinker.SetButtonVelocity(DrumButton.Rectangle, settings.Rectangle.Velocity);
-            m_Main.GuiLinker.SetButtonSwitchType(DrumButton.Rectangle, settings.Rectangle.SwitchType);
+            m_Main.GuiLinker.SetMidiNote(GuiDrumButton.Rectangle, settings.Rectangle.MidiNote);
+            m_Main.GuiLinker.SetButtonVelocity(GuiDrumButton.Rectangle, settings.Rectangle.Velocity);
+            m_Main.GuiLinker.SetButtonSwitchType(GuiDrumButton.Rectangle, settings.Rectangle.SwitchType);
 
             //Select
-            m_Main.GuiLinker.SetMidiNote(DrumButton.Select, settings.Select.MidiNote);
-            m_Main.GuiLinker.SetButtonVelocity(DrumButton.Select, settings.Select.Velocity);
-            m_Main.GuiLinker.SetButtonSwitchType(DrumButton.Select, settings.Select.SwitchType);
+            m_Main.GuiLinker.SetMidiNote(GuiDrumButton.Select, settings.Select.MidiNote);
+            m_Main.GuiLinker.SetButtonVelocity(GuiDrumButton.Select, settings.Select.Velocity);
+            m_Main.GuiLinker.SetButtonSwitchType(GuiDrumButton.Select, settings.Select.SwitchType);
             //Start
-            m_Main.GuiLinker.SetMidiNote(DrumButton.Start, settings.Start.MidiNote);
-            m_Main.GuiLinker.SetButtonVelocity(DrumButton.Start, settings.Start.Velocity);
-            m_Main.GuiLinker.SetButtonSwitchType(DrumButton.Start, settings.Start.SwitchType);
+            m_Main.GuiLinker.SetMidiNote(GuiDrumButton.Start, settings.Start.MidiNote);
+            m_Main.GuiLinker.SetButtonVelocity(GuiDrumButton.Start, settings.Start.Velocity);
+            m_Main.GuiLinker.SetButtonSwitchType(GuiDrumButton.Start, settings.Start.SwitchType);
             //BigButton
-            m_Main.GuiLinker.SetMidiNote(DrumButton.BigButton, settings.BigButton.MidiNote);
-            m_Main.GuiLinker.SetButtonVelocity(DrumButton.BigButton, settings.BigButton.Velocity);
-            m_Main.GuiLinker.SetButtonSwitchType(DrumButton.BigButton, settings.BigButton.SwitchType);
-
-            //PedalLeft
-            m_Main.GuiLinker.SetMidiNote(DrumButton.PedalLeft, settings.PedalLeft.MidiNote);
-            m_Main.GuiLinker.SetButtonVelocity(DrumButton.PedalLeft, settings.PedalLeft.Velocity);
-            m_Main.GuiLinker.SetButtonSwitchType(DrumButton.PedalLeft, settings.PedalLeft.SwitchType);
-            //PedalRight
-            m_Main.GuiLinker.SetMidiNote(DrumButton.PedalRight, settings.PedalRight.MidiNote);
-            m_Main.GuiLinker.SetButtonVelocity(DrumButton.PedalRight, settings.PedalRight.Velocity);
-            m_Main.GuiLinker.SetButtonSwitchType(DrumButton.PedalRight, settings.PedalRight.SwitchType);
+            m_Main.GuiLinker.SetMidiNote(GuiDrumButton.BigButton, settings.BigButton.MidiNote);
+            m_Main.GuiLinker.SetButtonVelocity(GuiDrumButton.BigButton, settings.BigButton.Velocity);
+            m_Main.GuiLinker.SetButtonSwitchType(GuiDrumButton.BigButton, settings.BigButton.SwitchType);
 
             //Midi
             m_Main.SetMidiChannel(settings.MidiSettings.MidiChannel);
@@ -276,6 +274,10 @@ namespace _PS360Drum.Serialize
             public Trigger GreenTom { get; set; }
             [XmlElement("GreenCymbal")]
             public Trigger GreenCymbal { get; set; }
+            [XmlElement("PedalLeft")]
+            public Trigger PedalLeft { get; set; }
+            [XmlElement("PedalRight")]
+            public Trigger PedalRight { get; set; }
 
             [XmlElement("DPadUp")]
             public Button DPadUp { get; set; }
@@ -302,11 +304,6 @@ namespace _PS360Drum.Serialize
             [XmlElement("BigButton")]
             public Button BigButton { get; set; }
 
-            [XmlElement("PedalLeft")]
-            public Button PedalLeft { get; set; }
-            [XmlElement("PedalRight")]
-            public Button PedalRight { get; set; }
-
             [XmlElement("MidiSettings")]
             public MidiSettings MidiSettings { get; set; }
 
@@ -322,6 +319,8 @@ namespace _PS360Drum.Serialize
                 BlueCymbal = new Trigger(49, true, 40);         //       Crash : 49
                 GreenTom = new Trigger(43, true, 20);           //      Low tom: 43
                 GreenCymbal = new Trigger(51, true, 40);        //         Ride: 51
+                PedalLeft = new Trigger(44, true, 20);          //  HiHat Pedal: 44
+                PedalRight = new Trigger(36, true, 20);         //    Bass Drum: 36
 
                 DPadUp = new Button(60, 100, SwitchType.KeyboardLike);      //Hi Bongo: 60
                 DPadRight = new Button(61, 100, SwitchType.KeyboardLike);   //Low Bongo: 61
@@ -336,9 +335,6 @@ namespace _PS360Drum.Serialize
                 Select = new Button(76, 100, SwitchType.KeyboardLike);      //Hi Wood Block: 76
                 Start = new Button(77, 100, SwitchType.KeyboardLike);       //Low Wood Block: 77
                 BigButton = new Button(37, 100, SwitchType.KeyboardLike);   //Side Stick: 37
-
-                PedalLeft = new Button(44, 100, SwitchType.OnOff);          //HiHat Pedal: 44
-                PedalRight = new Button(36, 100, SwitchType.KeyboardLike);  //Bass Drum: 36
 
                 MidiSettings = new MidiSettings("LoopBe Internal MIDI", 10);
 
@@ -425,7 +421,7 @@ namespace _PS360Drum.Serialize
             public MultNoteCheckType CheckType { get; set; }
 
             [XmlAttribute("Pad")]
-            public DrumPad Pad { get; set; }
+            public GuiDrumPad Pad { get; set; }
             [XmlAttribute("NoteTo")]
             public byte NoteTo { get; set; }
 
@@ -439,7 +435,7 @@ namespace _PS360Drum.Serialize
 	        }
 
             public MultiNote(MultNoteCheckType checkType, byte velocity,
-                         DrumPad pad, byte noteTo,
+                         GuiDrumPad pad, byte noteTo,
                          float velMult, byte velAdd)
             {
                 CheckType = checkType;

@@ -15,14 +15,14 @@ namespace _PS360Drum
         public byte Velocity { get; private set; }
         public MultNoteCheckType CheckType { get; private set; }
 
-        public DrumPad Pad { get; private set; }
+        public GuiDrumPad Pad { get; private set; }
         public byte NoteTo { get; private set; }
 
         public float VelocityMult { get; private set; }
         public byte VelocityAdd { get; private set; }
 
         public MultiNote(MultNoteCheckType checkType, byte velocity,
-                         DrumPad pad, byte noteTo,
+                         GuiDrumPad pad, byte noteTo,
                          float velMult, byte velAdd)
         {
             Velocity = velocity;
@@ -35,7 +35,7 @@ namespace _PS360Drum
             VelocityAdd = velAdd;
         }
 
-        public bool Morph(DrumPad pad, ref byte velocity, ref byte note)
+        public bool Morph(GuiDrumPad pad, ref byte velocity, ref byte note)
         {
             if (Pad == pad && VelocityCheck(velocity))
             {
@@ -96,13 +96,13 @@ namespace _PS360Drum
             m_nupVelCheck = nupVelCheck;
 
             m_ddlNote = ddlNote;
-            m_ddlNote.Items.Add(DrumPad.RedTom);
-            m_ddlNote.Items.Add(DrumPad.YellowTom);
-            m_ddlNote.Items.Add(DrumPad.YellowCymbal);
-            m_ddlNote.Items.Add(DrumPad.BlueTom);
-            m_ddlNote.Items.Add(DrumPad.BlueCymbal);
-            m_ddlNote.Items.Add(DrumPad.GreenTom);
-            m_ddlNote.Items.Add(DrumPad.GreenCymbal);
+            m_ddlNote.Items.Add(GuiDrumPad.RedTom);
+            m_ddlNote.Items.Add(GuiDrumPad.YellowTom);
+            m_ddlNote.Items.Add(GuiDrumPad.YellowCymbal);
+            m_ddlNote.Items.Add(GuiDrumPad.BlueTom);
+            m_ddlNote.Items.Add(GuiDrumPad.BlueCymbal);
+            m_ddlNote.Items.Add(GuiDrumPad.GreenTom);
+            m_ddlNote.Items.Add(GuiDrumPad.GreenCymbal);
             m_ddlNote.SelectedIndex = 0;
             m_nupNoteTo = nupNoteTo;
 
@@ -120,7 +120,7 @@ namespace _PS360Drum
         void m_btnAdd_Click(object sender, EventArgs e)
         {
             Add(new MultiNote((MultNoteCheckType)m_ddlVelCheck.SelectedItem,
-                (byte)m_nupVelCheck.Value, (DrumPad)m_ddlNote.SelectedItem, (byte)m_nupNoteTo.Value,
+                (byte)m_nupVelCheck.Value, (GuiDrumPad)m_ddlNote.SelectedItem, (byte)m_nupNoteTo.Value,
                 (float)m_nupVelMult.Value, (byte)m_nupVelAdd.Value));
         }
         void m_btnRemove_Click(object sender, EventArgs e)
@@ -129,7 +129,7 @@ namespace _PS360Drum
                 m_lb.Items.RemoveAt(m_lb.SelectedIndex);
         }
 
-        public bool Morph(DrumPad pad, ref byte velocity, ref byte note)
+        public bool Morph(GuiDrumPad pad, ref byte velocity, ref byte note)
         {
             bool changed = false;
             foreach (MultiNote mn in m_lb.Items)

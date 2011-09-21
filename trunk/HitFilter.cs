@@ -8,18 +8,23 @@ namespace _PS360Drum
 {
     class HitFilter
     {
-        Byte?[] m_HitVelocities = new Byte?[ProDrumController.NUM_PADS];
-        Timer[] m_Timers = new Timer[ProDrumController.NUM_PADS];
+        private byte?[] m_HitVelocities;
+        private Timer[] m_Timers;
+        private byte m_NumPads;
+        private IRawToGui m_RawToGuiConverter;
 
-        FrmMain m_Main;
+        private FrmMain m_Main;
 
-        const int MAX_HIT_PER_SECOND = 30; //33.3333ms delay
-        private byte m_MinVelocitySensitivity = 42;
+        private const int MAX_HIT_PER_SECOND = 30; //33.3333ms delay        
 
-        public HitFilter(FrmMain main)
+        public HitFilter(FrmMain main, byte numPads, IRawToGui translater)
         {
+            m_RawToGuiConverter = translater;
+            m_HitVelocities = new byte?[numPads];
+            m_Timers = new Timer[numPads];
+            m_NumPads = numPads;
             m_Main = main;
-            for (int i = 0; i < ProDrumController.NUM_PADS; ++i)
+            for (int i = 0; i < m_NumPads; ++i)
             {
                 m_HitVelocities[i] = null;
 
@@ -34,91 +39,37 @@ namespace _PS360Drum
             Timer timer = sender as Timer;
             timer.Stop();
 
-            for (int i = 0; i < ProDrumController.NUM_PADS; ++i)
+            for (byte i = 0; i < m_NumPads; ++i)
             {
                 if (m_Timers[i] == timer)
                 {
-                    DrumPad pad = (DrumPad)i;
+                    GuiDrumPad pad = m_RawToGuiConverter.TranslatePad(i);
                     m_Main.MidiSender.TriggerNote(pad, m_HitVelocities[i].Value);
                     m_HitVelocities[i] = null;
                     break;
                 }
             }
         }
-
-        public void TriggerNotes(byte color, byte type, byte flag, byte[] velocities, int velocityArrayOffset)
+        private byte Boost(byte rawpad, byte velocity)
         {
-            int isRed = color & ((byte)PadColor.Red);
-            int isYellow = color & ((byte)PadColor.Yellow);
-            int isBlue = color & ((byte)PadColor.Blue);
-            int isGreen = color & ((byte)PadColor.Green);
-            
-            int isTom = type & ((byte)PadType.Tom);
-            int isCymbal = type & ((byte)PadType.Cymbal);
-
-            bool OneColor = ((isRed != 0 ? 1 : 0) + (isYellow != 0 ? 1 : 0) + (isBlue != 0 ? 1 : 0) + (isGreen != 0 ? 1 : 0)) == 1;
-
-            if (isCymbal != 0)
-            {
-                if (flag == 0)
-                {
-                    TriggerNote(DrumPad.YellowCymbal, velocities[velocityArrayOffset + (OneColor ? 0 : 1)]);
-                    if (OneColor == false)
-                        isYellow = 0;
-                }
-                if ((flag & (byte)CymbalType.Blue) != 0)
-                {
-                    TriggerNote(DrumPad.BlueCymbal, velocities[velocityArrayOffset + (OneColor ? 3 : 1)]);
-                    if (OneColor == false)
-                        isBlue = 0;
-                }
-                if ((flag & (byte)CymbalType.Green) != 0)
-                {
-                    TriggerNote(DrumPad.GreenCymbal, velocities[velocityArrayOffset + (OneColor ? 2 : 1)]);
-                    if (OneColor == false)
-                        isGreen = 0;
-                }
-            }
-            if (isTom != 0)
-            {
-                if (isRed != 0)
-                {
-                    TriggerNote(DrumPad.RedTom, velocities[velocityArrayOffset + 1]);
-                }
-                if (isYellow != 0)
-                {
-                    TriggerNote(DrumPad.YellowTom, velocities[velocityArrayOffset + 0]);
-                }
-                if (isBlue != 0)
-                {
-                    TriggerNote(DrumPad.BlueTom, velocities[velocityArrayOffset + 3]);
-                }
-                if (isGreen != 0)
-                {
-                    TriggerNote(DrumPad.GreenTom, velocities[velocityArrayOffset + 2]);
-                }
-            }
-        }
-        private byte Boost(DrumPad pad, byte velocity)
-        {
+            GuiDrumPad pad = m_RawToGuiConverter.TranslatePad(rawpad);
             if (m_Main.GuiLinker.GetBoostEnabled(pad))
             {
                 velocity = (byte)Math.Min((byte)255, velocity + m_Main.GuiLinker.GetBoost(pad));
             }
             return velocity;
         }
-        private void TriggerNote(DrumPad pad, byte velocity)
+        public void TriggerNote(byte rawpad, byte velocity)
         {
-            velocity = (byte)(Math.Max(0, Math.Min(255, 255 - (velocity - m_MinVelocitySensitivity))));
-            velocity = Boost(pad, velocity);
-            if (m_HitVelocities[(int)pad] == null)
+            velocity = Boost(rawpad, velocity);
+            if (m_HitVelocities[rawpad] == null)
             {
-                m_HitVelocities[(int)pad] = velocity;
-                m_Timers[(int)pad].Start();
+                m_HitVelocities[(int)rawpad] = velocity;
+                m_Timers[rawpad].Start();
             }
-            else if (m_HitVelocities[(int)pad].Value < velocity)
+            else if (m_HitVelocities[(int)rawpad].Value < velocity)
             {
-                m_HitVelocities[(int)pad] = velocity;
+                m_HitVelocities[(int)rawpad] = velocity;
             }
         }
     }
