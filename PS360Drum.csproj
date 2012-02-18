@@ -69,6 +69,7 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Management" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.XML" />
     <Reference Include="UsbLibrary, Version=1.0.3206.41697, Culture=neutral, processorArchitecture=MSIL">
@@ -80,6 +81,7 @@
     <Compile Include="Drums\GHWT\GHWTDrumController.cs" />
     <Compile Include="Drums\GHWT\GHWTRawToGui.cs" />
     <Compile Include="Drums\Ps3Pro\ProDrumRawToGui.cs" />
+    <Compile Include="Drums\UsbDeviceInfo.cs" />
     <Compile Include="FrmMain.cs">
       <SubType>Form</SubType>
     </Compile>

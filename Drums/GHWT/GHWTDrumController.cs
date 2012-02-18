@@ -81,15 +81,15 @@ namespace _PS360Drum
         private Timer m_CheckForDrumTimer;
             
         #region Constructor
-        public GHWTDrumController(FrmMain main)
+        public GHWTDrumController(FrmMain main, int pid, int vid)
         {
             m_UsbDrum = new UsbHidPort();
-            m_UsbDrum.ProductId = 1817;
-            m_UsbDrum.VendorId = 1118;
-            m_UsbDrum.OnSpecifiedDeviceArrived += new System.EventHandler(UsbOnSpecifiedDeviceArrived);
-            m_UsbDrum.OnSpecifiedDeviceRemoved += new System.EventHandler(UsbOnSpecifiedDeviceRemoved);
-            m_UsbDrum.OnDataRecieved += new UsbLibrary.DataRecievedEventHandler(UsbOnDataRecieved);
-
+            m_UsbDrum.ProductId = pid;
+            m_UsbDrum.VendorId = vid;
+            m_UsbDrum.OnSpecifiedDeviceArrived += UsbOnSpecifiedDeviceArrived;
+            m_UsbDrum.OnSpecifiedDeviceRemoved += UsbOnSpecifiedDeviceRemoved;
+            m_UsbDrum.OnDataRecieved += UsbOnDataRecieved;
+            
             m_HitFilter = new HitFilter(main, 6, m_GuiTranslater);
             m_CheckForDrumTimer = new Timer();
             m_CheckForDrumTimer.Interval = 1000;
@@ -97,6 +97,15 @@ namespace _PS360Drum
             m_CheckForDrumTimer.Start();
         }
         #endregion
+
+        public void Dispose()
+        {
+            m_UsbDrum.OnSpecifiedDeviceArrived -= UsbOnSpecifiedDeviceArrived;
+            m_UsbDrum.OnSpecifiedDeviceRemoved -= UsbOnSpecifiedDeviceRemoved;
+            m_UsbDrum.OnDataRecieved -= UsbOnDataRecieved;
+            m_UsbDrum.UnregisterHandle();
+            m_UsbDrum.Dispose();
+        }
 
         #region USB
         public void RegisterHandle(IntPtr handle)
