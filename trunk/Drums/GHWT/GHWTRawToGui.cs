@@ -18,7 +18,7 @@ namespace _PS360Drum
                 case (byte)GHWTDrumController.DrumPad.OrangeCymbal: return GuiDrumPad.GreenCymbal;
                 case (byte)GHWTDrumController.DrumPad.Pedal1: return GuiDrumPad.PedalRight;
             }
-            Debug.Assert(false, "Unknown Pad value");
+            //Debug.Assert(false, "Unknown Pad value");
             return GuiDrumPad.BlueTom;
         }
         public GuiDrumButton TranslateButton(byte raw)
@@ -32,7 +32,7 @@ namespace _PS360Drum
                 case (byte)GHWTDrumController.DrumButton.Start: return GuiDrumButton.Start;
                 case (byte)GHWTDrumController.DrumButton.Back: return GuiDrumButton.Select;
             }
-            Debug.Assert(false, "Unknown Button value");
+            //Debug.Assert(false, "Unknown Button value");
             return GuiDrumButton.X;
         }
         public GuiDrumDPad TranslateDPad(byte raw)
@@ -49,7 +49,7 @@ namespace _PS360Drum
                 case (byte)GHWTDrumController.DPadValue.RightUp: return GuiDrumDPad.RightUp;
                 case (byte)GHWTDrumController.DPadValue.None: return GuiDrumDPad.None;
             }
-            Debug.Assert(false, "Unknown Dpad value");
+            //Debug.Assert(false, "Unknown Dpad value");
             return GuiDrumDPad.Down;
         }
     }

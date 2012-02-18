@@ -68,6 +68,8 @@
             System.Windows.Forms.Label label34;
             System.Windows.Forms.Label label35;
             System.Windows.Forms.Label label36;
+            System.Windows.Forms.Label label38;
+            System.Windows.Forms.Label label37;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmMain));
             this.ddlAdvSwitchDPadUp = new System.Windows.Forms.ComboBox();
             this.nupAdvVelDPadUp = new System.Windows.Forms.NumericUpDown();
@@ -111,10 +113,6 @@
             this.btnRedTom = new System.Windows.Forms.Button();
             this.pbRedTom = new System.Windows.Forms.ProgressBar();
             this.chkBoostRedTom = new System.Windows.Forms.CheckBox();
-            this.btnPedalRight = new System.Windows.Forms.Button();
-            this.pbPedalRight = new System.Windows.Forms.ProgressBar();
-            this.chkBoostPedalRight = new System.Windows.Forms.CheckBox();
-            this.ddlPedalRight = new System.Windows.Forms.ComboBox();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
             this.ddlYellowTom = new System.Windows.Forms.ComboBox();
             this.nupYellowTom = new System.Windows.Forms.NumericUpDown();
@@ -127,6 +125,18 @@
             this.pbBlueTom = new System.Windows.Forms.ProgressBar();
             this.chkBoostBlueTom = new System.Windows.Forms.CheckBox();
             this.ddlBlueTom = new System.Windows.Forms.ComboBox();
+            this.groupBox13 = new System.Windows.Forms.GroupBox();
+            this.ddlPedalLeft = new System.Windows.Forms.ComboBox();
+            this.btnPedalLeft = new System.Windows.Forms.Button();
+            this.pbPedalLeft = new System.Windows.Forms.ProgressBar();
+            this.chkBoostPedalLeft = new System.Windows.Forms.CheckBox();
+            this.nupPedalLeft = new System.Windows.Forms.NumericUpDown();
+            this.groupBox12 = new System.Windows.Forms.GroupBox();
+            this.ddlPedalRight = new System.Windows.Forms.ComboBox();
+            this.btnPedalRight = new System.Windows.Forms.Button();
+            this.nupPedalRight = new System.Windows.Forms.NumericUpDown();
+            this.pbPedalRight = new System.Windows.Forms.ProgressBar();
+            this.chkBoostPedalRight = new System.Windows.Forms.CheckBox();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.nupGreenTom = new System.Windows.Forms.NumericUpDown();
             this.btnGreenTom = new System.Windows.Forms.Button();
@@ -173,8 +183,6 @@
             this.nupX = new System.Windows.Forms.NumericUpDown();
             this.nupTriangle = new System.Windows.Forms.NumericUpDown();
             this.nupCircle = new System.Windows.Forms.NumericUpDown();
-            this.nupPedalLeft = new System.Windows.Forms.NumericUpDown();
-            this.nupPedalRight = new System.Windows.Forms.NumericUpDown();
             this.lowerValues = new System.Windows.Forms.Timer(this.components);
             this.saveFileDialog = new System.Windows.Forms.SaveFileDialog();
             this.btnSave = new System.Windows.Forms.Button();
@@ -227,12 +235,11 @@
             this.nupMNnoteTo = new System.Windows.Forms.NumericUpDown();
             this.ddlMNvelCheck = new System.Windows.Forms.ComboBox();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.groupBox12 = new System.Windows.Forms.GroupBox();
-            this.groupBox13 = new System.Windows.Forms.GroupBox();
-            this.ddlPedalLeft = new System.Windows.Forms.ComboBox();
-            this.btnPedalLeft = new System.Windows.Forms.Button();
-            this.pbPedalLeft = new System.Windows.Forms.ProgressBar();
-            this.chkBoostPedalLeft = new System.Windows.Forms.CheckBox();
+            this.btnRefreshUsb = new System.Windows.Forms.Button();
+            this.ddlController = new System.Windows.Forms.ComboBox();
+            this.ddlUsbController = new System.Windows.Forms.ComboBox();
+            this.btnConnect = new System.Windows.Forms.Button();
+            this.btnExit = new System.Windows.Forms.Button();
             lblMIDIChannel = new System.Windows.Forms.Label();
             lblMIDIDevice = new System.Windows.Forms.Label();
             label1 = new System.Windows.Forms.Label();
@@ -272,6 +279,8 @@
             label34 = new System.Windows.Forms.Label();
             label35 = new System.Windows.Forms.Label();
             label36 = new System.Windows.Forms.Label();
+            label38 = new System.Windows.Forms.Label();
+            label37 = new System.Windows.Forms.Label();
             tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nupAdvVelDPadUp)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nupAdvVelDPadRight)).BeginInit();
@@ -303,6 +312,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.nupYellowTom)).BeginInit();
             this.groupBox5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nupBlueTom)).BeginInit();
+            this.groupBox13.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nupPedalLeft)).BeginInit();
+            this.groupBox12.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nupPedalRight)).BeginInit();
             this.groupBox4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nupGreenTom)).BeginInit();
             this.groupBox3.SuspendLayout();
@@ -322,8 +335,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.nupX)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nupTriangle)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nupCircle)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nupPedalLeft)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nupPedalRight)).BeginInit();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -347,13 +358,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.nupMNvelCheck)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nupMNnoteTo)).BeginInit();
             this.panel1.SuspendLayout();
-            this.groupBox12.SuspendLayout();
-            this.groupBox13.SuspendLayout();
             this.SuspendLayout();
             // 
             // lblMIDIChannel
             // 
-            lblMIDIChannel.Location = new System.Drawing.Point(185, 0);
+            lblMIDIChannel.Location = new System.Drawing.Point(764, 4);
             lblMIDIChannel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             lblMIDIChannel.Name = "lblMIDIChannel";
             lblMIDIChannel.Size = new System.Drawing.Size(107, 30);
@@ -363,7 +372,7 @@
             // 
             // lblMIDIDevice
             // 
-            lblMIDIDevice.Location = new System.Drawing.Point(4, 0);
+            lblMIDIDevice.Location = new System.Drawing.Point(583, 4);
             lblMIDIDevice.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             lblMIDIDevice.Name = "lblMIDIDevice";
             lblMIDIDevice.Size = new System.Drawing.Size(96, 30);
@@ -1277,9 +1286,29 @@
             label36.TabIndex = 12;
             label36.Text = "+";
             // 
+            // label38
+            // 
+            label38.Location = new System.Drawing.Point(296, 2);
+            label38.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            label38.Name = "label38";
+            label38.Size = new System.Drawing.Size(160, 30);
+            label38.TabIndex = 28;
+            label38.Text = "Controller";
+            label38.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // label37
+            // 
+            label37.Location = new System.Drawing.Point(11, 2);
+            label37.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            label37.Name = "label37";
+            label37.Size = new System.Drawing.Size(277, 30);
+            label37.TabIndex = 27;
+            label37.Text = "Usb Controller";
+            label37.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
             // nupMIDIChannel
             // 
-            this.nupMIDIChannel.Location = new System.Drawing.Point(185, 30);
+            this.nupMIDIChannel.Location = new System.Drawing.Point(764, 34);
             this.nupMIDIChannel.Margin = new System.Windows.Forms.Padding(4);
             this.nupMIDIChannel.Maximum = new decimal(new int[] {
             15,
@@ -1295,7 +1324,7 @@
             // 
             this.ddlMIDIDevice.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.ddlMIDIDevice.FormattingEnabled = true;
-            this.ddlMIDIDevice.Location = new System.Drawing.Point(4, 30);
+            this.ddlMIDIDevice.Location = new System.Drawing.Point(583, 34);
             this.ddlMIDIDevice.Margin = new System.Windows.Forms.Padding(4);
             this.ddlMIDIDevice.Name = "ddlMIDIDevice";
             this.ddlMIDIDevice.Size = new System.Drawing.Size(160, 24);
@@ -1341,6 +1370,7 @@
             this.pnlHolder.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlHolder.Location = new System.Drawing.Point(3, 3);
             this.pnlHolder.Margin = new System.Windows.Forms.Padding(4);
+            this.pnlHolder.MaximumSize = new System.Drawing.Size(859, 608);
             this.pnlHolder.Name = "pnlHolder";
             this.pnlHolder.Size = new System.Drawing.Size(859, 608);
             this.pnlHolder.TabIndex = 15;
@@ -1429,57 +1459,6 @@
             this.chkBoostRedTom.TabIndex = 28;
             this.chkBoostRedTom.Text = "Boost";
             this.chkBoostRedTom.UseVisualStyleBackColor = false;
-            // 
-            // btnPedalRight
-            // 
-            this.btnPedalRight.ForeColor = System.Drawing.Color.Black;
-            this.btnPedalRight.Location = new System.Drawing.Point(80, 19);
-            this.btnPedalRight.Margin = new System.Windows.Forms.Padding(4);
-            this.btnPedalRight.Name = "btnPedalRight";
-            this.btnPedalRight.Size = new System.Drawing.Size(53, 25);
-            this.btnPedalRight.TabIndex = 10;
-            this.btnPedalRight.Text = "Hit";
-            this.btnPedalRight.UseVisualStyleBackColor = true;
-            this.btnPedalRight.Click += new System.EventHandler(this.ButtonPress);
-            // 
-            // pbPedalRight
-            // 
-            this.pbPedalRight.BackColor = System.Drawing.Color.Black;
-            this.pbPedalRight.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(175)))), ((int)(((byte)(230)))));
-            this.pbPedalRight.Location = new System.Drawing.Point(5, 49);
-            this.pbPedalRight.Margin = new System.Windows.Forms.Padding(4);
-            this.pbPedalRight.Maximum = 127;
-            this.pbPedalRight.Name = "pbPedalRight";
-            this.pbPedalRight.Size = new System.Drawing.Size(128, 15);
-            this.pbPedalRight.Style = System.Windows.Forms.ProgressBarStyle.Continuous;
-            this.pbPedalRight.TabIndex = 24;
-            // 
-            // chkBoostPedalRight
-            // 
-            this.chkBoostPedalRight.AutoSize = true;
-            this.chkBoostPedalRight.BackColor = System.Drawing.Color.Transparent;
-            this.chkBoostPedalRight.Checked = true;
-            this.chkBoostPedalRight.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.chkBoostPedalRight.ForeColor = System.Drawing.Color.White;
-            this.chkBoostPedalRight.Location = new System.Drawing.Point(5, 72);
-            this.chkBoostPedalRight.Margin = new System.Windows.Forms.Padding(4);
-            this.chkBoostPedalRight.Name = "chkBoostPedalRight";
-            this.chkBoostPedalRight.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.chkBoostPedalRight.Size = new System.Drawing.Size(66, 21);
-            this.chkBoostPedalRight.TabIndex = 29;
-            this.chkBoostPedalRight.Text = "Boost";
-            this.chkBoostPedalRight.UseVisualStyleBackColor = false;
-            // 
-            // ddlPedalRight
-            // 
-            this.ddlPedalRight.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.ddlPedalRight.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ddlPedalRight.FormattingEnabled = true;
-            this.ddlPedalRight.Location = new System.Drawing.Point(79, 72);
-            this.ddlPedalRight.Margin = new System.Windows.Forms.Padding(4);
-            this.ddlPedalRight.Name = "ddlPedalRight";
-            this.ddlPedalRight.Size = new System.Drawing.Size(52, 21);
-            this.ddlPedalRight.TabIndex = 35;
             // 
             // groupBox6
             // 
@@ -1650,6 +1629,175 @@
             this.ddlBlueTom.Name = "ddlBlueTom";
             this.ddlBlueTom.Size = new System.Drawing.Size(52, 21);
             this.ddlBlueTom.TabIndex = 35;
+            // 
+            // groupBox13
+            // 
+            this.groupBox13.Controls.Add(this.ddlPedalLeft);
+            this.groupBox13.Controls.Add(this.btnPedalLeft);
+            this.groupBox13.Controls.Add(this.pbPedalLeft);
+            this.groupBox13.Controls.Add(this.chkBoostPedalLeft);
+            this.groupBox13.Controls.Add(this.nupPedalLeft);
+            this.groupBox13.ForeColor = System.Drawing.Color.White;
+            this.groupBox13.Location = new System.Drawing.Point(75, 448);
+            this.groupBox13.Name = "groupBox13";
+            this.groupBox13.Size = new System.Drawing.Size(138, 100);
+            this.groupBox13.TabIndex = 41;
+            this.groupBox13.TabStop = false;
+            this.groupBox13.Text = "Pedal Left";
+            // 
+            // ddlPedalLeft
+            // 
+            this.ddlPedalLeft.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.ddlPedalLeft.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ddlPedalLeft.FormattingEnabled = true;
+            this.ddlPedalLeft.Location = new System.Drawing.Point(79, 72);
+            this.ddlPedalLeft.Margin = new System.Windows.Forms.Padding(4);
+            this.ddlPedalLeft.Name = "ddlPedalLeft";
+            this.ddlPedalLeft.Size = new System.Drawing.Size(52, 21);
+            this.ddlPedalLeft.TabIndex = 35;
+            // 
+            // btnPedalLeft
+            // 
+            this.btnPedalLeft.ForeColor = System.Drawing.Color.Black;
+            this.btnPedalLeft.Location = new System.Drawing.Point(80, 19);
+            this.btnPedalLeft.Margin = new System.Windows.Forms.Padding(4);
+            this.btnPedalLeft.Name = "btnPedalLeft";
+            this.btnPedalLeft.Size = new System.Drawing.Size(53, 25);
+            this.btnPedalLeft.TabIndex = 10;
+            this.btnPedalLeft.Text = "Hit";
+            this.btnPedalLeft.UseVisualStyleBackColor = true;
+            this.btnPedalLeft.Click += new System.EventHandler(this.ButtonPress);
+            // 
+            // pbPedalLeft
+            // 
+            this.pbPedalLeft.BackColor = System.Drawing.Color.Black;
+            this.pbPedalLeft.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(175)))), ((int)(((byte)(230)))));
+            this.pbPedalLeft.Location = new System.Drawing.Point(5, 49);
+            this.pbPedalLeft.Margin = new System.Windows.Forms.Padding(4);
+            this.pbPedalLeft.Maximum = 127;
+            this.pbPedalLeft.Name = "pbPedalLeft";
+            this.pbPedalLeft.Size = new System.Drawing.Size(128, 15);
+            this.pbPedalLeft.Style = System.Windows.Forms.ProgressBarStyle.Continuous;
+            this.pbPedalLeft.TabIndex = 24;
+            // 
+            // chkBoostPedalLeft
+            // 
+            this.chkBoostPedalLeft.AutoSize = true;
+            this.chkBoostPedalLeft.BackColor = System.Drawing.Color.Transparent;
+            this.chkBoostPedalLeft.Checked = true;
+            this.chkBoostPedalLeft.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.chkBoostPedalLeft.ForeColor = System.Drawing.Color.White;
+            this.chkBoostPedalLeft.Location = new System.Drawing.Point(5, 72);
+            this.chkBoostPedalLeft.Margin = new System.Windows.Forms.Padding(4);
+            this.chkBoostPedalLeft.Name = "chkBoostPedalLeft";
+            this.chkBoostPedalLeft.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.chkBoostPedalLeft.Size = new System.Drawing.Size(66, 21);
+            this.chkBoostPedalLeft.TabIndex = 29;
+            this.chkBoostPedalLeft.Text = "Boost";
+            this.chkBoostPedalLeft.UseVisualStyleBackColor = false;
+            // 
+            // nupPedalLeft
+            // 
+            this.nupPedalLeft.Location = new System.Drawing.Point(8, 20);
+            this.nupPedalLeft.Margin = new System.Windows.Forms.Padding(4);
+            this.nupPedalLeft.Maximum = new decimal(new int[] {
+            127,
+            0,
+            0,
+            0});
+            this.nupPedalLeft.Name = "nupPedalLeft";
+            this.nupPedalLeft.Size = new System.Drawing.Size(64, 22);
+            this.nupPedalLeft.TabIndex = 3;
+            this.nupPedalLeft.Value = new decimal(new int[] {
+            36,
+            0,
+            0,
+            0});
+            // 
+            // groupBox12
+            // 
+            this.groupBox12.Controls.Add(this.ddlPedalRight);
+            this.groupBox12.Controls.Add(this.btnPedalRight);
+            this.groupBox12.Controls.Add(this.nupPedalRight);
+            this.groupBox12.Controls.Add(this.pbPedalRight);
+            this.groupBox12.Controls.Add(this.chkBoostPedalRight);
+            this.groupBox12.ForeColor = System.Drawing.Color.White;
+            this.groupBox12.Location = new System.Drawing.Point(692, 433);
+            this.groupBox12.Name = "groupBox12";
+            this.groupBox12.Size = new System.Drawing.Size(138, 100);
+            this.groupBox12.TabIndex = 41;
+            this.groupBox12.TabStop = false;
+            this.groupBox12.Text = "Pedal Right";
+            // 
+            // ddlPedalRight
+            // 
+            this.ddlPedalRight.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.ddlPedalRight.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ddlPedalRight.FormattingEnabled = true;
+            this.ddlPedalRight.Location = new System.Drawing.Point(79, 72);
+            this.ddlPedalRight.Margin = new System.Windows.Forms.Padding(4);
+            this.ddlPedalRight.Name = "ddlPedalRight";
+            this.ddlPedalRight.Size = new System.Drawing.Size(52, 21);
+            this.ddlPedalRight.TabIndex = 35;
+            // 
+            // btnPedalRight
+            // 
+            this.btnPedalRight.ForeColor = System.Drawing.Color.Black;
+            this.btnPedalRight.Location = new System.Drawing.Point(80, 19);
+            this.btnPedalRight.Margin = new System.Windows.Forms.Padding(4);
+            this.btnPedalRight.Name = "btnPedalRight";
+            this.btnPedalRight.Size = new System.Drawing.Size(53, 25);
+            this.btnPedalRight.TabIndex = 10;
+            this.btnPedalRight.Text = "Hit";
+            this.btnPedalRight.UseVisualStyleBackColor = true;
+            this.btnPedalRight.Click += new System.EventHandler(this.ButtonPress);
+            // 
+            // nupPedalRight
+            // 
+            this.nupPedalRight.Location = new System.Drawing.Point(8, 21);
+            this.nupPedalRight.Margin = new System.Windows.Forms.Padding(4);
+            this.nupPedalRight.Maximum = new decimal(new int[] {
+            127,
+            0,
+            0,
+            0});
+            this.nupPedalRight.Name = "nupPedalRight";
+            this.nupPedalRight.Size = new System.Drawing.Size(64, 22);
+            this.nupPedalRight.TabIndex = 3;
+            this.nupPedalRight.Value = new decimal(new int[] {
+            36,
+            0,
+            0,
+            0});
+            this.nupPedalRight.ValueChanged += new System.EventHandler(this.nupPedalRight_ValueChanged);
+            // 
+            // pbPedalRight
+            // 
+            this.pbPedalRight.BackColor = System.Drawing.Color.Black;
+            this.pbPedalRight.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(175)))), ((int)(((byte)(230)))));
+            this.pbPedalRight.Location = new System.Drawing.Point(5, 49);
+            this.pbPedalRight.Margin = new System.Windows.Forms.Padding(4);
+            this.pbPedalRight.Maximum = 127;
+            this.pbPedalRight.Name = "pbPedalRight";
+            this.pbPedalRight.Size = new System.Drawing.Size(128, 15);
+            this.pbPedalRight.Style = System.Windows.Forms.ProgressBarStyle.Continuous;
+            this.pbPedalRight.TabIndex = 24;
+            // 
+            // chkBoostPedalRight
+            // 
+            this.chkBoostPedalRight.AutoSize = true;
+            this.chkBoostPedalRight.BackColor = System.Drawing.Color.Transparent;
+            this.chkBoostPedalRight.Checked = true;
+            this.chkBoostPedalRight.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.chkBoostPedalRight.ForeColor = System.Drawing.Color.White;
+            this.chkBoostPedalRight.Location = new System.Drawing.Point(5, 72);
+            this.chkBoostPedalRight.Margin = new System.Windows.Forms.Padding(4);
+            this.chkBoostPedalRight.Name = "chkBoostPedalRight";
+            this.chkBoostPedalRight.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.chkBoostPedalRight.Size = new System.Drawing.Size(66, 21);
+            this.chkBoostPedalRight.TabIndex = 29;
+            this.chkBoostPedalRight.Text = "Boost";
+            this.chkBoostPedalRight.UseVisualStyleBackColor = false;
             // 
             // groupBox4
             // 
@@ -2350,43 +2498,6 @@
             0,
             0});
             // 
-            // nupPedalLeft
-            // 
-            this.nupPedalLeft.Location = new System.Drawing.Point(8, 20);
-            this.nupPedalLeft.Margin = new System.Windows.Forms.Padding(4);
-            this.nupPedalLeft.Maximum = new decimal(new int[] {
-            127,
-            0,
-            0,
-            0});
-            this.nupPedalLeft.Name = "nupPedalLeft";
-            this.nupPedalLeft.Size = new System.Drawing.Size(64, 22);
-            this.nupPedalLeft.TabIndex = 3;
-            this.nupPedalLeft.Value = new decimal(new int[] {
-            36,
-            0,
-            0,
-            0});
-            // 
-            // nupPedalRight
-            // 
-            this.nupPedalRight.Location = new System.Drawing.Point(8, 21);
-            this.nupPedalRight.Margin = new System.Windows.Forms.Padding(4);
-            this.nupPedalRight.Maximum = new decimal(new int[] {
-            127,
-            0,
-            0,
-            0});
-            this.nupPedalRight.Name = "nupPedalRight";
-            this.nupPedalRight.Size = new System.Drawing.Size(64, 22);
-            this.nupPedalRight.TabIndex = 3;
-            this.nupPedalRight.Value = new decimal(new int[] {
-            36,
-            0,
-            0,
-            0});
-            this.nupPedalRight.ValueChanged += new System.EventHandler(this.nupPedalRight_ValueChanged);
-            // 
             // lowerValues
             // 
             this.lowerValues.Enabled = true;
@@ -2400,7 +2511,7 @@
             // 
             // btnSave
             // 
-            this.btnSave.Location = new System.Drawing.Point(554, 27);
+            this.btnSave.Location = new System.Drawing.Point(559, 66);
             this.btnSave.Margin = new System.Windows.Forms.Padding(4);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(116, 28);
@@ -2411,7 +2522,7 @@
             // 
             // btnLoad
             // 
-            this.btnLoad.Location = new System.Drawing.Point(430, 26);
+            this.btnLoad.Location = new System.Drawing.Point(435, 66);
             this.btnLoad.Margin = new System.Windows.Forms.Padding(4);
             this.btnLoad.Name = "btnLoad";
             this.btnLoad.Size = new System.Drawing.Size(116, 28);
@@ -2426,7 +2537,7 @@
             // 
             // btnReset
             // 
-            this.btnReset.Location = new System.Drawing.Point(306, 26);
+            this.btnReset.Location = new System.Drawing.Point(311, 66);
             this.btnReset.Margin = new System.Windows.Forms.Padding(4);
             this.btnReset.Name = "btnReset";
             this.btnReset.Size = new System.Drawing.Size(116, 28);
@@ -2443,7 +2554,7 @@
             this.tabControl1.Location = new System.Drawing.Point(0, 0);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(873, 643);
+            this.tabControl1.Size = new System.Drawing.Size(873, 692);
             this.tabControl1.TabIndex = 25;
             // 
             // tabPage1
@@ -2452,7 +2563,7 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 25);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(865, 614);
+            this.tabPage1.Size = new System.Drawing.Size(865, 663);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Simple";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -2466,7 +2577,7 @@
             this.tabPage2.Location = new System.Drawing.Point(4, 25);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(865, 614);
+            this.tabPage2.Size = new System.Drawing.Size(865, 663);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Advanced";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -3092,6 +3203,13 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.btnConnect);
+            this.panel1.Controls.Add(this.btnExit);
+            this.panel1.Controls.Add(this.btnRefreshUsb);
+            this.panel1.Controls.Add(label38);
+            this.panel1.Controls.Add(label37);
+            this.panel1.Controls.Add(this.ddlController);
+            this.panel1.Controls.Add(this.ddlUsbController);
             this.panel1.Controls.Add(this.btnSave);
             this.panel1.Controls.Add(lblMIDIChannel);
             this.panel1.Controls.Add(this.btnLoad);
@@ -3100,103 +3218,74 @@
             this.panel1.Controls.Add(this.ddlMIDIDevice);
             this.panel1.Controls.Add(this.btnReset);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel1.Location = new System.Drawing.Point(0, 583);
+            this.panel1.Location = new System.Drawing.Point(0, 591);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(873, 60);
+            this.panel1.Size = new System.Drawing.Size(873, 101);
             this.panel1.TabIndex = 26;
             // 
-            // groupBox12
+            // btnRefreshUsb
             // 
-            this.groupBox12.Controls.Add(this.ddlPedalRight);
-            this.groupBox12.Controls.Add(this.btnPedalRight);
-            this.groupBox12.Controls.Add(this.nupPedalRight);
-            this.groupBox12.Controls.Add(this.pbPedalRight);
-            this.groupBox12.Controls.Add(this.chkBoostPedalRight);
-            this.groupBox12.ForeColor = System.Drawing.Color.White;
-            this.groupBox12.Location = new System.Drawing.Point(692, 433);
-            this.groupBox12.Name = "groupBox12";
-            this.groupBox12.Size = new System.Drawing.Size(138, 100);
-            this.groupBox12.TabIndex = 41;
-            this.groupBox12.TabStop = false;
-            this.groupBox12.Text = "Pedal Right";
+            this.btnRefreshUsb.Location = new System.Drawing.Point(11, 66);
+            this.btnRefreshUsb.Margin = new System.Windows.Forms.Padding(4);
+            this.btnRefreshUsb.Name = "btnRefreshUsb";
+            this.btnRefreshUsb.Size = new System.Drawing.Size(112, 28);
+            this.btnRefreshUsb.TabIndex = 29;
+            this.btnRefreshUsb.Text = "Refresh";
+            this.btnRefreshUsb.UseVisualStyleBackColor = true;
+            this.btnRefreshUsb.Click += new System.EventHandler(this.btnRefreshUsb_Click);
             // 
-            // groupBox13
+            // ddlController
             // 
-            this.groupBox13.Controls.Add(this.ddlPedalLeft);
-            this.groupBox13.Controls.Add(this.btnPedalLeft);
-            this.groupBox13.Controls.Add(this.pbPedalLeft);
-            this.groupBox13.Controls.Add(this.chkBoostPedalLeft);
-            this.groupBox13.Controls.Add(this.nupPedalLeft);
-            this.groupBox13.ForeColor = System.Drawing.Color.White;
-            this.groupBox13.Location = new System.Drawing.Point(75, 448);
-            this.groupBox13.Name = "groupBox13";
-            this.groupBox13.Size = new System.Drawing.Size(138, 100);
-            this.groupBox13.TabIndex = 41;
-            this.groupBox13.TabStop = false;
-            this.groupBox13.Text = "Pedal Left";
+            this.ddlController.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.ddlController.FormattingEnabled = true;
+            this.ddlController.Location = new System.Drawing.Point(296, 32);
+            this.ddlController.Margin = new System.Windows.Forms.Padding(4);
+            this.ddlController.Name = "ddlController";
+            this.ddlController.Size = new System.Drawing.Size(233, 24);
+            this.ddlController.TabIndex = 25;
             // 
-            // ddlPedalLeft
+            // ddlUsbController
             // 
-            this.ddlPedalLeft.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.ddlPedalLeft.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ddlPedalLeft.FormattingEnabled = true;
-            this.ddlPedalLeft.Location = new System.Drawing.Point(79, 72);
-            this.ddlPedalLeft.Margin = new System.Windows.Forms.Padding(4);
-            this.ddlPedalLeft.Name = "ddlPedalLeft";
-            this.ddlPedalLeft.Size = new System.Drawing.Size(52, 21);
-            this.ddlPedalLeft.TabIndex = 35;
+            this.ddlUsbController.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.ddlUsbController.FormattingEnabled = true;
+            this.ddlUsbController.Location = new System.Drawing.Point(11, 32);
+            this.ddlUsbController.Margin = new System.Windows.Forms.Padding(4);
+            this.ddlUsbController.Name = "ddlUsbController";
+            this.ddlUsbController.Size = new System.Drawing.Size(277, 24);
+            this.ddlUsbController.TabIndex = 26;
             // 
-            // btnPedalLeft
+            // btnConnect
             // 
-            this.btnPedalLeft.ForeColor = System.Drawing.Color.Black;
-            this.btnPedalLeft.Location = new System.Drawing.Point(80, 19);
-            this.btnPedalLeft.Margin = new System.Windows.Forms.Padding(4);
-            this.btnPedalLeft.Name = "btnPedalLeft";
-            this.btnPedalLeft.Size = new System.Drawing.Size(53, 25);
-            this.btnPedalLeft.TabIndex = 10;
-            this.btnPedalLeft.Text = "Hit";
-            this.btnPedalLeft.UseVisualStyleBackColor = true;
-            this.btnPedalLeft.Click += new System.EventHandler(this.ButtonPress);
+            this.btnConnect.Location = new System.Drawing.Point(131, 66);
+            this.btnConnect.Margin = new System.Windows.Forms.Padding(4);
+            this.btnConnect.Name = "btnConnect";
+            this.btnConnect.Size = new System.Drawing.Size(112, 28);
+            this.btnConnect.TabIndex = 29;
+            this.btnConnect.Text = "Connect";
+            this.btnConnect.UseVisualStyleBackColor = true;
+            this.btnConnect.Click += new System.EventHandler(this.btnConnect_Click);
             // 
-            // pbPedalLeft
+            // btnExit
             // 
-            this.pbPedalLeft.BackColor = System.Drawing.Color.Black;
-            this.pbPedalLeft.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(175)))), ((int)(((byte)(230)))));
-            this.pbPedalLeft.Location = new System.Drawing.Point(5, 49);
-            this.pbPedalLeft.Margin = new System.Windows.Forms.Padding(4);
-            this.pbPedalLeft.Maximum = 127;
-            this.pbPedalLeft.Name = "pbPedalLeft";
-            this.pbPedalLeft.Size = new System.Drawing.Size(128, 15);
-            this.pbPedalLeft.Style = System.Windows.Forms.ProgressBarStyle.Continuous;
-            this.pbPedalLeft.TabIndex = 24;
-            // 
-            // chkBoostPedalLeft
-            // 
-            this.chkBoostPedalLeft.AutoSize = true;
-            this.chkBoostPedalLeft.BackColor = System.Drawing.Color.Transparent;
-            this.chkBoostPedalLeft.Checked = true;
-            this.chkBoostPedalLeft.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.chkBoostPedalLeft.ForeColor = System.Drawing.Color.White;
-            this.chkBoostPedalLeft.Location = new System.Drawing.Point(5, 72);
-            this.chkBoostPedalLeft.Margin = new System.Windows.Forms.Padding(4);
-            this.chkBoostPedalLeft.Name = "chkBoostPedalLeft";
-            this.chkBoostPedalLeft.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.chkBoostPedalLeft.Size = new System.Drawing.Size(66, 21);
-            this.chkBoostPedalLeft.TabIndex = 29;
-            this.chkBoostPedalLeft.Text = "Boost";
-            this.chkBoostPedalLeft.UseVisualStyleBackColor = false;
+            this.btnExit.Location = new System.Drawing.Point(748, 66);
+            this.btnExit.Margin = new System.Windows.Forms.Padding(4);
+            this.btnExit.Name = "btnExit";
+            this.btnExit.Size = new System.Drawing.Size(112, 28);
+            this.btnExit.TabIndex = 29;
+            this.btnExit.Text = "Exit";
+            this.btnExit.UseVisualStyleBackColor = true;
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
             // FrmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(873, 643);
+            this.ClientSize = new System.Drawing.Size(873, 692);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.tabControl1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4);
-            this.MaximumSize = new System.Drawing.Size(2048, 2048);
             this.MinimumSize = new System.Drawing.Size(853, 510);
             this.Name = "FrmMain";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -3238,6 +3327,12 @@
             this.groupBox5.ResumeLayout(false);
             this.groupBox5.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nupBlueTom)).EndInit();
+            this.groupBox13.ResumeLayout(false);
+            this.groupBox13.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nupPedalLeft)).EndInit();
+            this.groupBox12.ResumeLayout(false);
+            this.groupBox12.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nupPedalRight)).EndInit();
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nupGreenTom)).EndInit();
@@ -3261,8 +3356,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.nupX)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nupTriangle)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nupCircle)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nupPedalLeft)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nupPedalRight)).EndInit();
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage2.ResumeLayout(false);
@@ -3289,10 +3382,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.nupMNvelCheck)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nupMNnoteTo)).EndInit();
             this.panel1.ResumeLayout(false);
-            this.groupBox12.ResumeLayout(false);
-            this.groupBox12.PerformLayout();
-            this.groupBox13.ResumeLayout(false);
-            this.groupBox13.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -3467,6 +3556,11 @@
         private System.Windows.Forms.Button btnPedalLeft;
         private System.Windows.Forms.ProgressBar pbPedalLeft;
         private System.Windows.Forms.CheckBox chkBoostPedalLeft;
+        private System.Windows.Forms.Button btnRefreshUsb;
+        private System.Windows.Forms.ComboBox ddlController;
+        private System.Windows.Forms.ComboBox ddlUsbController;
+        private System.Windows.Forms.Button btnConnect;
+        private System.Windows.Forms.Button btnExit;
     }
 }
 

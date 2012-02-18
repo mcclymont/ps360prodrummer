@@ -8,6 +8,7 @@ using System.Xml;
 using System.Xml.Serialization;
 using System.Collections.Generic;
 using System.Threading;
+using System.Management;
 
 namespace _PS360Drum
 {
@@ -25,26 +26,17 @@ namespace _PS360Drum
         Random m_Random = new Random();
 
         public MidiSender MidiSender { get; private set; }
-        private List<IDrumController> m_DrumControllers = new List<IDrumController>();
+        private IDrumController m_DrumController;
         private Serialize.Serializer m_Serializer;
         public MultiNoteGui MultiNoteGui { get; private set; }
 
         private GuiDrumDPad m_PrevDPadState = GuiDrumDPad.None;
-
+        
         public FrmMain()
         {    
             InitializeComponent();
 
             m_Serializer = new Serialize.Serializer(this);
-            //m_DrumController = new ProDrumController(this);
-            m_DrumControllers.Add(new GHWTDrumController(this));
-            m_DrumControllers.Add(new ProDrumController(this));
-            foreach (IDrumController dc in m_DrumControllers)
-            {
-                dc.ButtonPressedEvent += DrumButtonPressed;
-                dc.ButtonReleasedEvent += DrumButtonReleased;
-                dc.DPadStateChanged += DrumDPadStateChanged;
-            }
 
             MidiSender = new MidiSender(this);
 
@@ -114,6 +106,11 @@ namespace _PS360Drum
 
             // Sets high priority and enables search for drums
             Process.GetCurrentProcess().PriorityClass = ProcessPriorityClass.High;
+            
+            FillUsbList();
+            ddlController.Items.Add(ControllerType.Xbox360_GHWT_GH5_Drum);
+            ddlController.Items.Add(ControllerType.Ps3_RockBandProDrum);
+            ddlController.SelectedIndex = 0;
         }
 
         private void ButtonPress(object sender, EventArgs e)
@@ -307,17 +304,13 @@ namespace _PS360Drum
         protected override void OnHandleCreated(EventArgs e)
         {
             base.OnHandleCreated(e);
-            foreach (IDrumController dc in m_DrumControllers)
-            {
-                dc.RegisterHandle(Handle);
-            }
+            if (m_DrumController != null)
+                m_DrumController.RegisterHandle(Handle);
         }
         protected override void WndProc(ref Message m)
         {
-            foreach (IDrumController dc in m_DrumControllers)
-            {
-                dc.ParseMessages(ref m);
-            }
+            if (m_DrumController != null)
+                m_DrumController.ParseMessages(ref m);               
             base.WndProc(ref m);	// pass message on to base form
         }
         #endregion
@@ -363,6 +356,75 @@ namespace _PS360Drum
         private void nupPedalRight_ValueChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnRefreshUsb_Click(object sender, EventArgs e)
+        {
+            FillUsbList();
+        }
+
+        private void FillUsbList()
+        {
+            List<UsbDeviceInfo> devices = new List<UsbDeviceInfo>();
+
+            ManagementObjectCollection devicesCollection;
+            using (var searcher = new ManagementObjectSearcher("select * from Win32_PnPEntity where DeviceID like 'USB%'"))
+            {
+                devicesCollection = searcher.Get();      
+            }
+
+            foreach (var device in devicesCollection)
+            {
+                devices.Add(new UsbDeviceInfo()
+                {
+                    Description = (string)device.GetPropertyValue("Description"),
+                    DeviceID = (string)device.GetPropertyValue("DeviceID")
+                });
+                //(string)device.GetPropertyValue("PNPDeviceID"),
+            }
+
+            devicesCollection.Dispose();
+
+            ddlUsbController.Items.Clear();
+            ddlUsbController.Items.AddRange(devices.ToArray());
+
+            ddlUsbController.SelectedIndex = 0;
+        }
+
+        private void btnExit_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void btnConnect_Click(object sender, EventArgs e)
+        {
+            UsbDeviceInfo info = (UsbDeviceInfo)ddlUsbController.SelectedItem;
+            string vid = info.DeviceID.Substring(info.DeviceID.IndexOf("VID_") + 4, 4);
+            string pid = info.DeviceID.Substring(info.DeviceID.IndexOf("PID_") + 4, 4);
+            
+            int iVid = int.Parse(vid, System.Globalization.NumberStyles.AllowHexSpecifier);
+            int iPid = int.Parse(pid, System.Globalization.NumberStyles.AllowHexSpecifier);
+
+            if (m_DrumController != null)
+            {
+                m_DrumController.Dispose();
+
+                m_DrumController.ButtonPressedEvent -= DrumButtonPressed;
+                m_DrumController.ButtonReleasedEvent -= DrumButtonReleased;
+                m_DrumController.DPadStateChanged -= DrumDPadStateChanged;
+            }
+
+            switch ((ControllerType)ddlController.SelectedItem)
+            {
+                case ControllerType.Xbox360_GHWT_GH5_Drum:
+                    m_DrumController = new GHWTDrumController(this, iPid, iVid); break;
+                case ControllerType.Ps3_RockBandProDrum:
+                    m_DrumController = new ProDrumController(this, iPid, iVid); break;
+            }
+
+            m_DrumController.ButtonPressedEvent += DrumButtonPressed;
+            m_DrumController.ButtonReleasedEvent += DrumButtonReleased;
+            m_DrumController.DPadStateChanged += DrumDPadStateChanged;
         }
     }
 }

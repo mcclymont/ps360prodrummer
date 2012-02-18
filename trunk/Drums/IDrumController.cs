@@ -19,7 +19,16 @@ namespace _PS360Drum
         event ButtonDelegate ButtonDownEvent;
         event DPadDelegate DPadStateChanged;
 
+
+        void Dispose();
+
         void RegisterHandle(IntPtr handle);
         void ParseMessages(ref Message m);
     }
+
+    enum ControllerType
+    {
+        Xbox360_GHWT_GH5_Drum,
+        Ps3_RockBandProDrum
+    };
 }
