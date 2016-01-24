@@ -41,10 +41,9 @@ namespace _PS360Drum
 
             for (byte i = 0; i < m_NumPads; ++i)
             {
+                // Find the index of our timer variable.
                 if (m_Timers[i] == timer)
                 {
-                    GuiDrumPad pad = m_RawToGuiConverter.TranslatePad(i);
-                    m_Main.MidiSender.TriggerNote(pad, m_HitVelocities[i].Value);
                     m_HitVelocities[i] = null;
                     break;
                 }
@@ -62,15 +61,15 @@ namespace _PS360Drum
         public void TriggerNote(byte rawpad, byte velocity)
         {
             velocity = Boost(rawpad, velocity);
-            if (m_HitVelocities[rawpad] == null)
+            if (m_HitVelocities[rawpad] == null) // No note recently triggered
             {
+                GuiDrumPad pad = m_RawToGuiConverter.TranslatePad(rawpad);
+                m_Main.MidiSender.TriggerNote(pad, velocity);
+
                 m_HitVelocities[(int)rawpad] = velocity;
                 m_Timers[rawpad].Start();
             }
-            else if (m_HitVelocities[(int)rawpad].Value < velocity)
-            {
-                m_HitVelocities[(int)rawpad] = velocity;
-            }
+            // Otherwise, the note is ignored.
         }
     }
 }
