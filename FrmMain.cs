@@ -384,9 +384,8 @@ namespace _PS360Drum
                     DeviceID = (string)device.GetPropertyValue("DeviceID")
                 });
 
-                // Try to choose the correct USB device based on the controller type.
-                if (  ControllerType.Xbox360_GHWT_GH5_Drum.Equals(ddlController.SelectedItem) &&
-                      deviceDescription == "Xbox 360 Wireless Receiver for Windows") {
+                // Automatically select the Xbox receiver if it's connected.
+                if (deviceDescription == "Xbox 360 Wireless Receiver for Windows") {
                     defaultIndex = i;
                 }
                 // TODO PS3 RockBand version of the above
