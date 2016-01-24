@@ -107,10 +107,10 @@ namespace _PS360Drum
             // Sets high priority and enables search for drums
             Process.GetCurrentProcess().PriorityClass = ProcessPriorityClass.High;
             
-            FillUsbList();
             ddlController.Items.Add(ControllerType.Xbox360_GHWT_GH5_Drum);
             ddlController.Items.Add(ControllerType.Ps3_RockBandProDrum);
             ddlController.SelectedIndex = 0;
+            FillUsbList();
         }
 
         private void ButtonPress(object sender, EventArgs e)
@@ -366,6 +366,7 @@ namespace _PS360Drum
         private void FillUsbList()
         {
             List<UsbDeviceInfo> devices = new List<UsbDeviceInfo>();
+            int defaultIndex = 0;
 
             ManagementObjectCollection devicesCollection;
             using (var searcher = new ManagementObjectSearcher("select * from Win32_PnPEntity where DeviceID like 'USB%'"))
@@ -373,14 +374,24 @@ namespace _PS360Drum
                 devicesCollection = searcher.Get();      
             }
 
+            var i = 0;
             foreach (var device in devicesCollection)
             {
+                var deviceDescription = (string)device.GetPropertyValue("Description");
                 devices.Add(new UsbDeviceInfo()
                 {
-                    Description = (string)device.GetPropertyValue("Description"),
+                    Description = deviceDescription,
                     DeviceID = (string)device.GetPropertyValue("DeviceID")
                 });
-                //(string)device.GetPropertyValue("PNPDeviceID"),
+
+                // Try to choose the correct USB device based on the controller type.
+                if (  ControllerType.Xbox360_GHWT_GH5_Drum.Equals(ddlController.SelectedItem) &&
+                      deviceDescription == "Xbox 360 Wireless Receiver for Windows") {
+                    defaultIndex = i;
+                }
+                // TODO PS3 RockBand version of the above
+
+                i += 1;
             }
 
             devicesCollection.Dispose();
@@ -388,7 +399,7 @@ namespace _PS360Drum
             ddlUsbController.Items.Clear();
             ddlUsbController.Items.AddRange(devices.ToArray());
 
-            ddlUsbController.SelectedIndex = 0;
+            ddlUsbController.SelectedIndex = defaultIndex;
         }
 
         private void btnExit_Click(object sender, EventArgs e)
